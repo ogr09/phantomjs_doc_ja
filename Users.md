@@ -6,7 +6,7 @@
 
 [CircuitLab](http://circuitlab.com) uses PhantomJS to render electronic schematic into professional-quality images and PDF (source: [blog post](https://www.circuitlab.com/blog/2012/06/20/rendering-16_000-schematics-in-the-cloud-with-rabbitmq-and/))
 
-[Internet Archive](http://archive.org) uses PhantomJS for automated QA (source: [tweet](https://twitter.com/lljohnston/status/197691434990698496)tweet from Leslie Johnston)
+[Internet Archive](http://archive.org) uses PhantomJS for automated QA (source: [tweet](https://twitter.com/lljohnston/status/197691434990698496) from Leslie Johnston)
 
 [Jive Software](http://www.jivesoftware.com/) uses PhantomJS to run QUnit tests as an Ant target in the continuous integration server.
 
