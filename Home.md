@@ -15,8 +15,8 @@ Note: the wiki content is still being migrated. It may not complete yet.
 
 ## Explore
 
-* [Buzz](Buzz): blog posts, articles, etc
-* [Who's Using PhantomJS?](Users)
+* [[Buzz|Buzz]]: blog posts, articles, etc
+* [[Who's Using PhantomJS?|Users]]
 * Related Projects
 * Troubleshooting
 
