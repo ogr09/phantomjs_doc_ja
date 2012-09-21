@@ -2,13 +2,13 @@ Note: the wiki content is still being migrated. It may not complete yet.
 
 ## From the Website
 
-* [Download and installation](http://phantomjs.org/download.html)
-* [Build from source](http://phantomjs.org/build.html)
+* [Download and Installation](http://phantomjs.org/download.html)
+* [Build from Source](http://phantomjs.org/build.html)
 * [Frequently Asked Question](http://phantomjs.org/faq.html) (FAQ)
 
 ## Learn
 
-* Quick Start
+* [[Quick Start|Quick Start]]
 * Headless Testing
 * Screen Capture
 * Network Monitoring
