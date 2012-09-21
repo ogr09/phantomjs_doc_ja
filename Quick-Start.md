@@ -25,7 +25,42 @@ It is **very important** to call `phantom.exit` at some point in the script, oth
 
 ## Page Loading
 
-(To be written)
+A web page can be loaded and analyzed by creating a web page object.
+
+The following `loadspeed.js` script loads a specified URL (do not forget the http protocol) and measures the time it takes to load it.
+
+```javascript
+var page = require('webpage').create(),
+    t, address;
+
+if (phantom.args.length === 0) {
+    console.log('Usage: loadspeed.js <some URL>');
+    phantom.exit();
+} else {
+    t = Date.now();
+    address = phantom.args[0];
+    page.open(address, function (status) {
+        if (status !== 'success') {
+            console.log('FAIL to load the address');
+        } else {
+            t = Date.now() - t;
+            console.log('Loading time ' + t + ' msec');
+        }
+        phantom.exit();
+    });
+}
+```
+
+Run the script with the command:
+
+    phantomjs loadspeed.js http://www.google.com
+
+It outputs something like:
+
+> Loading http://www.google.com
+> Loading time 719 msec
+
+(More to be written)
 
 ## Script Arguments
 
@@ -42,4 +77,3 @@ It is **very important** to call `phantom.exit` at some point in the script, oth
 ## Canvas
 
 (To be written)
-
