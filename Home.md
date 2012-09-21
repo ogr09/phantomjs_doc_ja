@@ -9,8 +9,10 @@ Note: the wiki content is still being migrated. It may not complete yet.
 ## Learn
 
 * Quick Start
-* Advanced Topics
-* Test Frameworks
+* Headless Testing
+* Screen Capture
+* Network Monitoring
+* Page Automation
 * API Reference
 
 ## Explore
