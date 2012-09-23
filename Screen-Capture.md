@@ -36,6 +36,6 @@ phantomjs rasterize.js 'http://en.wikipedia.org/w/index.php?title=Jakarta&printa
 
 Canvas can be easily constructed and converted to an image. The included example [colorwheel.js](https://github.com/ariya/phantomjs/blob/master/examples/colorwheel.js) (50 lines) produces the following color wheel:
 
-![Color Wheel](https://lh3.googleusercontent.com/_Oijhf1ZPv-4/TVzeP4NPMDI/AAAAAAAAB10/FhFzcvQLXLw/s800/colorwheel.png)
+![Color Wheel](https://lh3.googleusercontent.com/-xSIzxPtJULw/TVzeP4NPMDI/AAAAAAAAB10/k-c8jB6I5Cg/s288/colorwheel.png)
 
 It is possible to build a web screenshot service using PhantomJS. There are [[some projects|Related Projects]] which make it easy to create such a service. Examples of PhantomJS-based screenshot services are [Screener](http://screener.brachium-system.net) and [ChromaNope](http://chromanope.com/).
