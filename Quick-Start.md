@@ -111,3 +111,5 @@ page.open(url, function (status) {
     });
 });
 ```
+
+Since the script is executed as if it is running on a web browser, standard DOM scripting and CSS selectors work just fine. It makes PhantomJS suitable to carry out various [[page automation tasks|Page Automation]].
