@@ -72,16 +72,6 @@ It outputs something like:
 > Loading http://www.google.com
 > Loading time 719 msec
 
-(More to be written)
-
-## Script Arguments
-
-(To be written)
-
-## Page Settings
-
-(To be written)
-
 ## Code Evaluation
 
 To evaluate JavaScript or CoffeeScript code in the context of the web page, use `evaluate()` function. The execution is "sandboxed", there is no way for the code to access any JavaScript objects and variables outside its own page context. An object can be returned from `evaluate()`, however it is limited to simple objects and can't contain functions or closures.
