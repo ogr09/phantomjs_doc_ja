@@ -22,6 +22,8 @@ Several page capture projects utilizing PhantomJS:
 
 [django-screamshot](https://github.com/makinacorpus/django-screamshot) (uses Django and CasperJS).
 
+[node-webshot](https://github.com/brenden/node-webshot) (uses Node.js).
+
 [Screenshot](https://github.com/jegade/Screenshot) (uses Dancer).
 
 [screenshot-app](https://github.com/visionmedia/screenshot-app) (uses Node.js).
