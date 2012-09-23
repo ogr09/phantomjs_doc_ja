@@ -84,8 +84,30 @@ It outputs something like:
 
 ## Code Evaluation
 
-(To be written)
+To evaluate JavaScript or CoffeeScript code in the context of the web page, use `evaluate()` function. The execution is "sandboxed", there is no way for the code to access any JavaScript objects and variables outside its own page context. An object can be returned from `evaluate()`, however it is limited to simple objects and can't contain functions or closures.
 
-## Canvas
+Here is an example to show the title of a web page:
 
-(To be written)
+```javascript
+var page = require('webpage').create();
+page.open(url, function (status) {
+    var title = page.evaluate(function () {
+        return document.title;
+    });
+    console.log('Page title is ' + title);
+});
+```
+
+Any console message from a web page, including from the code inside `evaluate()`, will not be displayed by default. To override this behavior, use the `onConsoleMessage` callback. The previous example can be rewritten to:
+
+```javascript
+var page = require('webpage').create();
+page.onConsoleMessage = function (msg) {
+    console.log('Page title is ' + msg);
+};
+page.open(url, function (status) {
+    page.evaluate(function () {
+        console.log(document.title);
+    });
+});
+```
