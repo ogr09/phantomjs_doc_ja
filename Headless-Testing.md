@@ -27,6 +27,8 @@ In addition, there are [[projects|Related Projects]] which are built on top of P
 * [Lotte](https://github.com/StanAngeloff/lotte) adds jQuery-like methods, chaining, and more assertion logic
 * [WebSpecter](https://github.com/jgonera/webspecter) is a BDD-style acceptance test framework for web applications
 
+PhantomJS includes [run-qunit](https://github.com/ariya/phantomjs/blob/master/examples/run-qunit.js) and [run-jasmine](https://github.com/ariya/phantomjs/blob/master/examples/run-jasmine.js) in its `examples` subdirectory. However, these are for illustration purposes, it lacks important reporting features necessary for real-world uses.
+
 ## Continuous Integration Systems
 
 Using PhantomJS with CI system such as **[Jenkins](http://jenkins-ci.org/)** or **[TeamCity](http://www.jetbrains.com/teamcity/)** does not require special setup. Make sure PhantomJS is installed properly on the slave/build agent and it is ready to go.
@@ -34,5 +36,4 @@ Using PhantomJS with CI system such as **[Jenkins](http://jenkins-ci.org/)** or 
 Since PhantomJS is purely headless on Linux, the agent can run on an installation with any GUI. This means, a barebone Linux system without X11 is not a problem for PhantomJS. It makes it possible to spawn light build agents on Amazon EC2 or Heroku instances.
 
 **[Travis CI](http://about.travis-ci.org/)**, a popular hosted CI system, has built-in support for PhantomJS. See [its documentation](http://about.travis-ci.org/docs/user/gui-and-headless-browsers/) for details.
-
 
