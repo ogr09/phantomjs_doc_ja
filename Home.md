@@ -9,7 +9,7 @@ Note: the wiki content is still being migrated. It may not complete yet.
 ## Learn
 
 * [[Quick Start|Quick Start]]
-* Headless Testing
+* [[Headless Testing|Headless Testing]]
 * Screen Capture
 * Network Monitoring
 * Page Automation
