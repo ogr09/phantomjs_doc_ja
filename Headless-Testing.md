@@ -20,4 +20,11 @@ For other test frameworks, various test runners/drivers are usually available:
 * [WebDriver](http://dvcs.w3.org/hg/webdriver/raw-file/tip/webdriver-spec.html): [GhostDriver](https://github.com/detro/ghostdriver)
 * [YUITest](http://yuilibrary.com/projects/yuitest/): [Grover](https://github.com/davglass/grover), [phantomjs-yuitest](https://github.com/metafeather/phantomjs-yuitest)
 
+In addition, there are [[projects|Related Projects]] which are built on top of PhantomJS to provide convenient high-level functionality for testing purposes:
+
+* [Casper.js](https://casperjs.org) is useful to build scripted navigation and testing
+* [Lotte](https://github.com/StanAngeloff/lotte) adds jQuery-like methods, chaining, and more assertion logic
+* [WebSpecter](https://github.com/jgonera/webspecter) is a BDD-style acceptance test framework for web applications
+
+
 
