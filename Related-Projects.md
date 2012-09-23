@@ -32,4 +32,18 @@ Several page capture projects utilizing PhantomJS:
 
 ## Tools
 
-(To be written)
+[Compass Magick](https://github.com/StanAngeloff/compass-magick) is a dynamic image generation for Compass using (among others) PhantomJS.
+
+[Confess](https://github.com/jamesgpearce/confess) is small script library that uses PhantomJS to headlessly analyze web pages for the purposes of creating a cache manifest file.
+
+[Guard PhantomJS](https://github.com/carhartl/guard-phantomjs) automatically runs PhantomJS using Guard.
+
+[Grunt](http://gruntjs.org/) is a task-based command line build tool for JavaScript projects using PhantomJS for unit test automation.
+
+[phantomjs-node](https://github.com/sgentle/phantomjs-node) provides PhantomJS bridge for Node.js applications.
+
+[PhantomLint](https://github.com/arthurakay/PhantomLint) uses PhantomJS to run JSLint on JavaScript application code.
+
+[shortcut.io](https://github.com/hukl/shortcut.io) uses PhantomJS to generate the screenshot of the bookmarked web sites.
+
+[Slippy](https://github.com/Seldaek/slippy) uses PhantomJS to convert HTML presentations into PDFs that can be e.g. uploaded to SlideShare.
