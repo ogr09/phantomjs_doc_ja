@@ -12,7 +12,7 @@ page.open('http://google.com', function () {
 
 Beside PNG format, PhantomJS supports JPEG, GIF, and PDF.
 
-In the `examples` subdirectory, there is a script `rasterize.js` which demonstrates a more complete rendering feature of PhantomJS. An example to produce the rendering of the famous Tiger (from SVG):
+In the `examples` subdirectory, there is a script [rasterize.js](https://github.com/ariya/phantomjs/blob/master/examples/rasterize.js) which demonstrates a more complete rendering feature of PhantomJS. An example to produce the rendering of the famous Tiger (from SVG):
 
 ```
 phantomjs rasterize.js http://ariya.github.com/svg/tiger.svg tiger.png
