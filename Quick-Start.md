@@ -2,6 +2,8 @@ This instruction assumes that PhantomJS is installed and its executable is place
 
 All of the examples given here are available in the code repository under the sub-directory `examples/`. For each example, there are two version for each JavaScript and CoffeeScript.
 
+You are also recommend to explore the use of PhantomJS for [[page automation|Page Automation]], [[network monitoring|Network Monitoring]], [[screen capture|Screen Capture]], and [[headless testing|Headless Testing]].
+
 ## Hello, World!
 
 Create a new text file that contains the following two lines:
