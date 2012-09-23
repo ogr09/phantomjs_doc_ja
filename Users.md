@@ -1,3 +1,14 @@
+## Open-source Projects
+
+The following open-source projects are using PhantomJS as part of the testing workflow:
+
+* Modernizr
+* CodeMirror
+* Ember.js
+* YUI3
+
+## Organizations
+
 [1minus1 Ltd](http://1minus1.com) uses PhantomJS to run Jasmine tests on TeamCity continuous integration server.
 
 [Apache Thrift](http://thrift.apache.org) uses PhantomJS combined with QUnit for the test suite.
