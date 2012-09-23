@@ -17,8 +17,21 @@ In the `examples` subdirectory, there is a script [rasterize.js](https://github.
 ```
 phantomjs rasterize.js http://ariya.github.com/svg/tiger.svg tiger.png
 ```
-which gives the following tiger.png:
+which gives the following `tiger.png`:
 
 ![Rendered Tiger](http://lh6.ggpht.com/_Oijhf1ZPv-4/TR6iM8J0KrI/AAAAAAAABy4/RCZ8Eg567LM/s400/tiger.png)
+
+Another example: show the [polar clock|http://raphaeljs.com/polar-clock.html] (from [RaphaelJS|http://raphaeljs.com/]):
+
+```
+phantomjs rasterize.js http://raphaeljs.com/polar-clock.html clock.png
+```
+![Polar Clock](https://lh5.googleusercontent.com/_Oijhf1ZPv-4/TUuUx1o-tuI/AAAAAAAAB00/Ba-Gxl5Zp6Q/s288/polar-clock.png)
+
+Producing PDF output is also possible, e.g. from a Wikipedia article:
+
+```
+phantomjs rasterize.js 'http://en.wikipedia.org/w/index.php?title=Jakarta&printable=yes' jakarta.pdf
+```
 
 It is possible to build a web screenshot service using PhantomJS. There are [[some projects|Related Projects]] which make it easy to create such a service. Examples of PhantomJS-based screenshot services are [Screener](http://screener.brachium-system.net) and [ChromaNope](http://chromanope.com/).
