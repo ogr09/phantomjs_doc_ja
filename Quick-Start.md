@@ -25,7 +25,19 @@ It is **very important** to call `phantom.exit` at some point in the script, oth
 
 ## Page Loading
 
-A web page can be loaded and analyzed by creating a web page object.
+A web page can be loaded, analyzed, and rendered by creating a web page object.
+
+The following script demonstrates the simplest use of page object. It loads Google homepage and then save it as an image, `google.png`.
+
+```
+var page = require('webpage').create();
+page.open('http://google.com', function () {
+    page.render('google.png');
+    phantom.exit();
+});
+```
+
+Because of its rendering features, PhantomJS can be used to [[capture web pages|Screen Capture]], essentially taking a screenshot of the contents.
 
 The following `loadspeed.js` script loads a specified URL (do not forget the http protocol) and measures the time it takes to load it.
 
