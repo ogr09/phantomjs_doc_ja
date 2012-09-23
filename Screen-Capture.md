@@ -12,7 +12,7 @@ page.open('http://google.com', function () {
 
 Beside PNG format, PhantomJS supports JPEG, GIF, and PDF.
 
-In the `examples` subdirectory, there is a script [rasterize.js](https://github.com/ariya/phantomjs/blob/master/examples/rasterize.js) which demonstrates a more complete rendering feature of PhantomJS. An example to produce the rendering of the famous Tiger (from SVG):
+In the `examples` subdirectory, there is a script [rasterize.js](https://github.com/ariya/phantomjs/blob/master/examples/rasterize.js) (30 lines) which demonstrates a more complete rendering feature of PhantomJS. An example to produce the rendering of the famous Tiger (from SVG):
 
 ```
 phantomjs rasterize.js http://ariya.github.com/svg/tiger.svg tiger.png
@@ -33,5 +33,9 @@ Producing PDF output is also easy, e.g. from a Wikipedia article:
 ```
 phantomjs rasterize.js 'http://en.wikipedia.org/w/index.php?title=Jakarta&printable=yes' jakarta.pdf
 ```
+
+Canvas can be easily constructed and converted to an image. The included example [colorwheel.js](https://github.com/ariya/phantomjs/blob/master/examples/colorwheel.js) (50 lines) produces the following color wheel:
+
+![Color Wheel](https://lh3.googleusercontent.com/_Oijhf1ZPv-4/TVzeP4NPMDI/AAAAAAAAB10/FhFzcvQLXLw/s800/colorwheel.png)
 
 It is possible to build a web screenshot service using PhantomJS. There are [[some projects|Related Projects]] which make it easy to create such a service. Examples of PhantomJS-based screenshot services are [Screener](http://screener.brachium-system.net) and [ChromaNope](http://chromanope.com/).
