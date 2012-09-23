@@ -29,10 +29,10 @@ In addition, there are [[projects|Related Projects]] which are built on top of P
 
 ## Continuous Integration Systems
 
-Using PhantomJS with CI system such as [Jenkins](http://jenkins-ci.org/) or [TeamCity](http://www.jetbrains.com/teamcity/) does not require special setup. Make sure PhantomJS is installed properly on the slave/build agent and it is ready to go.
+Using PhantomJS with CI system such as **[Jenkins](http://jenkins-ci.org/)** or **[TeamCity](http://www.jetbrains.com/teamcity/)** does not require special setup. Make sure PhantomJS is installed properly on the slave/build agent and it is ready to go.
 
-Since PhantomJS is purely headless on Linux, the agent can run on an installation with any GUI. This means, a barebone Linux system without X11 is not a problem for PhantomJS. It makes it possible to spawn light build agents on Amazon EC2 or Hero instances.
+Since PhantomJS is purely headless on Linux, the agent can run on an installation with any GUI. This means, a barebone Linux system without X11 is not a problem for PhantomJS. It makes it possible to spawn light build agents on Amazon EC2 or Heroku instances.
 
-[Travis CI](http://about.travis-ci.org/), a popular hosted CI system, has built-in support for PhantomJS. See [its documentation](http://about.travis-ci.org/docs/user/gui-and-headless-browsers/) for details.
+**[Travis CI](http://about.travis-ci.org/)**, a popular hosted CI system, has built-in support for PhantomJS. See [its documentation](http://about.travis-ci.org/docs/user/gui-and-headless-browsers/) for details.
 
 
