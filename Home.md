@@ -25,3 +25,4 @@ Note: the wiki content is still being migrated. It may not complete yet.
 ## Contribute
 
 * [Contribution Guide](https://github.com/ariya/phantomjs/blob/master/CONTRIBUTING.md)
+* [[How to Report A Crash|Crash Reporting]]
