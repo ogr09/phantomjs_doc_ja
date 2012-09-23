@@ -10,7 +10,7 @@ Note: the wiki content is still being migrated. It may not complete yet.
 
 * [[Quick Start|Quick Start]]
 * [[Headless Testing|Headless Testing]]
-* Screen Capture
+* [[Screen Capture|Screen Capture]]
 * Network Monitoring
 * Page Automation
 * API Reference
