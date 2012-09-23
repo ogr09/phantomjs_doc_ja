@@ -12,7 +12,7 @@ Note: the wiki content is still being migrated. It may not complete yet.
 * [[Headless Testing|Headless Testing]]
 * [[Screen Capture|Screen Capture]]
 * [[Network Monitoring|Network Monitoring]]
-* Page Automation
+* [[Page Automation|Page Automation]]
 * [API Reference](http://code.google.com/p/phantomjs/wiki/Interface) (temporary, will be improved soon)
 
 ## Explore
