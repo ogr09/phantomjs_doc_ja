@@ -23,3 +23,7 @@ page.open('http://www.httpuseragent.org', function (status) {
 });
 ```
 The above example also demonstrates a way to customize the user agent seen by the remote web server.
+
+## Use jQuery and Other Libraries
+
+(To be written)
