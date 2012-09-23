@@ -16,7 +16,19 @@ The following projects are based on PhantomJS. They provide extra functionalitie
 
 ## Screenshot Utilities
 
-(To be written)
+Several page capture projects utilizing PhantomJS:
+
+[phantomjs-screenshots](https://github.com/hggh/phantomjs-screenshots), powers [Screener demo](http://screener.brachium-system.net).
+
+[django-screamshot](https://github.com/makinacorpus/django-screamshot) (uses Django and CasperJS).
+
+[Screenshot](https://github.com/jegade/Screenshot) (uses Dancer).
+
+[screenshot-app](https://github.com/visionmedia/screenshot-app) (uses Node.js).
+
+[screenshot-as-a-service](https://github.com/fzaninotto/screenshot-as-a-service) (uses Node.js).
+
+[screenshot-webservice](https://github.com/gre/screenshot-webservice) (uses Play2).
 
 ## Tools
 
