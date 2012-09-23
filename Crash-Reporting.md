@@ -2,7 +2,8 @@ This page contains information about what to do if PhantomJS crashes.
 
 You will have seen a message like this:
 
-"PhantomJS has crashed. Please file a bug report at https://code.google.com/p/phantomjs/issues/entry and attach the crash dump file: /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp"
+> PhantomJS has crashed. Please file a bug report at https://code.google.com/p/phantomjs/issues/entry
+> and attach the crash dump file: /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp"
 
 ## If you're using an official binary
 
