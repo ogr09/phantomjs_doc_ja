@@ -1,4 +1,4 @@
-PhantomJS comes with a lot of [included examples](https://github.com/ariya/phantomjs/tree/master/examples). Often an example comes in two flavors: JavaScript and CoffeScript.
+PhantomJS comes with a lot of [included examples](https://github.com/ariya/phantomjs/tree/master/examples). Often an example comes in two flavors: JavaScript and CoffeeScript.
 
 **Basic examples**
 
@@ -18,7 +18,7 @@ PhantomJS comes with a lot of [included examples](https://github.com/ariya/phant
 
 * `direction.js` uses Google Maps to print driving direction
 * `ipgeocode.js` deduces the location via IP geocoding
-* `follow.js` shows the number of follower of some Twitter accounts
+* `follow.js` shows the number of followers of some Twitter accounts
 * `tweets.js` displays the most recent tweets
 
 **Network**
