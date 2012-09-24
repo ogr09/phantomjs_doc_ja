@@ -106,7 +106,7 @@ Since the script is executed as if it is running on a web browser, standard DOM 
 
 ## Network Requests and Responses
 
-When a page requests a resource from a remote server, both the resource and the response can be tracked via `onResourceRequested` and `onResourceReceived` callback. This is demonstrated in the example [netlog.js](https://github.com/ariya/phantomjs/blob/master/examples/netlog.js):
+When a page requests a resource from a remote server, both the request and the response can be tracked via `onResourceRequested` and `onResourceReceived` callback. This is demonstrated in the example [netlog.js](https://github.com/ariya/phantomjs/blob/master/examples/netlog.js):
 
 ```javascript
 var page = require('webpage').create();
