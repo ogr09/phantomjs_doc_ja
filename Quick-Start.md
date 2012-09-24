@@ -1,8 +1,6 @@
 This instruction assumes that PhantomJS is installed and its executable is place somewhere in the PATH.
 
-All of the examples given here are available in the code repository under the sub-directory `examples/`. For each example, there are two version for each JavaScript and CoffeeScript.
-
-You are also recommend to explore the use of PhantomJS for [[page automation|Page Automation]], [[network monitoring|Network Monitoring]], [[screen capture|Screen Capture]], and [[headless testing|Headless Testing]].
+The code shown here is also available in [[various examples|Examples]] included with PhantomJS. You are also recommended to explore the use of PhantomJS for [[page automation|Page Automation]], [[network monitoring|Network Monitoring]], [[screen capture|Screen Capture]], and [[headless testing|Headless Testing]].
 
 ## Hello, World!
 
@@ -121,4 +119,4 @@ page.onResourceReceived = function (response) {
 page.open(url);
 ```
 
-For more information on how to utilize this features for HAR export as well as YSlow-based performance analysis, see the page on [[network monitoring|Network Monitoring]].
+For more info on how to utilize this features for HAR export as well as YSlow-based performance analysis, see the page on [[network monitoring|Network Monitoring]].
