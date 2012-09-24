@@ -5,6 +5,7 @@ Note: the wiki content is still being migrated. It may not complete yet.
 * [Download and Installation](http://phantomjs.org/download.html)
 * [Build from Source](http://phantomjs.org/build.html)
 * [Frequently Asked Question](http://phantomjs.org/faq.html) (FAQ)
+* [Release Notes](http://phantomjs.org/releases.html)
 
 ## Learn
 
