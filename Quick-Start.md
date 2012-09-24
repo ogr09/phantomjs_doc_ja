@@ -105,3 +105,20 @@ page.open(url, function (status) {
 ```
 
 Since the script is executed as if it is running on a web browser, standard DOM scripting and CSS selectors work just fine. It makes PhantomJS suitable to carry out various [[page automation tasks|Page Automation]].
+
+## Network Requests and Responses
+
+When a page requests a resource from a remote server, both the resource and the response can be tracked via `onResourceRequested` and `onResourceReceived` callback. This is demonstrated in the example [netlog.js](https://github.com/ariya/phantomjs/blob/master/examples/netlog.js):
+
+```javascript
+var page = require('webpage').create();
+page.onResourceRequested = function (request) {
+    console.log('Request ' + JSON.stringify(request, undefined, 4));
+};
+page.onResourceReceived = function (response) {
+    console.log('Receive ' + JSON.stringify(response, undefined, 4));
+};
+page.open(url);
+```
+
+For more information on how to utilize this features for HAR export as well as YSlow-based performance analysis, see the page on [[network monitoring|Network Monitoring]].
