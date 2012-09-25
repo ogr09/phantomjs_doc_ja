@@ -4,6 +4,9 @@
 
 ## 2012
 
+Web Performance Testing With PhantomJS by Wesley Hales (Aug 16, 2012)<br/>
+http://wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS/
+
 PhantomJS - Headless WebKit Browser Environment by Witold Graca (May 9, 2012)<br/>
 http://javascripted.me/phantomjs-headless-webkit-browser-environment.html
 
