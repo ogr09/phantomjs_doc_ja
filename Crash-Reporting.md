@@ -106,7 +106,7 @@ If you're building with `./build.sh`, and have an easily reproducible crash, thi
 
 1. Build with debugging symbols enabled:
 
-   `CFLAGS=-g CXXFLAGS=-g ./build.sh --qt-config '-webkit-debug' --qmake-args "QMAKE_CFLAGS=-g QMAKE_CXXFLAGS=-`
+   `CFLAGS=-g CXXFLAGS=-g ./build.sh --qt-config '-webkit-debug' --qmake-args "QMAKE_CFLAGS=-g QMAKE_CXXFLAGS=-g`
 
 2. Start gdb with phantomjs:
 
