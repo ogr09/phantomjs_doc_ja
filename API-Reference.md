@@ -186,6 +186,20 @@ page.zoomFactor = 0.25;
 page.render('capture.png');
 ```
 
+<a name="webpage-customHeaders" />
+#### `customHeaders` {object} ####
+This property specifies additional HTTP request headers that will be sent to the server for every request issued (for pages _and_ resources). The default value is an empty object `{}`. Headers names and values get encoded in US-ASCII before being sent. Please note that the 'User-Agent' should be set using the <a href="#wiki-webpage-settings">webpage settings</a>, setting the 'User-Agent' property in this property will overwrite the value set via webpage settings</p>
+
+Example:
+```javascript
+// Send two additional headers 'X-Test' and 'DNT'.
+page.customHeaders = {
+    'X-Test': 'foo',
+    'DNT': '1'
+};
+```
+
+
 <a name="webpage-functions" />
 ### Functions ###
 
