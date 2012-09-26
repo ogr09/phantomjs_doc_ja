@@ -46,19 +46,21 @@ The interface with various PhantomJS functionalities is carried out using a new 
 
 <a name="phantom-args" />
 #### `args` {array} ####
-This read-only property is an array of the arguments passed to the script. **Deprecated**: Please use `system.args` from the [System module](#system-module).
+**Stability:** _DEPRECATED_ - Use [`system.args`](#system-args) from the [System module](#system-module)  
+Read-only. An array of the arguments passed to the script.
 
 <a name="phantom-libraryPath" />
 #### `libraryPath` {string} ####
-This property stores the path which is used by injectJs function to resolve the script name. Initially it is set to the location of the script invoked by PhantomJS.
+This property stores the path which is used by [`injectJs`](#phantom-injectJs) function to resolve the script name. Initially it is set to the location of the script invoked by PhantomJS.
 
 <a name="phantom-scriptName" />
 #### `scriptName` {string} ####
-This read-only property stores the name of the invoked script file. **Deprecated**: Please use `system.args[0]` from the [System module](#system-module).
+**Stability:** _DEPRECATED_ - Use [`system.args[0]`](#system-args) from the [System module](#system-module)  
+Read-only. The name of the invoked script file.
 
 <a name="phantom-version" />
 #### `version` {object} ####
-This read-only property holds PhantomJS version. Example value: `{ major: 1, minor: 0, patch: 0 }`.
+Read-only. The version of the executing PhantomJS instance. Example value: `{ major: 1, minor: 0, patch: 0 }`.
 
 <a name="phantom-functions" />
 ### Functions ###
@@ -73,7 +75,7 @@ Injects external script code from the specified file. If the file cannot be foun
 
 <a name="module-api" />
 # Module API #
-The Module API is modeled after [CommonJS Modules](http://wiki.commonjs.org/wiki/Modules/1.1.1) is available. Up through PhantomJS 1.6, the only supported modules were those built in to PhantomJS:
+The Module API is modeled after [CommonJS Modules](http://wiki.commonjs.org/wiki/Modules/1.1.1) is available. Up through PhantomJS 1.6, the only supported modules that were built in:
  * [webpage](#webpage-module)
  * [system](#system-module)
  * [fs](#filesystem-module)
@@ -107,7 +109,7 @@ var page = new WebPage();
 
 <a name="webpage-clipRect" />
 #### `clipRect` {object} ####
-This property defines the rectangular area of the web page to be rasterized when `render()` is invoked. If no clipping rectangle is set, `render()` will process the entire web page.
+This property defines the rectangular area of the web page to be rasterized when [`render()`](#webpage-render) is invoked. If no clipping rectangle is set, [`render()`](#webpage-render) will process the entire web page.
 
 Example:
 ```javascript
@@ -116,13 +118,11 @@ page.clipRect = { top: 14, left: 3, width: 400, height: 300 };
 
 <a name="webpage-content" />
 #### `content` {string} ####
-This property stores the content of the web page, enclosed in HTML/XML
-element. Setting the property will effectively reload the web page with
-the new content.
+This property stores the content of the web page, enclosed in HTML/XML element. Setting the property will effectively reload the web page with the new content.
 
 <a name="webpage-libraryPath" />
 #### `libraryPath` {string} ####
-This property stores the path which is used by `injectJs` function to
+This property stores the path which is used by [`injectJs`](#webpage-injectJs) function to
 resolve the script name. Initially it is set to the location of the
 script invoked by PhantomJS.
 
@@ -274,7 +274,7 @@ page.open('http://www.google.com/', function(status) {
 
 <a name="webpage-release" />
 #### `release()` {void} ####
-**Stability:** _DEPRECATED_ (replaced by [`page.close()`](#webpage-close))
+**Stability:** _DEPRECATED_ - Use [`page.close()`](#webpage-close))  
 Releases memory heap associated with this page. Do not use the page instance after calling this.
 
 Due to some technical limitations, the web page object might not be completely garbage collected. This is often encountered when the same object is used over and over again. Calling this function may stop the increasing heap allocation.
