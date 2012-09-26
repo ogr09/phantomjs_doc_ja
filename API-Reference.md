@@ -211,7 +211,7 @@ Close the page and releases the memory heap associated with it. Do not use the p
 Due to some technical limitations, the web page object might not be completely garbage collected. This is often encountered when the same object is used over and over again. Calling this function may stop the increasing heap allocation.
 
 <a name="webpage-evaluate" />
-#### `evaluate(function, _args..._)` {object} ####
+#### `evaluate(function, arg1, arg2, ...)` {object} ####
 Evaluates the given function in the context of the web page. The execution is sandboxed, the web page has no access to the `phantom` object and it can't probe its own setting.
 
 Example:
@@ -226,7 +226,7 @@ page.open('http://m.bing.com', function(status) {
 });
 ```
 
-As of PhantomJS 1.6, arguments can be passed to the function. In the following example, the text value of a DOM element is extracted. The following example achieves the same end goal as the previous example but the element is chosen based on a selector which is passed to the `evaluate` call:
+As of PhantomJS 1.6, JSON-serializable arguments can be passed to the function. In the following example, the text value of a DOM element is extracted. The following example achieves the same end goal as the previous example but the element is chosen based on a selector which is passed to the `evaluate` call:
 ```javascript
 var page = require('webpage').create();
 page.open('http://m.bing.com', function(status) {
@@ -261,7 +261,7 @@ page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"
 Injects external script code from the specified file. If the file cannot be found in the current directory, `libraryPath` is used for additional look up. This function returns `true` if injection is successful, otherwise it returns `false`.
 
 <a name="webpage-open" />
-#### `open(url, _callback_)` {void} ####
+#### `open(url, callback)` {void} ####
 Opens the `url` and loads it to the page. Once the page is loaded, the optional `callback` is called using [`page.onLoadFinished`](#webpage-onLoadFinished), and also provides the page status to the function (`"success"` or `"fail"`).
 
 Example:
@@ -299,10 +299,10 @@ Supported formats include:
  * JPEG
 
 <a name="webpage-sendEvent" />
-#### `sendEvent(type, _mouseX_, _mouseY_)` ####
+#### `sendEvent(type, mouseX, mouseY)` ####
 Sends an event to the web page.
 
-The first argument is the event type. Supported type are `"mouseup"`, `"mousedown"`, `"mousemove"`, and `"click"`. The next two arguments represents the mouse position.
+The first argument is the event type. Supported type are `"mouseup"`, `"mousedown"`, `"mousemove"`, and `"click"`. The next two arguments are optional but represent the mouse position for the event.
 
 As of now, only the left mouse button is considered pressed for the event. For `"mousemove"`, however, there is no button pressed (i.e. it is not dragging).
 
