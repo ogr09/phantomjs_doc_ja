@@ -32,8 +32,8 @@ Rather than passing all options in the command-line, it is also possible to stor
 where the contents of `config.json` looks like:
 ```javascript
 {
-    'ignoreSslErrors': true,
-    'localToRemoteUrlAccessEnabled': true
+    "ignoreSslErrors": true,
+    "localToRemoteUrlAccessEnabled": true
 }
 ```
 
