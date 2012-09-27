@@ -4,6 +4,18 @@
 
 ## 2012
 
+headless JavaScript unit testing with Jasmine and PhantomJS by Rob Friesel Jr (Sep 23, 2012)<br/>
+http://blog.founddrama.net/2012/09/headless-javascript-testing-with-jasmine-and-phantomjs/
+
+Building Prime Time Episode Display App with PhantomJS by Justin Wehrman (Sep 18, 2012)<br/>
+http://blog.justinwehrman.com/building-prime-time-episode-display-app-with-phantomjs-the-code
+
+Creating Static Maps in OpenLayers using PhantomJS by Antonio Santiago (Sep 17, 2012)<br/>
+http://acuriousanimal.com/blog/2012/09/17/creating-static-maps-in-openlayers-using-phantomjs/
+
+The story of Jasmine and the Headless Webkit by Arlen Walker (Sep 10, 2012)<br/>
+http://www.theodicius.net/archives/2012/09/10/the-story-of-jasmine-and-the-headless-webkit/
+
 Web Performance Testing With PhantomJS by Wesley Hales (Aug 16, 2012)<br/>
 http://wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS/
 
