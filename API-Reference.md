@@ -138,7 +138,7 @@ The given object should be in one of the following two formats:
 ````javascript
 { width: '200px', height: '300px', border: '0px' }
 { format: 'A4', orientation: 'portrait', border: '1cm' }
-````
+```
 
 If no `paperSize` is defined, the size is defined by the web page. Supported dimension units are: `"mm"`, `"cm"`, `"in"`, `"px"`. No unit means `"px"`. Border is optional and defaults to `0`. Supported formats are: `"A3"`, `"A4"`, `"A5"`, `"Legal"`, `"Letter"`, `"Tabloid"`. Orientation (`"portrait"`, `"landscape"`) is optional and defaults to `"portrait"`.
 
