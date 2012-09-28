@@ -4,26 +4,22 @@ One major use case of PhantomJS is **headless testing** of web applications. It 
 
 PhantomJS itself is **not** a test framework, it is only used to launch the tests via a suitable test runner.
 
-The following test frameworks have built-in support for PhantomJS.
-
-* [Buster.JS](http://busterjs.org)
-* [FuncUnit](http://funcunit.com)
-* [Hiro](http://hirojs.com)
-* [QUnit](http://qunitjs.com)
-* [Testacular](http://vojtajina.github.com/testacular)
-* [wru](https://github.com/WebReflection/wru)
-
-For other test frameworks, various test runners/drivers are usually available:
+The following table summarizes the list of various test frameworks and the corresponding test runners. If the framework does not an external/third-part runner, it is marked as "built-in".
 
 | Framework  | Test Runner |
 |:-----------|:------------|
+| [Buster.JS](http://busterjs.org)| built-in|
 | [Capybara](http://jnicklas.github.com/capybara) |[Poltergeist](https://github.com/jonleighton/poltergeist)
 | [Mocha](http://visionmedia.github.com/mocha) | [mocha-phantomjs](http://metaskills.net/mocha-phantomjs) |
+| [FuncUnit](http://funcunit.com) | built-in|
+| [Hiro](http://hirojs.com) | built-in|
 | [Jasmine](https://github.com/pivotal/jasmine) | [Chutzpah](http://chutzpah.codeplex.com), [grunt-jasmine-runner](https://github.com/jasmine-contrib/grunt-jasmine-runner), [guard-jasmine](https://github.com/netzpirat/guard-jasmine), [phantom-jasmine](https://github.com/jcarver989/phantom-jasmine)|
 | [JsTestDriver](http://code.google.com/p/js-test-driver/) | [js-test-driver-phantomjs](https://github.com/larrymyers/js-test-driver-phantomjs) |
 | [Robot Framework](http://code.google.com/p/robotframework/) | [phantomrobot](https://github.com/datakurre/phantomrobot)|
-| QUnit | [Chutzpah](http://chutzpah.codeplex.com), [JS Test Runner](http://js-testrunner.codehaus.org), [United](https://github.com/asciidisco/united)|
+| [QUnit](http://qunitjs.com) | built-in, [Chutzpah](http://chutzpah.codeplex.com), [JS Test Runner](http://js-testrunner.codehaus.org), [United](https://github.com/asciidisco/united)|
+| [Testacular](http://vojtajina.github.com/testacular) | built-in |
 | [WebDriver](http://dvcs.w3.org/hg/webdriver/raw-file/tip/webdriver-spec.html) | [GhostDriver](https://github.com/detro/ghostdriver)|
+| [wru](https://github.com/WebReflection/wru) | built-in|
 | [YUITest](http://yuilibrary.com/projects/yuitest) | [Grover](https://github.com/davglass/grover), [phantomjs-yuitest](https://github.com/metafeather/phantomjs-yuitest) |
 
 In addition, there are [[projects|Related Projects]] which are built on top of PhantomJS to provide convenient high-level functionality for testing purposes:
