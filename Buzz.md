@@ -16,11 +16,20 @@ http://acuriousanimal.com/blog/2012/09/17/creating-static-maps-in-openlayers-usi
 The story of Jasmine and the Headless Webkit by Arlen Walker (Sep 10, 2012)<br/>
 http://www.theodicius.net/archives/2012/09/10/the-story-of-jasmine-and-the-headless-webkit/
 
+Intro to PhantomJS and CasperJS by Mike Subelsky (Aug 30, 2012)<br/>
+http://www.youtube.com/watch?v=NBxd0VrIpXM
+
+Web Performance Power Tool: HTTP Archive (HAR) by Ilya Grigorik (Aug 28, 2012)<br/>
+http://www.igvita.com/2012/08/28/web-performance-power-tool-http-archive-har/
+
 Web Performance Testing With PhantomJS by Wesley Hales (Aug 16, 2012)<br/>
 http://wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS/
 
 Search engine optimization (Aug 8, 2012)<br/>
 http://www.meteor.com/blog/2012/08/08/search-engine-optimization
+
+Unit Testing Improvements in ReSharper 7 by Dmitri Nesteruk (Jul 27, 2012)<br/>
+http://blogs.jetbrains.com/dotnet/2012/07/unit-testing-improvements-in-resharper-7/
 
 PhantomJS - Headless WebKit Browser Environment by Witold Graca (May 9, 2012)<br/>
 http://javascripted.me/phantomjs-headless-webkit-browser-environment.html
