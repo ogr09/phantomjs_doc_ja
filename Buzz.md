@@ -4,6 +4,9 @@
 
 ## 2012
 
+How to test Recurly.js in Ruby using RSpec, Capybara and Phantom.js (Sep 27, 2012)<br/>
+http://pieoneers.tumblr.com/post/32406386853/test-recurlyjs-in-ruby-using-rspec-capybara-phantomjs
+
 headless JavaScript unit testing with Jasmine and PhantomJS by Rob Friesel Jr (Sep 23, 2012)<br/>
 http://blog.founddrama.net/2012/09/headless-javascript-testing-with-jasmine-and-phantomjs/
 
