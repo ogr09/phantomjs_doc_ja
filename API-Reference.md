@@ -192,12 +192,25 @@ This property specifies additional HTTP request headers that will be sent to the
 
 Example:
 ```javascript
-// Send two additional headers 'X-Test' and 'DNT'.
+// Send two additional headers "X-Test" and "DNT".
 page.customHeaders = {
-    'X-Test': 'foo',
-    'DNT': '1'
+    "X-Test": "foo",
+    "DNT": "1"
 };
 ```
+
+Do you only want these `customHeaders` passed to the initial [`page.open`](#webpage-open) request? Here's the recommended workaround:
+```javascript
+// Send two additional headers "X-Test" and "DNT".
+page.customHeaders = {
+    "X-Test": "foo",
+    "DNT": "1"
+};
+page.onInitialized = function() {
+    page.customHeaders = {};
+};
+```
+
 
 
 <a name="webpage-functions" />
