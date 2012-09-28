@@ -14,7 +14,7 @@ If PhantomJS is invoked without any argument, it will enter the interactive mode
 Supported command-line options are:
  * `--cookies-file=/path/to/cookies.txt` specifies the file name to store the persistent cookies.
  * `--disk-cache=[yes|no]` enables disk cache (at desktop services cache storage location, default is `no`).
- * `--help` or `-h` lists all possible command-line options.
+ * `--help` or `-h` lists all possible command-line options. _Halts immediately, will not run a script passed as argument._
  * `--ignore-ssl-errors=[yes|no]` ignores SSL errors, such as expired or self-signed certificate errors (default is `no`).
  * `--load-images=[yes|no]` load all inlined images (default is `yes`).
  * `--local-to-remote-url-access=[yes|no]` allows local content to access remote URL (default is `no`).
@@ -23,17 +23,25 @@ Supported command-line options are:
  * `--proxy=address:port` specifies the proxy server to use (e.g. `--proxy=192.168.1.42:8080`).
  * `--proxy-type=[http|socks5]` specifies the type of the proxy server.
  * `--script-encoding=encoding` sets the encoding used for the starting script (default is `utf8`).
- * `--version` or `-v` prints out the version of PhantomJS.
+ * `--version` or `-v` prints out the version of PhantomJS. _Halts immediately, will not run a script passed as argument._
  * `--web-security=[yes|no]` disables web security and allows cross-domain XHR (default is `yes`).
 
-Rather than passing all options in the command-line, it is also possible to store the options in a file using JavaScript Object Notation (JSON) and then tell PhantomJS to read it:
-    `phantomjs --config=/path/to/config.json script.js arg1 arg2 arg3`
+Alternatively, since PhantomJS 1.3, you can also utilize a JavaScript Object Notation (JSON) configuration file instead of passing in multiple command-line options:
+ * `--config=/path/to/config.json`
 
-where the contents of `config.json` looks like:
+The contents of `config.json` should be a standalone JavaScript object. Keys are de-dashed, camel-cased equivalents of the other supported command-line options.  Values are their JavaScript equivalents: "yes/"no" values translate into `true`/`false` Boolean values, numbers remain numbers, strings remain strings. For example:
 ```javascript
 {
+    /* Same as: --ignore-ssl-errors=yes */
     "ignoreSslErrors": true,
-    "localToRemoteUrlAccessEnabled": true
+
+    /* Same as: --max-disk-cache-size=1000 */
+    "maxDiskCacheSize": 1000,
+
+    /* Same as: --output-encoding=utf8 */
+    "outputEncoding": "utf8"
+
+    /* etc. */
 }
 ```
 
