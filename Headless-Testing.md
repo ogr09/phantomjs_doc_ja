@@ -11,6 +11,7 @@ The following test frameworks have built-in support for PhantomJS.
 * [Hiro](http://hirojs.com)
 * [QUnit](http://qunitjs.com)
 * [Testacular](http://vojtajina.github.com/testacular)
+* [wru](https://github.com/WebReflection/wru)
 
 For other test frameworks, various test runners/drivers are usually available:
 
