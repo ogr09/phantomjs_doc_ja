@@ -28,6 +28,9 @@ http://wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS/
 Search engine optimization (Aug 8, 2012)<br/>
 http://www.meteor.com/blog/2012/08/08/search-engine-optimization
 
+023 JSJ Phantom.js with Ariya Hidayat (Aug 7, 2012)<br/>
+http://javascriptjabber.com/023-jsj-phantom-js-with-ariya-hidayat/
+
 Unit Testing Improvements in ReSharper 7 by Dmitri Nesteruk (Jul 27, 2012)<br/>
 http://blogs.jetbrains.com/dotnet/2012/07/unit-testing-improvements-in-resharper-7/
 
