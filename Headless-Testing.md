@@ -18,6 +18,7 @@ The following table summarizes the list of various test frameworks and the corre
 | [Robot Framework](http://code.google.com/p/robotframework/) | [phantomrobot](https://github.com/datakurre/phantomrobot)|
 | [QUnit](http://qunitjs.com) | built-in, [Chutzpah](http://chutzpah.codeplex.com), [JS Test Runner](http://js-testrunner.codehaus.org), [United](https://github.com/asciidisco/united)|
 | [Testacular](http://vojtajina.github.com/testacular) | built-in |
+| [Testem](https://github.com/airportyh/testem) | built-in |
 | [WebDriver](http://dvcs.w3.org/hg/webdriver/raw-file/tip/webdriver-spec.html) | [GhostDriver](https://github.com/detro/ghostdriver)|
 | [wru](https://github.com/WebReflection/wru) | built-in|
 | [YUITest](http://yuilibrary.com/projects/yuitest) | [Grover](https://github.com/davglass/grover), [phantomjs-yuitest](https://github.com/metafeather/phantomjs-yuitest) |
