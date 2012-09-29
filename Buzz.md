@@ -58,6 +58,9 @@ http://blog.iron.io/2012/07/phantomjs-in-2-minutes.html
 Run JS tests without a browser from xUnit (using Jasmine and Phantom.js) by Federico Silva Armas (Jul 8, 2012)<br/>
 http://www.federicosilva.net/2012/07/run-js-tests-without-browser-from-xunit.html
 
+Running Mocha browser tests in TeamCity by Richard Dingwall (Jun 17, 2012)<br/>
+http://richarddingwall.name/2012/06/17/running-mocha-browser-tests-in-teamcity/
+
 PhantomJS - Headless WebKit Browser Environment by Witold Graca (May 9, 2012)<br/>
 http://javascripted.me/phantomjs-headless-webkit-browser-environment.html
 
@@ -102,6 +105,9 @@ http://hackspoiler.de/2012/03/phantomjs-webkit-kommandozeilentool/
 
 Setup JavaScript unit testing using QUnit, PhantomJS and Jenkins on Amazon EC2 by Stefan Oderbolz (Mar 8, 2012)<br/>
 http://www.readmore.ch/post/18940470535
+
+Continuos Integration (CI) for JavaScript – Jasmine and Teamcity by Dan Merino (Mar 5, 2012)<br/>
+http://blog.danmerino.com/continuos-integration-ci-for-javascript-jasmine-and-teamcity/
 
 PhantomJS meets Jasmine by Bryan Robinson (Mar 2, 2012)<br/>
 http://rockycode.com/blog/phantomjs-meets-jasmine/
