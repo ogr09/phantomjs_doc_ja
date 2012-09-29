@@ -10,14 +10,23 @@ http://pieoneers.tumblr.com/post/32406386853/test-recurlyjs-in-ruby-using-rspec-
 headless JavaScript unit testing with Jasmine and PhantomJS by Rob Friesel Jr (Sep 23, 2012)<br/>
 http://blog.founddrama.net/2012/09/headless-javascript-testing-with-jasmine-and-phantomjs/
 
+PhantomJS: a new way for running Highcharts on the server side by Joe Kuan (Sep 22, 2012)<br/>
+http://joekuan.wordpress.com/2012/09/22/phantomjs-a-new-way-for-running-highcharts-on-the-server-side/
+
 Building Prime Time Episode Display App with PhantomJS by Justin Wehrman (Sep 18, 2012)<br/>
 http://blog.justinwehrman.com/building-prime-time-episode-display-app-with-phantomjs-the-code
 
 Creating Static Maps in OpenLayers using PhantomJS by Antonio Santiago (Sep 17, 2012)<br/>
 http://acuriousanimal.com/blog/2012/09/17/creating-static-maps-in-openlayers-using-phantomjs/
 
+Taking Web Page Screenshot by Antonio Santiago (Sep 15, 2012)<br/>
+http://acuriousanimal.com/blog/2012/09/15/taking-web-page-screenshots/
+
 The story of Jasmine and the Headless Webkit by Arlen Walker (Sep 10, 2012)<br/>
 http://www.theodicius.net/archives/2012/09/10/the-story-of-jasmine-and-the-headless-webkit/
+
+Running QUnit on Save with PhantomJS by Zach Kessin (Sep 5, 2012)<br/>
+http://future-web-app.blogspot.com/2012/09/running-qunit-on-save-with-phantomjs.html
 
 Intro to PhantomJS and CasperJS by Mike Subelsky (Aug 30, 2012)<br/>
 http://www.youtube.com/watch?v=NBxd0VrIpXM
