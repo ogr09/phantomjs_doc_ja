@@ -34,6 +34,12 @@ http://www.youtube.com/watch?v=NBxd0VrIpXM
 Web Performance Power Tool: HTTP Archive (HAR) by Ilya Grigorik (Aug 28, 2012)<br/>
 http://www.igvita.com/2012/08/28/web-performance-power-tool-http-archive-har/
 
+Scripted Screenshots by Michael Schuerig (Aug 27, 2012)<br/>
+http://www.schuerig.de/michael/blog/index.php/2012/08/27/scripted-screenshots/
+
+Headless browsers by Pavan Gaikwad(Aug 26, 2012)<br/>
+http://pavangaikwad.com/headless-browsers/
+
 Web Performance Testing With PhantomJS by Wesley Hales (Aug 16, 2012)<br/>
 http://wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS/
 
@@ -45,6 +51,12 @@ http://javascriptjabber.com/023-jsj-phantom-js-with-ariya-hidayat/
 
 Unit Testing Improvements in ReSharper 7 by Dmitri Nesteruk (Jul 27, 2012)<br/>
 http://blogs.jetbrains.com/dotnet/2012/07/unit-testing-improvements-in-resharper-7/
+
+Serverless PhantomJS with IronWorker by Chad Arimura (Jul 11, 2012)<br/>
+http://blog.iron.io/2012/07/phantomjs-in-2-minutes.html
+
+Run JS tests without a browser from xUnit (using Jasmine and Phantom.js) by Federico Silva Armas (Jul 8, 2012)<br/>
+http://www.federicosilva.net/2012/07/run-js-tests-without-browser-from-xunit.html
 
 PhantomJS - Headless WebKit Browser Environment by Witold Graca (May 9, 2012)<br/>
 http://javascripted.me/phantomjs-headless-webkit-browser-environment.html
