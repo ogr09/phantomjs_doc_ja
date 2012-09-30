@@ -357,7 +357,7 @@ page.onAlert = function(msg) {
 
 <a name="webpage-onCallback" />
 #### onCallback ####
-**Stability:** _EXPERIMENTAL_
+**Stability:** _EXPERIMENTAL_  
 **Introduced:** PhantomJS 1.6  
 This callback is invoked when there is a JavaScript `window.callPhantom` call made on the web page. The only argument passed to the callback is a data object.
 
