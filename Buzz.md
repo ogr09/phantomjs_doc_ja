@@ -7,6 +7,9 @@
 How to test Recurly.js in Ruby using RSpec, Capybara and Phantom.js (Sep 27, 2012)<br/>
 http://pieoneers.tumblr.com/post/32406386853/test-recurlyjs-in-ruby-using-rspec-capybara-phantomjs
 
+PhantomJS 1.7 “Blazing Star” by Ariya Hidayat (Sep 25, 2012)<br/>
+http://ariya.ofilabs.com/2012/09/phantomjs-1-7-blazing-star.html
+
 headless JavaScript unit testing with Jasmine and PhantomJS by Rob Friesel Jr (Sep 23, 2012)<br/>
 http://blog.founddrama.net/2012/09/headless-javascript-testing-with-jasmine-and-phantomjs/
 
@@ -49,6 +52,9 @@ http://www.meteor.com/blog/2012/08/08/search-engine-optimization
 023 JSJ Phantom.js with Ariya Hidayat (Aug 7, 2012)<br/>
 http://javascriptjabber.com/023-jsj-phantom-js-with-ariya-hidayat/
 
+Cloud PhantomJS with IronWorker by Ariya Hidayat (Jul 30, 2012)<br/>
+http://ariya.ofilabs.com/2012/07/cloud-phantomjs-with-ironworker.html
+
 Unit Testing Improvements in ReSharper 7 by Dmitri Nesteruk (Jul 27, 2012)<br/>
 http://blogs.jetbrains.com/dotnet/2012/07/unit-testing-improvements-in-resharper-7/
 
@@ -57,6 +63,9 @@ http://blog.iron.io/2012/07/phantomjs-in-2-minutes.html
 
 Run JS tests without a browser from xUnit (using Jasmine and Phantom.js) by Federico Silva Armas (Jul 8, 2012)<br/>
 http://www.federicosilva.net/2012/07/run-js-tests-without-browser-from-xunit.html
+
+PhantomJS 1.6 “Lavender” by Ariya Hidayat (Jun 23, 2012)<br/>
+http://ariya.ofilabs.com/2012/06/phantomjs-1-6-lavender.html
 
 Running Mocha browser tests in TeamCity by Richard Dingwall (Jun 17, 2012)<br/>
 http://richarddingwall.name/2012/06/17/running-mocha-browser-tests-in-teamcity/
@@ -82,11 +91,26 @@ http://devblog.hedtek.com/2012/04/phantomjs-on-ubuntu.html
 Continuous Integration for Javascript by Jonathan Hoguet (Apr 21, 2012)<br/>
 http://jonhoguet.blogspot.com/2012/04/continuous-integration-for-javascript.html
 
+PhantomJS Myths: Busted by Ariya Hidayat (Apr 12, 2012)<br/>
+http://ariya.ofilabs.com/2012/04/phantomjs-myths-busted.html
+
+Cloud PhantomJS on Amazon EC2 by Ariya Hidayat (Apr 2, 2012)<br/>
+http://ariya.ofilabs.com/2012/04/cloud-phantomjs-on-amazon-ec2.html
+
 Testing from the Command Line with PhantomJS by Dan Vanderkam (Mar 31, 2012)<br/>
 http://blog.dygraphs.com/2012/03/testing-from-command-line-with.html
 
 Building a bookmarking service with Python and PhantomJS by Charles Leifer (Mar 29, 2012)<br/>
 http://charlesleifer.com/blog/building-bookmarking-service-python-and-phantomjs/
+
+Pure headless PhantomJS (no X11 or Xvfb) by Ariya Hidayat (Mar 27, 2012)<br/>
+http://ariya.ofilabs.com/2012/03/pure-headless-phantomjs-no-x11-or-xvfb.html
+
+The evolution of PhantomJS build workflow by Ariya Hidayat (Mar 26, 2012)<br/>
+http://ariya.ofilabs.com/2012/03/the-evolution-of-phantomjs-build-workflow.html
+
+Ghost Flower by Ariya Hidayat (Mar 23, 2012)<br/>
+http://ariya.ofilabs.com/2012/03/ghost-flower.html
 
 PhantomJS - O Fantasminha Camarada by Henrique Gogó (Mar 24, 2012)<br/>
 http://www.slideshare.net/henriquegogo/phantomjs-o-fantasminha-camarada
@@ -109,6 +133,9 @@ http://www.readmore.ch/post/18940470535
 Continuos Integration (CI) for JavaScript – Jasmine and Teamcity by Dan Merino (Mar 5, 2012)<br/>
 http://blog.danmerino.com/continuos-integration-ci-for-javascript-jasmine-and-teamcity/
 
+PhantomJS and Travis CI by Ariya Hidayat (Mar 5, 2012)<br/>
+http://ariya.ofilabs.com/2012/03/phantomjs-and-travis-ci.html
+
 PhantomJS meets Jasmine by Bryan Robinson (Mar 2, 2012)<br/>
 http://rockycode.com/blog/phantomjs-meets-jasmine/
 
@@ -117,6 +144,12 @@ http://skookum.com/blog/dynamic-screenshots-on-the-server-with-phantomjs/
 
 Current Workflow: Developing, Linting, Testing and Distributing JavaScript by Todd Anderson (Feb 7, 2012)<br/>
 http://custardbelly.com/blog/2012/02/07/current-workflow-developing-linting-testing-and-distributing-javascript/
+
+PhantomJS and Mac OS X by Ariya Hidayat (Feb 8, 2012)<br/>
+http://ariya.ofilabs.com/2012/02/phantomjs-and-mac-os-x.html
+
+one year of wandering headlessly by Ariya Hidayat (Jan 23, 2012)<br/>
+http://ariya.ofilabs.com/2012/01/one-year-of-wandering-headlessly.html
 
 PhantomJS + JSCoverage + QUnit или консольные JS юнит-тесты с подсчетом покрытия (Jan 11, 2012)<br/>
 http://habrahabr.ru/blogs/javascript/135979/
@@ -132,6 +165,9 @@ http://www.b2bweb.fr/molokoloco/automated-webapps-ui-elements-screenshot-ex-docu
 
 Use PhantomJS to take screenshots of your webapp for you by Florian Cargoet (Jan 6, 2012)<br/>
 http://fcargoet.evolix.net/2012/01/use-phantomjs-to-take-screenshots-of-you-webapp-for-you/
+
+glory of the snow by Ariya Hidayat (Jan 4, 2012)<br/>
+http://ariya.ofilabs.com/2012/01/glory-of-the-snow.html
 
 Poltergeist: A PhantomJS driver for Capybara by Jon Leighton (Jan 3, 2012)<br/>
 http://jonathanleighton.com/articles/2012/announcing-poltergeist/f
