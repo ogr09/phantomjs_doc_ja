@@ -25,7 +25,7 @@ The following table summarizes the list of various test frameworks and the corre
 
 In addition, there are [[projects|Related Projects]] which are built on top of PhantomJS to provide convenient high-level functionality for testing purposes:
 
-* [Casper.js](https://casperjs.org) is useful to build scripted navigation and testing
+* [Casper.js](http://casperjs.org) is useful to build scripted navigation and testing
 * [Lotte](https://github.com/StanAngeloff/lotte) adds jQuery-like methods, chaining, and more assertion logic
 * [WebSpecter](https://github.com/jgonera/webspecter) is a BDD-style acceptance test framework for web applications
 
