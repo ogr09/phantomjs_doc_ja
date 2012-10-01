@@ -48,7 +48,6 @@ var page = require('webpage').create(),
 if (phantom.args.length === 0) {
     console.log('Usage: loadspeed.js <some URL>');
     phantom.exit();
-    return;
 }
 
 t = Date.now();
