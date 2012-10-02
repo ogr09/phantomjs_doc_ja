@@ -43,6 +43,7 @@ The following `loadspeed.js` script loads a specified URL (do not forget the htt
 
 ```javascript
 var page = require('webpage').create(),
+    system = require('system'),
     t, address;
 
 if (system.args.length === 1) {
