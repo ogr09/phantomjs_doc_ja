@@ -49,6 +49,9 @@ http://pavangaikwad.com/headless-browsers/
 Web Performance Testing With PhantomJS by Wesley Hales (Aug 16, 2012)<br/>
 http://wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS/
 
+Webscraping with CasperJS and PhantomJS by Mike Subelsky (Aug 9, 2012)<br/>
+http://www.subelsky.com/2012/08/webscraping-with-casperjs-and-phantomjs.html
+
 Search engine optimization (Aug 8, 2012)<br/>
 http://www.meteor.com/blog/2012/08/08/search-engine-optimization
 
@@ -61,6 +64,9 @@ http://ariya.ofilabs.com/2012/07/cloud-phantomjs-with-ironworker.html
 Unit Testing Improvements in ReSharper 7 by Dmitri Nesteruk (Jul 27, 2012)<br/>
 http://blogs.jetbrains.com/dotnet/2012/07/unit-testing-improvements-in-resharper-7/
 
+Scraping Adsense Ads with PhantomJS by Gary Sieling (Jul 20, 2012)<br/>
+http://garysieling.com/blog/scraping-adsense-ads-with-phantomjs
+
 Serverless PhantomJS with IronWorker by Chad Arimura (Jul 11, 2012)<br/>
 http://blog.iron.io/2012/07/phantomjs-in-2-minutes.html
 
@@ -69,6 +75,9 @@ http://www.federicosilva.net/2012/07/run-js-tests-without-browser-from-xunit.htm
 
 PhantomJS 1.6 “Lavender” by Ariya Hidayat (Jun 23, 2012)<br/>
 http://ariya.ofilabs.com/2012/06/phantomjs-1-6-lavender.html
+
+Screen Scraping with Node.js & PhantomJS by Tilo Mitra (Jun 21, 2012)<br/>
+http://net.tutsplus.com/tutorials/javascript-ajax/web-scraping-with-node-js/
 
 Running Mocha browser tests in TeamCity by Richard Dingwall (Jun 17, 2012)<br/>
 http://richarddingwall.name/2012/06/17/running-mocha-browser-tests-in-teamcity/
