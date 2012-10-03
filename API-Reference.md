@@ -2,8 +2,8 @@ _**Applies to:** PhantomJS 1.7_
 
 **Note:** This page serves as a reference. To learn step-by-step on how to use PhantomJS, please refer to the [[Quick Start guide|Quick Start]].
 
-Assuming PhantomJS is [built](http://phantomjs.org/build.html) and its executable is place somewhere in the PATH, it can invoked as follows:
-    `phantomjs [options] somescript.js [argument [argument ...]]`
+Assuming PhantomJS is [built](http://phantomjs.org/build.html) and its executable is place somewhere in the PATH, it can be invoked as follows:
+    `phantomjs [options] somescript.js [arg1 [arg2 [...]]]`
 
 The script code will be executed as if it running in a web browser with an empty page. Since PhantomJS is headless, there will not be anything visible shown up on the screen.
 
@@ -489,7 +489,7 @@ By implementing this callback, you will be notified when a navigation event happ
  * `url`: The target URL of this navigation event
  * `type`: Possible values include: `"Undefined"`, `"LinkClicked"`, `"FormSubmitted"`, `"BackOrForward"`, `"Reload"`, `"FormResubmitted"`, `"Other"`
  * `willNavigate`: `true` if navigation will happen, `false` if it is locked (by `page.navigationLocked`)
- * `main`: `true` if this events comes from the main frame, `false` if it comes from an iframe of some other sub-frame.
+ * `main`: `true` if this event comes from the main frame, `false` if it comes from an iframe of some other sub-frame.
 
 Example:
 ```javascript
@@ -582,7 +582,7 @@ Read-only. An object providing information about the operating system, including
 #### env {object} ####
 Queries and returns a list of key-value pairs representing the environment variables.
 
-The following example demonstrates the same functionlity as the Unix `printenv` utility or the Windows `set` command:
+The following example demonstrates the same functionality as the Unix `printenv` utility or the Windows `set` command:
 ```javascript
 var env = require("system").env;
 Object.keys(env).forEach(function(key) {
