@@ -1,5 +1,5 @@
+<a id="in-the-family" />
 ## In the Family ##
-
 The following projects are based on PhantomJS. They provide extra functionalities.
 
  * [Casper.js](https://casperjs.org) is useful to build scripted navigation and testing.
@@ -16,6 +16,8 @@ The following projects are based on PhantomJS. They provide extra functionalitie
 
  * [WebSpecter](https://github.com/jgonera/webspecter) is a BDD-style acceptance test framework for web applications.
 
+
+<a id="screenshot-utilities" />
 ## Screenshot Utilities ##
 
 Several page capture projects utilizing PhantomJS:
@@ -35,7 +37,7 @@ Several page capture projects utilizing PhantomJS:
  * [screenshot-webservice](https://github.com/gre/screenshot-webservice) (uses Play2).
 
 
-
+<a id="tools" />
 ## Tools ##
 
  * [Compass Magick](https://github.com/StanAngeloff/compass-magick) is a dynamic image generation for Compass using (among others) PhantomJS.
