@@ -128,6 +128,33 @@ page.clipRect = { top: 14, left: 3, width: 400, height: 300 };
 #### `content` {string} ####
 This property stores the content of the web page, enclosed in HTML/XML element. Setting the property will effectively reload the web page with the new content.
 
+<a name="webpage-customHeaders" />
+#### `customHeaders` {object} ####
+**Introduced:** PhantomJS 1.5  
+This property specifies additional HTTP request headers that will be sent to the server for every request issued (for pages _and_ resources). The default value is an empty object `{}`. Headers names and values get encoded in US-ASCII before being sent. Please note that the 'User-Agent' should be set using the <a href="#wiki-webpage-settings">webpage settings</a>, setting the 'User-Agent' property in this property will overwrite the value set via webpage settings</p>
+
+Example:
+```javascript
+// Send two additional headers "X-Test" and "DNT".
+page.customHeaders = {
+    "X-Test": "foo",
+    "DNT": "1"
+};
+```
+
+Do you only want these `customHeaders` passed to the initial [`page.open`](#webpage-open) request? Here's the recommended workaround:
+```javascript
+// Send two additional headers "X-Test" and "DNT".
+page.customHeaders = {
+    "X-Test": "foo",
+    "DNT": "1"
+};
+page.onInitialized = function() {
+    page.customHeaders = {};
+};
+```
+
+
 <a name="webpage-libraryPath" />
 #### `libraryPath` {string} ####
 This property stores the path which is used by [`injectJs`](#webpage-injectJs) function to
@@ -171,6 +198,10 @@ This property stores various settings of the web page:
 
 **Note:** The `settings` apply only during the call to the `page.open(...)` function. Subsequent modification of the `settings` object will not have any impact.
 
+<a name="webpage-url" />
+#### `url` {string} ####
+**Introduced:** PhantomJS 1.7  
+Read-only. This property gets the current URL of the page.
 
 <a name="webpage-viewportSize" />
 #### `viewportSize` {object} ####
@@ -192,31 +223,6 @@ Example:
 // Create a thumbnail preview with 25% zoom
 page.zoomFactor = 0.25;
 page.render('capture.png');
-```
-
-<a name="webpage-customHeaders" />
-#### `customHeaders` {object} ####
-This property specifies additional HTTP request headers that will be sent to the server for every request issued (for pages _and_ resources). The default value is an empty object `{}`. Headers names and values get encoded in US-ASCII before being sent. Please note that the 'User-Agent' should be set using the <a href="#wiki-webpage-settings">webpage settings</a>, setting the 'User-Agent' property in this property will overwrite the value set via webpage settings</p>
-
-Example:
-```javascript
-// Send two additional headers "X-Test" and "DNT".
-page.customHeaders = {
-    "X-Test": "foo",
-    "DNT": "1"
-};
-```
-
-Do you only want these `customHeaders` passed to the initial [`page.open`](#webpage-open) request? Here's the recommended workaround:
-```javascript
-// Send two additional headers "X-Test" and "DNT".
-page.customHeaders = {
-    "X-Test": "foo",
-    "DNT": "1"
-};
-page.onInitialized = function() {
-    page.customHeaders = {};
-};
 ```
 
 
