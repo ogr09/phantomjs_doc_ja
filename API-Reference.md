@@ -379,7 +379,7 @@ page.onCallback = function(data) {
 <a name="webpage-onClosing" />
 #### onClosing ####
 **Introduced:** PhantomJS 1.7  
-This callback is invoked whenever the top-level page or one of its child pages (e.g. created via [`window.open`](https://developer.mozilla.org/docs/DOM/window.open)) are closed.  It takes one argument, which is a reference to the page that is closing.
+This callback is invoked whenever the top-level page or one of its child pages (e.g. created via [`window.open`](https://developer.mozilla.org/docs/DOM/window.open)) are closed.  It takes one argument, `closingPage`, which is a reference to the page that is closing. Once the `onClosing` handler has finished executing (returned), the WebPage object `closingPage` will become invalid.
 
 Example:
 ```javascript
