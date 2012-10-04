@@ -126,7 +126,7 @@ page.clipRect = { top: 14, left: 3, width: 400, height: 300 };
 
 <a name="webpage-content" />
 #### `content` {string} ####
-This property stores the content of the web page, enclosed in HTML/XML element. Setting the property will effectively reload the web page with the new content.
+This property stores the content of the web page (main frame), enclosed in an HTML/XML element. Setting the property will effectively reload the web page with the new content.
 
 <a name="webpage-customHeaders" />
 #### `customHeaders` {object} ####
@@ -155,6 +155,21 @@ page.onInitialized = function() {
 ```
 
 
+<a name="webpage-frameContent" />
+#### `frameContent` {string} ####
+**Introduced:** PhantomJS 1.7  
+This property stores the content of the web page's _currently active_ frame (which may or may not be the main frame), enclosed in an HTML/XML element. Setting the property will effectively reload the web page with the new content.
+
+<a name="webpage-framePlainText" />
+#### `framePlainText` {string} ####
+**Introduced:** PhantomJS 1.7  
+Read-only. This property stores the content of the web page's _currently active_ frame (which may or may not be the main frame) as plain text &mdash; no element tags!
+
+<a name="webpage-frameUrl" />
+#### `frameUrl` {string} ####
+**Introduced:** PhantomJS 1.7  
+Read-only. This property gets the current URL of the web page's _currently active_ frame (which may or may not be the main frame).
+
 <a name="webpage-libraryPath" />
 #### `libraryPath` {string} ####
 This property stores the path which is used by [`injectJs`](#webpage-injectJs) function to
@@ -182,6 +197,10 @@ Example:
 page.paperSize = { width: "5in", height: "7in", border: "20px" };
 ```
 
+<a name="webpage-plainText" />
+#### `plainText` {string} ####
+Read-only. This property stores the content of the web page (main frame) as plain text &mdash; no element tags!
+
 <a name="webpage-settings" />
 #### `settings` {object} ####
 This property stores various settings of the web page:
@@ -201,7 +220,7 @@ This property stores various settings of the web page:
 <a name="webpage-url" />
 #### `url` {string} ####
 **Introduced:** PhantomJS 1.7  
-Read-only. This property gets the current URL of the page.
+Read-only. This property gets the current URL of the web page (main frame).
 
 <a name="webpage-viewportSize" />
 #### `viewportSize` {object} ####
