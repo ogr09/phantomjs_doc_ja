@@ -7,6 +7,9 @@
 Testing JavaScript with PhantomJS and YUI Test by Ryuichi Okumura (Sep 30, 2012)<br/>
 http://www.okuryu.com/2012/09/30/testing-javascript-with-phantomjs-and-yui-test.html
 
+SEO and JavaScript with PhantomJS server-side rendering by James Wanga (Sep 30, 2012)<br/>
+http://thedigitalself.com/blog/seo-and-javascript-with-phantomjs-server-side-rendering
+
 Headless Tests with Buster.js and Phantom.js by Knut Haugen (Sep 28, 2012)<br/>
 http://blog.knuthaugen.no/2012/09/headless-tests-with-buster-and-phantom/
 
