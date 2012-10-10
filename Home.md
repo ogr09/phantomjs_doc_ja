@@ -14,7 +14,7 @@ Note: the wiki content is still being migrated. It may not complete yet.
 * [[Screen Capture|Screen Capture]]
 * [[Network Monitoring|Network Monitoring]]
 * [[Page Automation|Page Automation]]
-* [[API Reference|API Reference]] ([old docs](http://code.google.com/p/phantomjs/wiki/Interface))
+* [[API Reference|API Reference]]
 
 ## Explore
 
