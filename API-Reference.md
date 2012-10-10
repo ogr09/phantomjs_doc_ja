@@ -30,7 +30,7 @@ Alternatively, since PhantomJS 1.3, you can also utilize a JavaScript Object Not
  * `--config=/path/to/config.json`
 
 The contents of `config.json` should be a standalone JavaScript object. Keys are de-dashed, camel-cased equivalents of the other supported command-line options.  Values are their JavaScript equivalents: "yes/"no" values translate into `true`/`false` Boolean values, numbers remain numbers, strings remain strings. For example:
-```javascript
+```js
 {
     /* Same as: --ignore-ssl-errors=yes */
     "ignoreSslErrors": true,
@@ -57,6 +57,16 @@ The interface with various PhantomJS functionalities is carried out using a new 
 **Stability:** _DEPRECATED_ - Use [`system.args`](#system-args) from the [System module](#system-module)  
 Read-only. An array of the arguments passed to the script.
 
+<a name="phantom-cookies" />
+#### `cookies` {array} ####
+**Introduced:** PhantomJS 1.7  
+Get or set cookies for any domain (though, for setting, use of [`phantom.addCookie`](#phantom-addCookie) is preferred). These cookies are stored in the CookieJar and will be supplied when opening pertinent WebPages. This array will be pre-populated by any existing cookie data stored in the cookie file specified in the PhantomJS [startup config/command-line options](#command-line-options), if any.
+
+<a name="phantom-cookiesEnabled" />
+#### `cookiesEnabled` {boolean} ####
+**Introduced:** PhantomJS 1.7  
+Controls whether the CookieJar is enabled or not.  Defaults to `true`.
+
 <a name="phantom-libraryPath" />
 #### `libraryPath` {string} ####
 This property stores the path which is used by [`injectJs`](#phantom-injectJs) function to resolve the script name. Initially it is set to the location of the script invoked by PhantomJS.
@@ -72,6 +82,37 @@ Read-only. The version of the executing PhantomJS instance. Example value: `{ ma
 
 <a name="phantom-functions" />
 ### Functions ###
+
+<a name="phantom-addCookie" />
+#### `addCookie(cookie)` {boolean} ####
+**Introduced:** PhantomJS 1.7  
+Add a cookie to the CookieJar.  Returns `true` if successfully added, otherwise `false`. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
+
+Example:
+```js
+phantom.addCookie({
+    "name": "Added-Cookie-Name",
+    "value": "Added-Cookie-Value",
+    "domain": ".google.com"
+});
+```
+
+
+<a name="phantom-clearCookies" />
+#### `clearCookies()` {void} ####
+**Introduced:** PhantomJS 1.7  
+Delete all cookies in the CookieJar. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
+
+<a name="phantom-deleteCookie" />
+#### `deleteCookie(cookieName)` {boolean} ####
+**Introduced:** PhantomJS 1.7  
+Delete any cookies in the CookieJar with a "Name" property matching `cookieName`. Returns `true` if successfully deleted, otherwise `false`. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
+
+Example:
+```js
+phantom.deleteCookie("Added-Cookie-Name");
+```
+
 
 <a name="phantom-exit" />
 #### `exit(returnValue)` {void} ####
@@ -94,7 +135,7 @@ As of PhantomJS 1.7, however, users can reference their own modules from the fil
 <a name="require" />
 ## Function: `require` ##
 To support the Module API, a `require` function modeled after [CommonJS Modules' Require](http://wiki.commonjs.org/wiki/Modules/1.1.1#Require) is globally available. General usage:
-```javascript
+```js
 var server = require("webserver").create();
 var Awesome = require("MyAwesomeModule");
 Awesome.do();
@@ -103,12 +144,12 @@ Awesome.do();
 <a name="webpage-module" />
 ## Module: WebPage ##
 A `WebPage` object encapsulates a web page. It is usually instantiated using the following pattern:
-```javascript
+```js
 var page = require("webpage").create();
 ```
 
 **Note:** For backward compatibility with legacy PhantomJS applications, the constructor also remains exposed as a _deprecated_ global `WebPage` object:
-```javascript
+```js
 var page = new WebPage();
 ```
 
@@ -117,10 +158,10 @@ var page = new WebPage();
 
 <a name="webpage-clipRect" />
 #### `clipRect` {object} ####
-This property defines the rectangular area of the web page to be rasterized when [`render()`](#webpage-render) is invoked. If no clipping rectangle is set, [`render()`](#webpage-render) will process the entire web page.
+This property defines the rectangular area of the web page to be rasterized when [`WebPage#render()`](#webpage-render) is invoked. If no clipping rectangle is set, [`WebPage#render()`](#webpage-render) will process the entire web page.
 
 Example:
-```javascript
+```js
 page.clipRect = { top: 14, left: 3, width: 400, height: 300 };
 ```
 
@@ -128,13 +169,17 @@ page.clipRect = { top: 14, left: 3, width: 400, height: 300 };
 #### `content` {string} ####
 This property stores the content of the web page (main frame), enclosed in an HTML/XML element. Setting the property will effectively reload the web page with the new content.
 
+<a name="webpage-cookies" />
+#### `cookies` {array} ####
+Get or set cookies visible to the current URL (though, for setting, use of [`WebPage#addCookie`](#webpage-addCookie) is preferred). This array will be pre-populated by any existing cookie data visible to this URL that is stored in the CookieJar, if any. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
+
 <a name="webpage-customHeaders" />
 #### `customHeaders` {object} ####
 **Introduced:** PhantomJS 1.5  
-This property specifies additional HTTP request headers that will be sent to the server for every request issued (for pages _and_ resources). The default value is an empty object `{}`. Headers names and values get encoded in US-ASCII before being sent. Please note that the 'User-Agent' should be set using the <a href="#wiki-webpage-settings">webpage settings</a>, setting the 'User-Agent' property in this property will overwrite the value set via webpage settings</p>
+This property specifies additional HTTP request headers that will be sent to the server for every request issued (for pages _and_ resources). The default value is an empty object `{}`. Headers names and values get encoded in US-ASCII before being sent. Please note that the 'User-Agent' should be set using the [`WebPage#settings`](#webpage-settings)</a>, setting the 'User-Agent' property in this property will _overwrite_ the value set via `WebPage#settings`.
 
 Example:
-```javascript
+```js
 // Send two additional headers "X-Test" and "DNT".
 page.customHeaders = {
     "X-Test": "foo",
@@ -143,7 +188,7 @@ page.customHeaders = {
 ```
 
 Do you only want these `customHeaders` passed to the initial [`page.open`](#webpage-open) request? Here's the recommended workaround:
-```javascript
+```js
 // Send two additional headers "X-Test" and "DNT".
 page.customHeaders = {
     "X-Test": "foo",
@@ -172,7 +217,7 @@ Read-only. This property gets the current URL of the web page's _currently activ
 
 <a name="webpage-libraryPath" />
 #### `libraryPath` {string} ####
-This property stores the path which is used by [`injectJs`](#webpage-injectJs) function to
+This property stores the path which is used by [`WebPage#injectJs`](#webpage-injectJs) function to
 resolve the script name. Initially it is set to the location of the
 script invoked by PhantomJS.
 
@@ -185,7 +230,7 @@ This property defines whether navigation away from the page is permitted or not.
 This property defines the size of the web page when rendered as a PDF.
 
 The given object should be in one of the following two formats:
-````javascript
+````js
 { width: '200px', height: '300px', border: '0px' }
 { format: 'A4', orientation: 'portrait', border: '1cm' }
 ```
@@ -193,7 +238,7 @@ The given object should be in one of the following two formats:
 If no `paperSize` is defined, the size is defined by the web page. Supported dimension units are: `"mm"`, `"cm"`, `"in"`, `"px"`. No unit means `"px"`. Border is optional and defaults to `0`. Supported formats are: `"A3"`, `"A4"`, `"A5"`, `"Legal"`, `"Letter"`, `"Tabloid"`. Orientation (`"portrait"`, `"landscape"`) is optional and defaults to `"portrait"`.
 
 Example:
-```javascript
+```js
 page.paperSize = { width: "5in", height: "7in", border: "20px" };
 ```
 
@@ -215,7 +260,7 @@ This property stores various settings of the web page:
  * `webSecurityEnabled` defines whether web security should be
   enabled or not (defaults to `true`).
 
-**Note:** The `settings` apply only during the call to the `page.open(...)` function. Subsequent modification of the `settings` object will not have any impact.
+**Note:** The `settings` apply only during the initial call to the [`WebPage#open(...)`](#webpage-open) function. Subsequent modification of the `settings` object will not have any impact.
 
 <a name="webpage-url" />
 #### `url` {string} ####
@@ -224,21 +269,21 @@ Read-only. This property gets the current URL of the web page (main frame).
 
 <a name="webpage-viewportSize" />
 #### `viewportSize` {object} ####
-This property sets the size of the viewport for the layout process. It is useful to set the preferred initial size before loading the page, e.g. to choose between `"landscape"` vs `"portrait"`.</p>
+This property sets the size of the viewport for the layout process. It is useful to set the preferred initial size before loading the page, e.g. to choose between `"landscape"` vs `"portrait"`.
 
 Because PhantomJS is headless (nothing is shown), `viewportSize` effectively simulates the size of the window like in a traditional browser.
 
 Example:
-```javascript
+```js
 page.viewportSize = { width: 480, height: 800 };
 ```
 
 <a name="webpage-zoomFactor" />
 #### `zoomFactor` {number} ####
-This property specifies the scaling factor for the `render` and `renderBase64` functions. The default is `1`, i.e. 100% zoom.</p>
+This property specifies the scaling factor for the [`WebPage#render()`](#webpage-render) and [`WebPage#renderBase64()`](#webpage-renderBase64) functions. The default is `1`, i.e. 100% zoom.
 
 Example:
-```javascript
+```js
 // Create a thumbnail preview with 25% zoom
 page.zoomFactor = 0.25;
 page.render('capture.png');
@@ -249,6 +294,25 @@ page.render('capture.png');
 <a name="webpage-functions" />
 ### Functions ###
 
+<a name="webpage-addCookie" />
+#### `addCookie(cookie)` {boolean} ####
+**Introduced:** PhantomJS 1.7  
+Add a cookie to the page.  If the domains do not match, the cookie will be ignored/rejected. Returns `true` if successfully added, otherwise `false`.
+
+Example:
+```js
+page.addCookie({
+    "name": "Added-Cookie-Name",
+    "value": "Added-Cookie-Value"
+});
+```
+
+
+<a name="webpage-clearCookies" />
+#### `clearCookies()` {void} ####
+**Introduced:** PhantomJS 1.7  
+Delete all cookies visible to the current URL.
+
 <a name="webpage-close" />
 #### `close()` {void} ####
 **Introduced:** PhantomJS 1.7  
@@ -256,12 +320,23 @@ Close the page and releases the memory heap associated with it. Do not use the p
 
 Due to some technical limitations, the web page object might not be completely garbage collected. This is often encountered when the same object is used over and over again. Calling this function may stop the increasing heap allocation.
 
+<a name="webpage-deleteCookie" />
+#### `deleteCookie(cookieName)` {boolean} ####
+**Introduced:** PhantomJS 1.7  
+Delete any cookies visible to the current URL with a "Name" property matching `cookieName`. Returns `true` if successfully deleted, otherwise `false`.
+
+Example:
+```js
+page.deleteCookie("Added-Cookie-Name");
+```
+
+
 <a name="webpage-evaluate" />
 #### `evaluate(function, arg1, arg2, ...)` {object} ####
 Evaluates the given function in the context of the web page. The execution is sandboxed, the web page has no access to the `phantom` object and it can't probe its own setting.
 
 Example:
-```javascript
+```js
 var page = require('webpage').create();
 page.open('http://m.bing.com', function(status) {
     var title = page.evaluate(function() {
@@ -273,7 +348,7 @@ page.open('http://m.bing.com', function(status) {
 ```
 
 As of PhantomJS 1.6, JSON-serializable arguments can be passed to the function. In the following example, the text value of a DOM element is extracted. The following example achieves the same end goal as the previous example but the element is chosen based on a selector which is passed to the `evaluate` call:
-```javascript
+```js
 var page = require('webpage').create();
 page.open('http://m.bing.com', function(status) {
     var title = page.evaluate(function(s) {
@@ -296,7 +371,7 @@ Evaluates the given function in the context of the web page without blocking the
 Includes external script from the specified `url` (usually a remote location) and executes the `callback` upon completion.
 
 Example:
-```javascript
+```js
 page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js", function() {
     /* jQuery is loaded, now manipulate the DOM */
 });
@@ -308,10 +383,10 @@ Injects external script code from the specified file. If the file cannot be foun
 
 <a name="webpage-open" />
 #### `open(url, callback)` {void} ####
-Opens the `url` and loads it to the page. Once the page is loaded, the optional `callback` is called using [`page.onLoadFinished`](#webpage-onLoadFinished), and also provides the page status to the function (`"success"` or `"fail"`).
+Opens the `url` and loads it to the page. Once the page is loaded, the optional `callback` is called using [`WebPage#onLoadFinished`](#webpage-onLoadFinished), and also provides the page status to the function (`"success"` or `"fail"`).
 
 Example:
-```javascript
+```js
 page.open('http://www.google.com/', function(status) {
     console.log("Status: " + status);
     // Do other things here...
@@ -320,7 +395,7 @@ page.open('http://www.google.com/', function(status) {
 
 <a name="webpage-release" />
 #### `release()` {void} ####
-**Stability:** _DEPRECATED_ - Use [`page.close()`](#webpage-close))  
+**Stability:** _DEPRECATED_ - Use [`WebPage#close()`](#webpage-close))  
 Releases memory heap associated with this page. Do not use the page instance after calling this.
 
 Due to some technical limitations, the web page object might not be completely garbage collected. This is often encountered when the same object is used over and over again. Calling this function may stop the increasing heap allocation.
@@ -361,7 +436,7 @@ Uploads the specified file (`filename`) to the form element associated with the 
 This function is used to automate the upload of a file, which is usually handled with a file dialog in a traditional browser. Since there is no dialog in this headless mode, such an upload mechanism is handled via this special function instead.
 
 Example:
-```javascript
+```js
 page.uploadFile("input[name=image]", "/path/to/some/photo.jpg");
 ```
 
@@ -374,7 +449,7 @@ page.uploadFile("input[name=image]", "/path/to/some/photo.jpg");
 This callback is invoked when there is a JavaScript `alert` on the web page. The only argument passed to the callback is the string for the message. There is no return value expected from the callback handler.
 
 Example:
-```javascript
+```js
 page.onAlert = function(msg) {
     console.log("ALERT: " + msg);
 };
@@ -389,7 +464,7 @@ This callback is invoked when there is a JavaScript `window.callPhantom` call ma
 Although there are many possible use cases for this inversion of control, the primary one so far is to prevent the need for a PhantomJS script to be continually polling for some variable on the web page.
 
 Example:
-```javascript
+```js
 page.onCallback = function(data) {
     console.log("CALLBACK: " + JSON.stringify(data));
 };
@@ -401,7 +476,7 @@ page.onCallback = function(data) {
 This callback is invoked whenever the top-level page or one of its child pages (e.g. created via [`window.open`](https://developer.mozilla.org/docs/DOM/window.open)) are closed.  It takes one argument, `closingPage`, which is a reference to the page that is closing. Once the `onClosing` handler has finished executing (returned), the WebPage object `closingPage` will become invalid.
 
 Example:
-```javascript
+```js
 page.onClosing = function(closingPage) {
     if (closingPage === page) {
         console.log("The top-level page is closing!");
@@ -418,7 +493,7 @@ page.onClosing = function(closingPage) {
 This callback is invoked when there is a JavaScript `confirm` on the web page. The only argument passed to the callback is the string for the message. The return value of the callback handler can be either `true` or `false`, which are equivalent to pressing the "OK" or "Cancel" buttons presented in a JavaScript `confirm`, respectively.
 
 Example:
-```javascript
+```js
 page.onConfirm = function(msg) {
     console.log("CONFIRM: " + msg);
 	return true;  // `true` === pressing the "OK" button, `false` === pressing the "Cancel" button
@@ -433,7 +508,7 @@ This callback is invoked when there is a JavaScript `console` message on the web
 By default, `console` messages from the web page are not displayed. Using this callback is a typical way to redirect it.
 
 Example:
-```javascript
+```js
 page.onConsoleMessage = function(msg, lineNum, sourceId) {
     console.log("CONSOLE: " + msg + ' (from line #' + lineNum + ' in "' + sourceId + '")');
 };
@@ -445,7 +520,7 @@ page.onConsoleMessage = function(msg, lineNum, sourceId) {
 This callback is invoked when there is a JavaScript execution error. It is a good way to catch problems when evaluating a script in the web page context. The arguments passed to the callback are the error message and the stack trace (as an Array).
 
 Example:
-```javascript
+```js
 page.onError = function(msg, trace) {
 	var msgStack = ["ERROR: " + msg];
 	if (trace) {
@@ -464,7 +539,7 @@ page.onError = function(msg, trace) {
 This callback is invoked _after_ the web page is created but _before_ a URL is loaded. The callback may be used to change global objects.
 
 Example:
-```javascript
+```js
 page.onInitialized = function() {
     page.evaluate(function() {
         document.addEventListener("DOMContentLoaded", function() {
@@ -479,10 +554,10 @@ page.onInitialized = function() {
 **Introduced:** PhantomJS 1.2  
 This callback is invoked when the page finishes the loading. It may accept a single argument indicating the page's `status`: `"success"` if no network errors occurred, otherwise `"fail"`.
 
-Also see [`page.open`](#webpage-open) for an alternate hook for the `onLoadFinished` callback.
+Also see [`WebPage#open`](#webpage-open) for an alternate hook for the `onLoadFinished` callback.
 
 Example:
-```javascript
+```js
 page.onLoadFinished = function(status) {
     console.log("Status: " + status);
 	// Do other things here...
@@ -495,7 +570,7 @@ page.onLoadFinished = function(status) {
 This callback is invoked when the page starts the loading. There is no argument passed to the callback.
 
 Example:
-```javascript
+```js
 page.onLoadStarted = function() {
     console.log("Now loading...");
 };
@@ -504,14 +579,14 @@ page.onLoadStarted = function() {
 <a name="webpage-onNavigationRequested" />
 #### onNavigationRequested ####
 **Introduced:** PhantomJS 1.6  
-By implementing this callback, you will be notified when a navigation event happens and know if it will be blocked (by `page.navigationLocked`). Takes the following arguments:
+By implementing this callback, you will be notified when a navigation event happens and know if it will be blocked (by [`WebPage#navigationLocked`](#webpage-navigationLocked)). Takes the following arguments:
  * `url`: The target URL of this navigation event
  * `type`: Possible values include: `"Undefined"`, `"LinkClicked"`, `"FormSubmitted"`, `"BackOrForward"`, `"Reload"`, `"FormResubmitted"`, `"Other"`
- * `willNavigate`: `true` if navigation will happen, `false` if it is locked (by `page.navigationLocked`)
+ * `willNavigate`: `true` if navigation will happen, `false` if it is locked (by [`WebPage#navigationLocked`](#webpage-navigationLocked))
  * `main`: `true` if this event comes from the main frame, `false` if it comes from an iframe of some other sub-frame.
 
 Example:
-```javascript
+```js
 page.onNavigationRequested = function(url, type, willNavigate, main) {
     console.log("Trying to navigate to: " + url);
     console.log("Caused by: " + type);
@@ -526,7 +601,7 @@ page.onNavigationRequested = function(url, type, willNavigate, main) {
 This callback is invoked when there is a JavaScript `prompt` on the web page. The arguments passed to the callback are the string for the message (`msg`) and the default value (`defaultVal`) for the prompt answer. The return value of the callback handler should be a string.
 
 Example:
-```javascript
+```js
 page.onPrompt = function(msg, defaultVal) {
     if (msg === "What's your name?") {
 	    return "PhantomJS";
@@ -541,7 +616,7 @@ page.onPrompt = function(msg, defaultVal) {
 This callback is invoked when the page requests a resource. The only argument to the callback is the `request` metadata object.
 
 Example:
-```javascript
+```js
 page.onResourceRequested = function(request) {
     console.log("Request (#" + request.id + "): " + JSON.stringify(request));
 };
@@ -555,7 +630,7 @@ This callback is invoked when the a resource requested by the page is received. 
 If the resource is large and sent by the server in multiple chunks, `onResourceReceived` will be invoked for every chunk received by PhantomJS.
 
 Example:
-```javascript
+```js
 page.onResourceReceived = function(response) {
     console.log('Response (#' + response.id + ', stage "' + response.stage + '"): ' + JSON.stringify(response));
 };
@@ -567,7 +642,7 @@ page.onResourceReceived = function(response) {
 This callback is invoked when the URL changes, e.g. as it navigates away from the current URL. The only argument to the callback is the new `targetUrl` string.
 
 Example:
-```javascript
+```js
 page.onUrlChanged = function(targetUrl) {
     var currentUrl = page.evaluate(function() {
 		return window.location.href;
@@ -582,7 +657,7 @@ page.onUrlChanged = function(targetUrl) {
 A set of functions to access system-level functionalities is available, modeled after the [CommonJS System proposal](http://wiki.commonjs.org/wiki/System).
 
 To start using, you must `require` a reference to the `system` module:
-```javascript
+```js
 var system = require('system');
 ```
 
@@ -602,7 +677,7 @@ Read-only. An object providing information about the operating system, including
 Queries and returns a list of key-value pairs representing the environment variables.
 
 The following example demonstrates the same functionality as the Unix `printenv` utility or the Windows `set` command:
-```javascript
+```js
 var env = require("system").env;
 Object.keys(env).forEach(function(key) {
     console.log(key + "=" + env[key]);
@@ -614,7 +689,7 @@ Object.keys(env).forEach(function(key) {
 Queries and returns a list of the command-line arguments.  The first one is always the script name, which is then followed by the subsequent arguments.
 
 The following example prints all of the command-line arguments:
-```javascript
+```js
 var args = require("system").args;
 if (args.length === 1) {
     console.log("Try to pass some arguments when invoking this script!");
@@ -631,7 +706,7 @@ else {
 A set of API functions is available to access files and directories, modeled after the [CommonJS Filesystem proposal](http://wiki.commonjs.org/wiki/Filesystem).
 
 To start using, you must `require` a reference to the `fs` module:
-```javascript
+```js
 var fs = require("fs");
 ```
 
@@ -700,7 +775,7 @@ A `stream` object returned from the `fs.open(...)` function has the following fu
 Using an embedded web server module called [Mongoose](http://code.google.com/p/mongoose/), PhantomJS script can start a web server. This is intended for ease of communication between PhantomJS scripts and the outside world and is _not_ recommended for use as a general production server.
 
 Here is a simple example that always gives the same response regardless of the request:
-```javascript
+```js
 var server = require('webserver').create();
 var service = server.listen(8080, function(request, response) {
     response.statusCode = 200;
