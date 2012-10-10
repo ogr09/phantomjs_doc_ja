@@ -4,6 +4,9 @@
 
 ## 2012
 
+Web Page Screenshot with PhantomJS by Ariya Hidayat (Oct 9, 2012)<br/>
+http://ariya.ofilabs.com/2012/10/web-page-screenshot-with-phantomjs.html
+
 Testing JavaScript with PhantomJS and YUI Test by Ryuichi Okumura (Sep 30, 2012)<br/>
 http://www.okuryu.com/2012/09/30/testing-javascript-with-phantomjs-and-yui-test.html
 
