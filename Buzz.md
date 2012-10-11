@@ -4,6 +4,9 @@
 
 ## 2012
 
+PhantomJS at Mountain View JavaScript Meetup Group by Adrian Adkison (Oct 10, 2012)<br/>
+http://www.meetup.com/javascript-9/events/85021482/
+
 Web Page Screenshot with PhantomJS by Ariya Hidayat (Oct 9, 2012)<br/>
 http://ariya.ofilabs.com/2012/10/web-page-screenshot-with-phantomjs.html
 
