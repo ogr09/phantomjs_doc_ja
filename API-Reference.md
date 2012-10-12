@@ -481,9 +481,9 @@ page.onClosing = function(closingPage) {
     if (closingPage === page) {
         console.log("The top-level page is closing!");
     }
-	else {
-	    console.log("A child page is closing.");
-	}
+    else {
+        console.log("A child page is closing.");
+    }
 };
 ```
 
@@ -496,7 +496,7 @@ Example:
 ```js
 page.onConfirm = function(msg) {
     console.log("CONFIRM: " + msg);
-	return true;  // `true` === pressing the "OK" button, `false` === pressing the "Cancel" button
+    return true;  // `true` === pressing the "OK" button, `false` === pressing the "Cancel" button
 };
 ```
 
@@ -522,14 +522,14 @@ This callback is invoked when there is a JavaScript execution error. It is a goo
 Example:
 ```js
 page.onError = function(msg, trace) {
-	var msgStack = ["ERROR: " + msg];
-	if (trace) {
-		msgStack.push("TRACE:");
-		trace.forEach(function(t) {
-			msgStack.push(" -> " + t.file + ": " + t.line + (t.function ? " (in function '" + t.function + "')" : ""));
-		});
-	}
-	console.error(msgStack.join("\n"));
+    var msgStack = ["ERROR: " + msg];
+    if (trace) {
+        msgStack.push("TRACE:");
+        trace.forEach(function(t) {
+            msgStack.push(" -> " + t.file + ": " + t.line + (t.function ? " (in function '" + t.function + "')" : ""));
+        });
+    }
+    console.error(msgStack.join("\n"));
 };
 ```
 
@@ -543,8 +543,8 @@ Example:
 page.onInitialized = function() {
     page.evaluate(function() {
         document.addEventListener("DOMContentLoaded", function() {
-			console.log("DOM content has loaded.");
-		}, false);
+            console.log("DOM content has loaded.");
+        }, false);
     });
 };
 ```
@@ -560,7 +560,7 @@ Example:
 ```js
 page.onLoadFinished = function(status) {
     console.log("Status: " + status);
-	// Do other things here...
+    // Do other things here...
 };
 ```
 
@@ -590,8 +590,8 @@ Example:
 page.onNavigationRequested = function(url, type, willNavigate, main) {
     console.log("Trying to navigate to: " + url);
     console.log("Caused by: " + type);
-	console.log("Will actually navigate: " + willNavigate);
-	console.log("Sent from the page's main frame: " + main);
+    console.log("Will actually navigate: " + willNavigate);
+    console.log("Sent from the page's main frame: " + main);
 }
 ```
 
@@ -604,9 +604,9 @@ Example:
 ```js
 page.onPrompt = function(msg, defaultVal) {
     if (msg === "What's your name?") {
-	    return "PhantomJS";
-	}
-	return defaultVal;
+        return "PhantomJS";
+    }
+    return defaultVal;
 };
 ```
 
@@ -645,10 +645,10 @@ Example:
 ```js
 page.onUrlChanged = function(targetUrl) {
     var currentUrl = page.evaluate(function() {
-		return window.location.href;
-	});
-	console.log("Old URL: " + currentUrl);
-	console.log("New URL: " + targetUrl);
+        return window.location.href;
+    });
+    console.log("Old URL: " + currentUrl);
+    console.log("New URL: " + targetUrl);
 };
 ```
 
