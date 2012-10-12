@@ -120,7 +120,7 @@ Exits the program with the specified return value. If no return value is specifi
 
 <a name="phantom-injectJs" />
 #### `injectJs(filename)` {boolean} ####
-Injects external script code from the specified file. If the file cannot be found in the current directory, [`libraryPath`](#phantom-libraryPath) is used for additional look up. This function returns `true` if injection is successful, otherwise it returns `false`.
+Injects external script code from the specified file into the Phantom outer space. If the file cannot be found in the current directory, [`libraryPath`](#phantom-libraryPath) is used for additional look up. This function returns `true` if injection is successful, otherwise it returns `false`.
 
 <a name="module-api" />
 # Module API #
@@ -368,7 +368,7 @@ Evaluates the given function in the context of the web page without blocking the
 
 <a name="webpage-includeJs" />
 #### `includeJs(url, callback)` {void} ####
-Includes external script from the specified `url` (usually a remote location) and executes the `callback` upon completion.
+Includes external script from the specified `url` (usually a remote location) on the page and executes the `callback` upon completion.
 
 Example:
 ```js
@@ -379,7 +379,7 @@ page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"
 
 <a name="webpage-injectJs" />
 #### `injectJs(filename)` {boolean} ####
-Injects external script code from the specified file. If the file cannot be found in the current directory, `libraryPath` is used for additional look up. This function returns `true` if injection is successful, otherwise it returns `false`.
+Injects external script code from the specified file into the page (like [`WebPage#includeJs`](#webpage-includeJs), except that the file does not need to be accessible from the hosted page). If the file cannot be found in the current directory, `libraryPath` is used for additional look up. This function returns `true` if injection is successful, otherwise it returns `false`.
 
 <a name="webpage-open" />
 #### `open(url, callback)` {void} ####
