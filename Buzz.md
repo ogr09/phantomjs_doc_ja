@@ -4,6 +4,12 @@
 
 ## 2012
 
+Acceptance Testing Primer for Emberjs by Anthony Bull (Oct 15, 2012)<br/>
+http://thebullog.net/acceptance-testing-primer-for-emberjs/index.html
+
+Using PhantomJs to download jsFiddle.net code by Joe Kuan (Oct 10, 2012)<br/>
+http://joekuan.wordpress.com/2012/10/10/using-phantomjs-to-download-jsfiddle-net-code/
+
 PhantomJS at Mountain View JavaScript Meetup Group by Adrian Adkison (Oct 10, 2012)<br/>
 http://www.meetup.com/javascript-9/events/85021482/
 
