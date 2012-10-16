@@ -50,6 +50,8 @@ Several page capture projects utilizing PhantomJS:
 
  * [node-phantom](https://github.com/alexscheelmeyer/node-phantom) is a bridge between PhantomJS and Node.js.
 
+ * [phantomas](https://github.com/macbre/phantomas) is a web-performance metrics and hints generation tool.
+
  * [phantom-proxy](https://github.com/sheebz/phantom-proxy) provides a proxy interface for PhantomJS which runs inside of node.
 
  * [phantomjs-node](https://github.com/sgentle/phantomjs-node) provides PhantomJS bridge for Node.js applications.
