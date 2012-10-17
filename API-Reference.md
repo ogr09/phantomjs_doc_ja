@@ -420,14 +420,22 @@ Supported formats include:
  * JPEG
 
 <a name="webpage-sendEvent" />
-#### `sendEvent(type, mouseX, mouseY)` ####
-Sends an event to the web page.
-
-The first argument is the event type. Supported type are `"mouseup"`, `"mousedown"`, `"mousemove"`, and `"click"`. The next two arguments are optional but represent the mouse position for the event.
-
-As of now, only the left mouse button is considered pressed for the event. For `"mousemove"`, however, there is no button pressed (i.e. it is not dragging).
+#### `sendEvent(mouseEventType[, mouseX, mouseY, button="left"])` or `sendEvent(keyboardEventType, keyOrKeys)` ####
+Sends an event to the web page. [1.7 implementation source](https://github.com/ariya/phantomjs/blob/63e06cb/src/webpage.cpp#L1015).
 
 The events are not like synthetic [DOM events](http://www.w3.org/TR/DOM-Level-2-Events/events.html). Each event is sent to the web page as if it comes as part of user interaction.
+
+##### Mouse events
+
+The first argument is the event type. Supported types are `"mouseup"`, `"mousedown"`, `"mousemove"`, `"doubleclick"` and `"click"`. The next two arguments are optional but represent the mouse position for the event.
+
+The button parameter (defaults to `left`) specifies the button to push.
+
+For `"mousemove"`, however, there is no button pressed (i.e. it is not dragging).
+
+##### Keyboard events
+
+The first argument is the event type. The supported types are: `keyup`, `keypress` and `keydown`. The second parameter is a key (from [page.event.key](https://github.com/ariya/phantomjs/commit/cab2635e66d74b7e665c44400b8b20a8f225153a)), or a string.
 
 <a name="webpage-uploadFile" />
 #### `uploadFile(selector, filename)` ####
