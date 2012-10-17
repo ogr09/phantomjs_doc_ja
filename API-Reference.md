@@ -158,7 +158,7 @@ var page = new WebPage();
 
 <a name="webpage-clipRect" />
 #### `clipRect` {object} ####
-This property defines the rectangular area of the web page to be rasterized when [`WebPage#render()`](#webpage-render) is invoked. If no clipping rectangle is set, [`WebPage#render()`](#webpage-render) will process the entire web page.
+This property defines the rectangular area of the web page to be rasterized when [`WebPage#render`](#webpage-render) is invoked. If no clipping rectangle is set, [`WebPage#render`](#webpage-render) will process the entire web page.
 
 Example:
 ```js
@@ -187,7 +187,7 @@ page.customHeaders = {
 };
 ```
 
-Do you only want these `customHeaders` passed to the initial [`page.open`](#webpage-open) request? Here's the recommended workaround:
+Do you only want these `customHeaders` passed to the initial [`WebPage#open`](#webpage-open) request? Here's the recommended workaround:
 ```js
 // Send two additional headers "X-Test" and "DNT".
 page.customHeaders = {
@@ -260,7 +260,7 @@ This property stores various settings of the web page:
  * `webSecurityEnabled` defines whether web security should be
   enabled or not (defaults to `true`).
 
-**Note:** The `settings` apply only during the initial call to the [`WebPage#open(...)`](#webpage-open) function. Subsequent modification of the `settings` object will not have any impact.
+**Note:** The `settings` apply only during the initial call to the [`WebPage#open`](#webpage-open) function. Subsequent modification of the `settings` object will not have any impact.
 
 <a name="webpage-url" />
 #### `url` {string} ####
@@ -280,7 +280,7 @@ page.viewportSize = { width: 480, height: 800 };
 
 <a name="webpage-zoomFactor" />
 #### `zoomFactor` {number} ####
-This property specifies the scaling factor for the [`WebPage#render()`](#webpage-render) and [`WebPage#renderBase64()`](#webpage-renderBase64) functions. The default is `1`, i.e. 100% zoom.
+This property specifies the scaling factor for the [`WebPage#render`](#webpage-render) and [`WebPage#renderBase64`](#webpage-renderBase64) functions. The default is `1`, i.e. 100% zoom.
 
 Example:
 ```js
@@ -395,7 +395,7 @@ page.open('http://www.google.com/', function(status) {
 
 <a name="webpage-release" />
 #### `release()` {void} ####
-**Stability:** _DEPRECATED_ - Use [`WebPage#close()`](#webpage-close))  
+**Stability:** _DEPRECATED_ - Use [`WebPage#close`](#webpage-close))  
 Releases memory heap associated with this page. Do not use the page instance after calling this.
 
 Due to some technical limitations, the web page object might not be completely garbage collected. This is often encountered when the same object is used over and over again. Calling this function may stop the increasing heap allocation.
@@ -473,7 +473,7 @@ page.onCallback = function(data) {
 <a name="webpage-onClosing" />
 #### onClosing ####
 **Introduced:** PhantomJS 1.7  
-This callback is invoked whenever the top-level page or one of its child pages (e.g. created via [`window.open`](https://developer.mozilla.org/docs/DOM/window.open)) are closed.  It takes one argument, `closingPage`, which is a reference to the page that is closing. Once the `onClosing` handler has finished executing (returned), the WebPage object `closingPage` will become invalid.
+This callback is invoked when the `WebPage` object is being closed, either via [`WebPage#close`](#webpage-close) in the PhantomJS outer space or via [`window.close`](https://developer.mozilla.org/docs/DOM/window.close) in the page's client-side.  It is _not_ invoked when child/descendant pages are being closed unless you also hook them up individually. It takes one argument, `closingPage`, which is a reference to the page that is closing. Once the `onClosing` handler has finished executing (returned), the `WebPage` object `closingPage` will become invalid.
 
 Example:
 ```js
@@ -482,7 +482,7 @@ page.onClosing = function(closingPage) {
         console.log("The top-level page is closing!");
     }
     else {
-        console.log("A child page is closing.");
+        console.log("A child page is closing. URL: " + closingPage.url);
     }
 };
 ```
@@ -517,7 +517,7 @@ page.onConsoleMessage = function(msg, lineNum, sourceId) {
 <a name="webpage-onError" />
 #### onError ####
 **Introduced:** PhantomJS 1.5  
-This callback is invoked when there is a JavaScript execution error. It is a good way to catch problems when evaluating a script in the web page context. The arguments passed to the callback are the error message and the stack trace (as an Array).
+This callback is invoked when there is a JavaScript execution error. It is a good way to catch problems when evaluating a script in the web page context. The arguments passed to the callback are the error message and the stack trace [as an Array].
 
 Example:
 ```js
@@ -593,6 +593,22 @@ page.onNavigationRequested = function(url, type, willNavigate, main) {
     console.log("Will actually navigate: " + willNavigate);
     console.log("Sent from the page's main frame: " + main);
 }
+```
+
+<a name="webpage-onPageCreated" />
+#### onPageCreated ####
+**Introduced:** PhantomJS 1.7  
+This callback is invoked when a new child window (but _not_ deeper descendant windows) is created by the page, e.g. using [`window.open`](https://developer.mozilla.org/docs/DOM/window.open). In the PhantomJS outer space, this `WebPage` object will not yet have called its own [`WebPage#open`](#webpage-open) method yet and thus does not yet know its requested URL ([`WebPage#url`](#webpage-url)). Therefore, the most common purpose for utilizing a `WebPage#onPageCreated` callback is to decorate the page (e.g. hook up callbacks, etc.).
+
+Example:
+```js
+page.onPageCreated = function(newPage) {
+    console.log("A new child page was created! Its requested URL is not yet available, though.");
+    // Decorate
+    newPage.onClosing = function(closingPage) {
+        console.log("A child page is closing: " + closingPage.url);
+    };
+};
 ```
 
 <a name="webpage-onPrompt" />
@@ -760,12 +776,12 @@ Read-only. The current working directory.
 
 <a name="filesystem-stream" />
 #### `stream` object ####
-A `stream` object returned from the `fs.open(...)` function has the following functions:
+A `stream` object returned from the `fs.open` function has the following methods:
  * `read()`: Returns the content of the stream.
  * `readLine()`: Reads only a line from the stream and return it.
  * `write(data)`: Writes the string to the stream.
  * `writeLine(data)`: Writes the data as a line to the stream.
- * `flush()`: Flushes all pending input output.
+ * `flush()`: Flushes all pending input/output.
  * `close()`: Completes the stream operation.
 
 <a name="webserver-module" />
@@ -799,4 +815,4 @@ The `response` object should be used to create the response using the following 
  * `statusCode`: Sets the returned HTTP status code.
  * `write(data)`: Sends a chunk for the response body. Can be called multiple times.
  * `close()`: Closes the HTTP connection.
-      * To avoid the client detecting a connection drop, remember to use `write()` at least once. Sending an empty string (i.e. `write("")`) would be enough if the only aim is, for example, to return an HTTP status code of `200` (`"OK"`).
+      * To avoid the client detecting a connection drop, remember to use `write()` at least once. Sending an empty string (i.e. `response.write("")`) would be enough if the only aim is, for example, to return an HTTP status code of `200` (`"OK"`).
