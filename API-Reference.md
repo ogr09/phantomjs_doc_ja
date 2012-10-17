@@ -478,12 +478,7 @@ This callback is invoked when the `WebPage` object is being closed, either via [
 Example:
 ```js
 page.onClosing = function(closingPage) {
-    if (closingPage === page) {
-        console.log("The top-level page is closing!");
-    }
-    else {
-        console.log("A child page is closing. URL: " + closingPage.url);
-    }
+    console.log("The page is closing! URL: " + closingPage.url);
 };
 ```
 
