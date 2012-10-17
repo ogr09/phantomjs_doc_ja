@@ -5,7 +5,7 @@ You will have seen a message like this:
 > PhantomJS has crashed. Please file a bug report at https://code.google.com/p/phantomjs/issues/entry
 > and attach the crash dump file: /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp"
 
-## If you're using an official binary
+## If you're using an official binary ([downloaded](https://code.google.com/p/phantomjs/downloads/list) or installed via Homebrew)
 
 You can post the crash dump to an issue, but it will help us solve your problem more quickly if you convert the crash dump to a stack trace. Here's how.
 
