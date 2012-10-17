@@ -46,9 +46,9 @@ Then there is no point posting it - it is not useful for debugging in this form.
 
 ### OS X
 
-At the moment we don't have a good way obtain OS X stack traces. It would be great if someone could work on this.
+At the moment the process for obtaining OS X stack traces is not ideal. It would be great if someone could work on this.
 
-In the mean time, the following steps can be used to obtain a vaguely-useful trace. The trace must be generated on Linux, since we don't have a way of building the minidump_stacktrace program on OS X yet.
+In the mean time, the following steps can be used to obtain a somewhat useful trace. The trace must be generated on Linux, since we don't have a way of building the minidump_stacktrace program on OS X yet.
 
 1. Obtain the macosx symbol files from the [downloads page](https://code.google.com/p/phantomjs/downloads/list). Also download the linux symbols, as you will need to copy the minidump_stackwalk program from here.
 
