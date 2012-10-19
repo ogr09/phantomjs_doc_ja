@@ -4,6 +4,9 @@
 
 ## 2012
 
+Testing Google Analytics with PhantomJS by Nate Hunzaker (Oct 17, 2012)<br/>
+http://viget.com/extend/testing-google-analytics-with-phantomjs
+
 Acceptance Testing Primer for Emberjs by Anthony Bull (Oct 15, 2012)<br/>
 http://thebullog.net/acceptance-testing-primer-for-emberjs/index.html
 
