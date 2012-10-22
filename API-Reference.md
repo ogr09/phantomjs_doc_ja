@@ -176,7 +176,7 @@ Get or set cookies visible to the current URL (though, for setting, use of [`Web
 <a name="webpage-customHeaders" />
 #### `customHeaders` {object} ####
 **Introduced:** PhantomJS 1.5  
-This property specifies additional HTTP request headers that will be sent to the server for every request issued (for pages _and_ resources). The default value is an empty object `{}`. Headers names and values get encoded in US-ASCII before being sent. Please note that the 'User-Agent' should be set using the [`WebPage#settings`](#webpage-settings)</a>, setting the 'User-Agent' property in this property will _overwrite_ the value set via `WebPage#settings`.
+This property specifies additional HTTP request headers that will be sent to the server for every request issued (for pages _and_ resources). The default value is an empty object `{}`. Headers names and values get encoded in US-ASCII before being sent. Please note that the 'User-Agent' should be set using the [`WebPage#settings`](#webpage-settings), setting the 'User-Agent' property in this property will _overwrite_ the value set via `WebPage#settings`.
 
 Example:
 ```js
