@@ -21,7 +21,7 @@ Supported command-line options are:
  * `--max-disk-cache-size=size` limits the size of disk cache (in KB).
  * `--output-encoding=encoding` sets the encoding used for terminal output (default is `utf8`).
  * `--proxy=address:port` specifies the proxy server to use (e.g. `--proxy=192.168.1.42:8080`).
- * `--proxy-type=[http|socks5]` specifies the type of the proxy server.
+ * `--proxy-type=[http|socks5|none]` specifies the type of the proxy server (default is `http`).
  * `--script-encoding=encoding` sets the encoding used for the starting script (default is `utf8`).
  * `--version` or `-v` prints out the version of PhantomJS. _Halts immediately, will not run a script passed as argument._
  * `--web-security=[yes|no]` disables web security and allows cross-domain XHR (default is `yes`).
