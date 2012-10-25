@@ -43,6 +43,9 @@ http://joekuan.wordpress.com/2012/09/22/phantomjs-a-new-way-for-running-highchar
 Building Prime Time Episode Display App with PhantomJS by Justin Wehrman (Sep 18, 2012)<br/>
 http://blog.justinwehrman.com/building-prime-time-episode-display-app-with-phantomjs-the-code
 
+CSS Inliner with PhantomJS by Donald Lau (Sep 18, 2012)<br/>
+http://www.badassdon.com/2012/09/css-inliner-with-phantomjs/
+
 Creating Static Maps in OpenLayers using PhantomJS by Antonio Santiago (Sep 17, 2012)<br/>
 http://acuriousanimal.com/blog/2012/09/17/creating-static-maps-in-openlayers-using-phantomjs/
 
