@@ -22,6 +22,8 @@ The following projects are based on PhantomJS. They provide extra functionalitie
 
 Several page capture projects utilizing PhantomJS:
 
+ * [capturejs](https://github.com/superbrothers/capturejs), a command-line tool using Node.js
+
  * [phantomjs-screenshots](https://github.com/hggh/phantomjs-screenshots), powers [Screener demo](http://screener.brachium-system.net).
 
  * [django-screamshot](https://github.com/makinacorpus/django-screamshot) (uses Django and CasperJS).
