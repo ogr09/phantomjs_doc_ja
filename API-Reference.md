@@ -230,7 +230,7 @@ This property defines whether navigation away from the page is permitted or not.
 This property defines the size of the web page when rendered as a PDF.
 
 The given object should be in one of the following two formats:
-````js
+```js
 { width: '200px', height: '300px', border: '0px' }
 { format: 'A4', orientation: 'portrait', border: '1cm' }
 ```
