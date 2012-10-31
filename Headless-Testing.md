@@ -23,13 +23,15 @@ The following table summarizes the list of various test frameworks and the corre
 | [wru](https://github.com/WebReflection/wru) | built-in|
 | [YUITest](http://yuilibrary.com/projects/yuitest) | [Grover](https://github.com/davglass/grover), [phantomjs-yuitest](https://github.com/metafeather/phantomjs-yuitest) |
 
+PhantomJS includes [run-qunit](https://github.com/ariya/phantomjs/blob/master/examples/run-qunit.js) and [run-jasmine](https://github.com/ariya/phantomjs/blob/master/examples/run-jasmine.js) in its `examples` subdirectory. However, these are for illustration purposes, it lacks important reporting features necessary for real-world uses.
+
+## PhantomJS tailored testing
+
 In addition, there are [[projects|Related Projects]] which are built on top of PhantomJS to provide convenient high-level functionality for testing purposes:
 
 * [Casper.js](http://casperjs.org) is useful to build scripted navigation and testing
 * [Lotte](https://github.com/StanAngeloff/lotte) adds jQuery-like methods, chaining, and more assertion logic
 * [WebSpecter](https://github.com/jgonera/webspecter) is a BDD-style acceptance test framework for web applications
-
-PhantomJS includes [run-qunit](https://github.com/ariya/phantomjs/blob/master/examples/run-qunit.js) and [run-jasmine](https://github.com/ariya/phantomjs/blob/master/examples/run-jasmine.js) in its `examples` subdirectory. However, these are for illustration purposes, it lacks important reporting features necessary for real-world uses.
 
 ## Continuous Integration Systems
 
