@@ -13,6 +13,7 @@ PhantomJS comes with a lot of [included examples](https://github.com/ariya/phant
 * `scandir.js` lists all files in a directory and its subdirectories
 * `sleepsort.js` sorts integers and delays display depending on their values
 * `version.js` prints out PhantomJS version number
+* `page_events.js` prints out page events firing: useful to better grasp `page.on*` callbacks
 
 **Rendering/rasterization**
 
