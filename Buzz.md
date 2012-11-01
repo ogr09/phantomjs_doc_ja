@@ -4,6 +4,9 @@
 
 ## 2012
 
+Running Jasmine Tests With Phantom.js or Webdriver by JP (Oct 31, 2012)<br/>
+http://blog.jphpsf.com/2012/10/31/running-Jasmine-tests-with-Phantom-js-or-Webdriver
+
 Grabbing HTML source code with PhantomJS or CasperJS (Oct 24, 2012)<br/>
 http://techslides.com/grabbing-html-source-code-with-phantomjs-or-casperjs/
 
