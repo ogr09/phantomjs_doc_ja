@@ -4,6 +4,9 @@
 
 ## 2012
 
+Whatever It Takes by Parse.ly team (Nov 1, 2012)<br/>
+http://blog.parsely.com/post/34241210620/whatever-it-takes
+
 Running Jasmine Tests With Phantom.js or Webdriver by JP (Oct 31, 2012)<br/>
 http://blog.jphpsf.com/2012/10/31/running-Jasmine-tests-with-Phantom-js-or-Webdriver
 
