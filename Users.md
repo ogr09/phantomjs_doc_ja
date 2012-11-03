@@ -32,7 +32,7 @@ The following open-source projects are using PhantomJS as part of the testing wo
 
 [Pantera Commerce](http://www.panteracom.com) uses PhantomJS on Pantera Store to make large-scale e-commerce stores crawlable by search engines.
 
-[Parse.ly](http://parse.ly) uses PhantomJS to generate weekly digest e-mails to writers and editors that include personalized analytics about their content, summarizing pageviews, shares, and referrals. Source: [Whatever It Takes](http://blog.parsely.com/post/34241210620/whatever-it-takes), a technical blog post). Parse.ly also uses PhantomJS to capture news homepages for their news monitoring app, [Parse.ly News](http://news.parsely.com). Source: [Tweet from CTO](https://twitter.com/amontalenti/status/264388620176211968).
+[Parse.ly](http://parse.ly) uses PhantomJS to generate weekly digest e-mails to writers and editors that include personalized analytics about their content; built with d3.js, Jinja2 and the PhantomJS ``render()`` function. (Source: [Whatever It Takes](http://blog.parsely.com/post/34241210620/whatever-it-takes).) Parse.ly also uses PhantomJS to capture news homepages for their news monitoring app, [Parse.ly News](http://news.parsely.com). (Source: [Tweet from CTO](https://twitter.com/amontalenti/status/264388620176211968).)
 
 [Superius](http://www.superius.hr) uses PhantomJS for QUnit tests of their dynamically created mobile business web applications.
 
