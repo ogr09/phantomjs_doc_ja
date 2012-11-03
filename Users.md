@@ -3,6 +3,7 @@
 The following open-source projects are using PhantomJS as part of the testing workflow:
 
 * Modernizr
+* Bootstrap
 * CodeMirror
 * Ember.js
 * YUI3
