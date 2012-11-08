@@ -122,6 +122,29 @@ Exits the program with the specified return value. If no return value is specifi
 #### `injectJs(filename)` {boolean} ####
 Injects external script code from the specified file into the Phantom outer space. If the file cannot be found in the current directory, [`libraryPath`](#phantom-libraryPath) is used for additional look up. This function returns `true` if injection is successful, otherwise it returns `false`.
 
+
+<a name="phantom-callbacks" />
+### Callbacks ###
+
+<a name="phantom-onError" />
+#### `onError` ####
+**Introduced:** PhantomJS 1.5  
+This callback is invoked when there is a JavaScript execution error _not_ caught by a [`WebPage#onError`](#webpage-onError) handler. This is the closest it gets to having a global error handler in PhantomJS, and so it is a best practice to set this `onError` handler up in order to catch any unexpected problems. The arguments passed to the callback are the error message and the stack trace [as an Array].
+
+Example:
+```js
+phantom.onError = function(msg, trace) {
+    var msgStack = ["PHANTOM ERROR: " + msg];
+    if (trace) {
+        msgStack.push("TRACE:");
+        trace.forEach(function(t) {
+            msgStack.push(" -> " + (t.file || t.sourceURL) + ": " + t.line + (t.function ? " (in function '" + t.function + "')" : ""));
+        });
+    }
+    console.error(msgStack.join("\n"));
+};
+```
+
 <a name="module-api" />
 # Module API #
 The Module API is modeled after [CommonJS Modules](http://wiki.commonjs.org/wiki/Modules/1.1.1) is available. Up through PhantomJS 1.6, the only supported modules that were built in:
@@ -425,7 +448,7 @@ Sends an event to the web page. [1.7 implementation source](https://github.com/a
 
 The events are not like synthetic [DOM events](http://www.w3.org/TR/DOM-Level-2-Events/events.html). Each event is sent to the web page as if it comes as part of user interaction.
 
-##### Mouse events
+##### Mouse events #####
 
 The first argument is the event type. Supported types are `"mouseup"`, `"mousedown"`, `"mousemove"`, `"doubleclick"` and `"click"`. The next two arguments are optional but represent the mouse position for the event.
 
@@ -433,7 +456,7 @@ The button parameter (defaults to `left`) specifies the button to push.
 
 For `"mousemove"`, however, there is no button pressed (i.e. it is not dragging).
 
-##### Keyboard events
+##### Keyboard events #####
 
 The first argument is the event type. The supported types are: `keyup`, `keypress` and `keydown`. The second parameter is a key (from [page.event.key](https://github.com/ariya/phantomjs/commit/cab2635e66d74b7e665c44400b8b20a8f225153a)), or a string.
 
@@ -452,7 +475,7 @@ page.uploadFile("input[name=image]", "/path/to/some/photo.jpg");
 ### Callbacks ###
 
 <a name="webpage-onAlert" />
-#### onAlert ###
+#### `onAlert` ###
 **Introduced:** PhantomJS 1.0  
 This callback is invoked when there is a JavaScript `alert` on the web page. The only argument passed to the callback is the string for the message. There is no return value expected from the callback handler.
 
@@ -464,7 +487,7 @@ page.onAlert = function(msg) {
 ```
 
 <a name="webpage-onCallback" />
-#### onCallback ####
+#### `onCallback` ####
 **Stability:** _EXPERIMENTAL_  
 **Introduced:** PhantomJS 1.6  
 This callback is invoked when there is a JavaScript `window.callPhantom` call made on the web page. The only argument passed to the callback is a data object.
@@ -479,7 +502,7 @@ page.onCallback = function(data) {
 ```
 
 <a name="webpage-onClosing" />
-#### onClosing ####
+#### `onClosing` ####
 **Introduced:** PhantomJS 1.7  
 This callback is invoked when the `WebPage` object is being closed, either via [`WebPage#close`](#webpage-close) in the PhantomJS outer space or via [`window.close`](https://developer.mozilla.org/docs/DOM/window.close) in the page's client-side.  It is _not_ invoked when child/descendant pages are being closed unless you also hook them up individually. It takes one argument, `closingPage`, which is a reference to the page that is closing. Once the `onClosing` handler has finished executing (returned), the `WebPage` object `closingPage` will become invalid.
 
@@ -491,7 +514,7 @@ page.onClosing = function(closingPage) {
 ```
 
 <a name="webpage-onConfirm" />
-#### onConfirm ####
+#### `onConfirm` ####
 **Introduced:** PhantomJS 1.6  
 This callback is invoked when there is a JavaScript `confirm` on the web page. The only argument passed to the callback is the string for the message. The return value of the callback handler can be either `true` or `false`, which are equivalent to pressing the "OK" or "Cancel" buttons presented in a JavaScript `confirm`, respectively.
 
@@ -504,7 +527,7 @@ page.onConfirm = function(msg) {
 ```
 
 <a name="webpage-onConsoleMessage" />
-#### onConsoleMessage ####
+#### `onConsoleMessage` ####
 **Introduced:** PhantomJS 1.2  
 This callback is invoked when there is a JavaScript `console` message on the web page. The callback may accept up to three arguments: the string for the message, the line number, and the source identifier.
 
@@ -518,7 +541,7 @@ page.onConsoleMessage = function(msg, lineNum, sourceId) {
 ```
 
 <a name="webpage-onError" />
-#### onError ####
+#### `onError` ####
 **Introduced:** PhantomJS 1.5  
 This callback is invoked when there is a JavaScript execution error. It is a good way to catch problems when evaluating a script in the web page context. The arguments passed to the callback are the error message and the stack trace [as an Array].
 
@@ -537,7 +560,7 @@ page.onError = function(msg, trace) {
 ```
 
 <a name="webpage-onInitialized" />
-#### onInitialized ####
+#### `onInitialized` ####
 **Introduced:** PhantomJS 1.3  
 This callback is invoked _after_ the web page is created but _before_ a URL is loaded. The callback may be used to change global objects.
 
@@ -553,7 +576,7 @@ page.onInitialized = function() {
 ```
 
 <a name="webpage-onLoadFinished" />
-#### onLoadFinished ####
+#### `onLoadFinished` ####
 **Introduced:** PhantomJS 1.2  
 This callback is invoked when the page finishes the loading. It may accept a single argument indicating the page's `status`: `"success"` if no network errors occurred, otherwise `"fail"`.
 
@@ -568,7 +591,7 @@ page.onLoadFinished = function(status) {
 ```
 
 <a name="webpage-onLoadStarted" />
-#### onLoadStarted ####
+#### `onLoadStarted` ####
 **Introduced:** PhantomJS 1.2  
 This callback is invoked when the page starts the loading. There is no argument passed to the callback.
 
@@ -580,7 +603,7 @@ page.onLoadStarted = function() {
 ```
 
 <a name="webpage-onNavigationRequested" />
-#### onNavigationRequested ####
+#### `onNavigationRequested` ####
 **Introduced:** PhantomJS 1.6  
 By implementing this callback, you will be notified when a navigation event happens and know if it will be blocked (by [`WebPage#navigationLocked`](#webpage-navigationLocked)). Takes the following arguments:
  * `url`: The target URL of this navigation event
@@ -599,7 +622,7 @@ page.onNavigationRequested = function(url, type, willNavigate, main) {
 ```
 
 <a name="webpage-onPageCreated" />
-#### onPageCreated ####
+#### `onPageCreated` ####
 **Introduced:** PhantomJS 1.7  
 This callback is invoked when a new child window (but _not_ deeper descendant windows) is created by the page, e.g. using [`window.open`](https://developer.mozilla.org/docs/DOM/window.open). In the PhantomJS outer space, this `WebPage` object will not yet have called its own [`WebPage#open`](#webpage-open) method yet and thus does not yet know its requested URL ([`WebPage#url`](#webpage-url)). Therefore, the most common purpose for utilizing a `WebPage#onPageCreated` callback is to decorate the page (e.g. hook up callbacks, etc.).
 
@@ -615,7 +638,7 @@ page.onPageCreated = function(newPage) {
 ```
 
 <a name="webpage-onPrompt" />
-#### onPrompt ####
+#### `onPrompt` ####
 **Introduced:** PhantomJS 1.6  
 This callback is invoked when there is a JavaScript `prompt` on the web page. The arguments passed to the callback are the string for the message (`msg`) and the default value (`defaultVal`) for the prompt answer. The return value of the callback handler should be a string.
 
@@ -630,7 +653,7 @@ page.onPrompt = function(msg, defaultVal) {
 ```
 
 <a name="webpage-onResourceRequested" />
-#### onResourceRequested ####
+#### `onResourceRequested` ####
 **Introduced:** PhantomJS 1.2  
 This callback is invoked when the page requests a resource. The only argument to the callback is the `request` metadata object.
 
@@ -642,7 +665,7 @@ page.onResourceRequested = function(request) {
 ```
 
 <a name="webpage-onResourceReceived" />
-#### onResourceReceived ####
+#### `onResourceReceived` ####
 **Introduced:** PhantomJS 1.2  
 This callback is invoked when the a resource requested by the page is received. The only argument to the callback is the `response` metadata object.
 
@@ -656,7 +679,7 @@ page.onResourceReceived = function(response) {
 ```
 
 <a name="webpage-onUrlChanged" />
-#### onUrlChanged ####
+#### `onUrlChanged` ####
 **Introduced:** PhantomJS 1.6  
 This callback is invoked when the URL changes, e.g. as it navigates away from the current URL. The only argument to the callback is the new `targetUrl` string.
 
@@ -684,15 +707,15 @@ var system = require('system');
 ### Properties ###
 
 <a name="system-platform" />
-#### platform {string} ####
+#### `platform` {string} ####
 Read-only. The name of the platform, for which the value is always `"phantomjs"`.
 
 <a name="system-os" />
-#### os {object} ####
+#### `os` {object} ####
 Read-only. An object providing information about the operating system, including `architecture`, `name`, and `version`.
 
 <a name="system-env" />
-#### env {object} ####
+#### `env` {object} ####
 Queries and returns a list of key-value pairs representing the environment variables.
 
 The following example demonstrates the same functionality as the Unix `printenv` utility or the Windows `set` command:
@@ -704,7 +727,7 @@ Object.keys(env).forEach(function(key) {
 ```
 
 <a name="system-args" />
-#### args {array} ####
+#### `args` {array} ####
 Queries and returns a list of the command-line arguments.  The first one is always the script name, which is then followed by the subsequent arguments.
 
 The following example prints all of the command-line arguments:
@@ -733,11 +756,11 @@ var fs = require("fs");
 ### Properties ###
 
 <a name="filesystem-separator" />
-#### separator {string} ####
+#### `separator` {string} ####
 Read-only. The path separator (`/` or `\`, depending on the operating system).
 
 <a name="filesystem-workingDirectory" />
-#### workingDirectory {string} ####
+#### `workingDirectory` {string} ####
 Read-only. The current working directory.
 
 <a name="filesystem-functions" />
@@ -817,5 +840,6 @@ The `response` object should be used to create the response using the following 
  * `headers`: Stores all HTTP headers as key-value pairs. These must be set **BEFORE** calling `write` for the first time.
  * `statusCode`: Sets the returned HTTP status code.
  * `write(data)`: Sends a chunk for the response body. Can be called multiple times.
+ * `writeHead(statusCode, headers)`: Sends a response header to the request. The status code is a 3-digit HTTP status code (e.g. `404`). The last argument, headers, are the response headers. Optionally one can give a human-readable `headers` collection as the second argument.
  * `close()`: Closes the HTTP connection.
       * To avoid the client detecting a connection drop, remember to use `write()` at least once. Sending an empty string (i.e. `response.write("")`) would be enough if the only aim is, for example, to return an HTTP status code of `200` (`"OK"`).
