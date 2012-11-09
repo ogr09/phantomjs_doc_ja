@@ -12,7 +12,7 @@ If PhantomJS is invoked without any argument, it will enter the interactive mode
 <a name="command-line-options" />
 ## Command-line Options ##
 Supported command-line options are:
- * `--cookies-file=/path/to/cookies.txt` specifies the file name to store the persistent cookies.
+ * `--cookies-file=/path/to/cookies.txt` specifies the file name to store the persistent [Cookies](#cookie).
  * `--disk-cache=[yes|no]` enables disk cache (at desktop services cache storage location, default is `no`).
  * `--help` or `-h` lists all possible command-line options. _Halts immediately, will not run a script passed as argument._
  * `--ignore-ssl-errors=[yes|no]` ignores SSL errors, such as expired or self-signed certificate errors (default is `no`).
@@ -60,33 +60,33 @@ Read-only. An array of the arguments passed to the script.
 <a name="phantom-cookies" />
 #### `cookies` {[Cookie](#cookie)[]} ####
 **Introduced:** PhantomJS 1.7  
-Get or set cookies for any domain (though, for setting, use of [`phantom.addCookie`](#phantom-addCookie) is preferred). These cookies are stored in the CookieJar and will be supplied when opening pertinent WebPages. This array will be pre-populated by any existing cookie data stored in the cookie file specified in the PhantomJS [startup config/command-line options](#command-line-options), if any.
+Get or set [Cookies](#cookie) for any domain (though, for setting, use of [`phantom.addCookie`](#phantom-addCookie) is preferred). These Cookies are stored in the CookieJar and will be supplied when opening pertinent WebPages. This array will be pre-populated by any existing Cookie data stored in the cookie file specified in the PhantomJS [startup config/command-line options](#command-line-options), if any.
 
 <a name="phantom-cookiesEnabled" />
-#### `cookiesEnabled` {boolean} ####
+#### `cookiesEnabled` {Boolean} ####
 **Introduced:** PhantomJS 1.7  
 Controls whether the CookieJar is enabled or not.  Defaults to `true`.
 
 <a name="phantom-libraryPath" />
-#### `libraryPath` {string} ####
+#### `libraryPath` {String} ####
 This property stores the path which is used by [`injectJs`](#phantom-injectJs) function to resolve the script name. Initially it is set to the location of the script invoked by PhantomJS.
 
 <a name="phantom-scriptName" />
-#### `scriptName` {string} ####
+#### `scriptName` {String} ####
 **Stability:** _DEPRECATED_ - Use [`system.args[0]`](#system-args) from the [System module](#system-module)  
 Read-only. The name of the invoked script file.
 
 <a name="phantom-version" />
-#### `version` {object} ####
-Read-only. The version of the executing PhantomJS instance. Example value: `{ major: 1, minor: 0, patch: 0 }`.
+#### `version` {Object} ####
+Read-only. The version of the executing PhantomJS instance. Example value: `{ 'major': 1, 'minor': 7, 'patch': 0 }`.
 
 <a name="phantom-functions" />
 ### Functions ###
 
 <a name="phantom-addCookie" />
-#### `addCookie(cookie)` {boolean} ####
+#### `addCookie([Cookie](#cookie))` {Boolean} ####
 **Introduced:** PhantomJS 1.7  
-Add a cookie to the CookieJar.  Returns `true` if successfully added, otherwise `false`. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
+Add a [Cookie](#cookie) to the CookieJar.  Returns `true` if successfully added, otherwise `false`. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
 
 Example:
 ```js
@@ -101,12 +101,12 @@ phantom.addCookie({
 <a name="phantom-clearCookies" />
 #### `clearCookies()` {void} ####
 **Introduced:** PhantomJS 1.7  
-Delete all cookies in the CookieJar. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
+Delete all [Cookies](#cookie) in the CookieJar. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
 
 <a name="phantom-deleteCookie" />
-#### `deleteCookie(cookieName)` {boolean} ####
+#### `deleteCookie(cookieName)` {Boolean} ####
 **Introduced:** PhantomJS 1.7  
-Delete any cookies in the CookieJar with a '`name'` property matching `cookieName`. Returns `true` if successfully deleted, otherwise `false`. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
+Delete any [Cookies](#cookie) in the CookieJar with a '`name'` property matching `cookieName`. Returns `true` if successfully deleted, otherwise `false`. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
 
 Example:
 ```js
@@ -193,8 +193,8 @@ page.clipRect = { top: 14, left: 3, width: 400, height: 300 };
 This property stores the content of the web page (main frame), enclosed in an HTML/XML element. Setting the property will effectively reload the web page with the new content.
 
 <a name="webpage-cookies" />
-#### `cookies` {array} ####
-Get or set cookies visible to the current URL (though, for setting, use of [`WebPage#addCookie`](#webpage-addCookie) is preferred). This array will be pre-populated by any existing cookie data visible to this URL that is stored in the CookieJar, if any. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
+#### `cookies` {[Cookie](#cookie)[]} ####
+Get or set [Cookies](#cookie) visible to the current URL (though, for setting, use of [`WebPage#addCookie`](#webpage-addCookie) is preferred). This array will be pre-populated by any existing Cookie data visible to this URL that is stored in the CookieJar, if any. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
 
 <a name="webpage-customHeaders" />
 #### `customHeaders` {object} ####
@@ -318,9 +318,9 @@ page.render('capture.png');
 ### Functions ###
 
 <a name="webpage-addCookie" />
-#### `addCookie(cookie)` {boolean} ####
+#### `addCookie([Cookie](#cookie))` {boolean} ####
 **Introduced:** PhantomJS 1.7  
-Add a cookie to the page.  If the domains do not match, the cookie will be ignored/rejected. Returns `true` if successfully added, otherwise `false`.
+Add a [Cookie](#cookie) to the page.  If the domains do not match, the Cookie will be ignored/rejected. Returns `true` if successfully added, otherwise `false`.
 
 Example:
 ```js
@@ -334,7 +334,7 @@ page.addCookie({
 <a name="webpage-clearCookies" />
 #### `clearCookies()` {void} ####
 **Introduced:** PhantomJS 1.7  
-Delete all cookies visible to the current URL.
+Delete all [Cookies](#cookie) visible to the current URL.
 
 <a name="webpage-close" />
 #### `close()` {void} ####
@@ -346,7 +346,7 @@ Due to some technical limitations, the web page object might not be completely g
 <a name="webpage-deleteCookie" />
 #### `deleteCookie(cookieName)` {boolean} ####
 **Introduced:** PhantomJS 1.7  
-Delete any cookies visible to the current URL with a 'name' property matching `cookieName`. Returns `true` if successfully deleted, otherwise `false`.
+Delete any [Cookies](#cookie) visible to the current URL with a 'name' property matching `cookieName`. Returns `true` if successfully deleted, otherwise `false`.
 
 Example:
 ```js
@@ -852,18 +852,18 @@ The `response` object should be used to create the response using the following 
 
 # Appendix #
 <a name="cookie" />
-## `cookie` {Object} ##
-Various methods in the [`phantom`](#phantom) object, as well as in [`WebPage`](#webpage) instances, utilize `cookie` objects. These are best created via object literals.
+## `Cookie` {Object} ##
+Various methods in the [`phantom`](#phantom) object, as well as in [`WebPage`](#webpage) instances, utilize `Cookie` objects. These are best created via object literals.
 
 For example:
 ```js
-page.addCookie({
-    'name': 'Valid-Cookie-Name',    /* required property */
-    'value': 'Valid-Cookie-Value',  /* required property */
-    'domain': 'localhost',          /* required property */
-    'path': '/foo',
+phantom.addCookie({
+    'name':     'Valid-Cookie-Name',   /* required property */
+    'value':    'Valid-Cookie-Value',  /* required property */
+    'domain':   'localhost',           /* required property */
+    'path':     '/foo',
     'httponly': true,
-    'secure': false,
-    'expires': (new Date()).getTime() + 3600   /* <- expires in 1 hour */
+    'secure':   false,
+    'expires':  (new Date()).getTime() + 3600   /* <- expires in 1 hour */
 });
 ```
