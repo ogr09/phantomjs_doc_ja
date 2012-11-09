@@ -29,7 +29,7 @@ Supported command-line options are:
 Alternatively, since PhantomJS 1.3, you can also utilize a JavaScript Object Notation (JSON) configuration file instead of passing in multiple command-line options:
  * `--config=/path/to/config.json`
 
-The contents of `config.json` should be a standalone JavaScript object. Keys are de-dashed, camel-cased equivalents of the other supported command-line options.  Values are their JavaScript equivalents: "yes/"no" values translate into `true`/`false` Boolean values, numbers remain numbers, strings remain strings. For example:
+The contents of `config.json` should be a standalone JavaScript object. Keys are de-dashed, camel-cased equivalents of the other supported command-line options.  Values are their JavaScript equivalents: 'yes'/'no' values translate into `true`/`false` Boolean values, numbers remain numbers, strings remain strings. For example:
 ```js
 {
     /* Same as: --ignore-ssl-errors=yes */
@@ -53,12 +53,12 @@ The interface with various PhantomJS functionalities is carried out using a new 
 ### Properties ###
 
 <a name="phantom-args" />
-#### `args` {array} ####
+#### `args` {String[]} ####
 **Stability:** _DEPRECATED_ - Use [`system.args`](#system-args) from the [System module](#system-module)  
 Read-only. An array of the arguments passed to the script.
 
 <a name="phantom-cookies" />
-#### `cookies` {array} ####
+#### `cookies` {[Cookie](#cookie)[]} ####
 **Introduced:** PhantomJS 1.7  
 Get or set cookies for any domain (though, for setting, use of [`phantom.addCookie`](#phantom-addCookie) is preferred). These cookies are stored in the CookieJar and will be supplied when opening pertinent WebPages. This array will be pre-populated by any existing cookie data stored in the cookie file specified in the PhantomJS [startup config/command-line options](#command-line-options), if any.
 
@@ -91,9 +91,9 @@ Add a cookie to the CookieJar.  Returns `true` if successfully added, otherwise 
 Example:
 ```js
 phantom.addCookie({
-    "name": "Added-Cookie-Name",
-    "value": "Added-Cookie-Value",
-    "domain": ".google.com"
+    'name': 'Added-Cookie-Name',
+    'value': 'Added-Cookie-Value',
+    'domain': '.google.com'
 });
 ```
 
@@ -106,11 +106,11 @@ Delete all cookies in the CookieJar. See [`phantom.cookies`](#phantom-cookies) f
 <a name="phantom-deleteCookie" />
 #### `deleteCookie(cookieName)` {boolean} ####
 **Introduced:** PhantomJS 1.7  
-Delete any cookies in the CookieJar with a "Name" property matching `cookieName`. Returns `true` if successfully deleted, otherwise `false`. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
+Delete any cookies in the CookieJar with a '`name'` property matching `cookieName`. Returns `true` if successfully deleted, otherwise `false`. See [`phantom.cookies`](#phantom-cookies) for more information on the CookieJar.
 
 Example:
 ```js
-phantom.deleteCookie("Added-Cookie-Name");
+phantom.deleteCookie('Added-Cookie-Name');
 ```
 
 
@@ -134,14 +134,14 @@ This callback is invoked when there is a JavaScript execution error _not_ caught
 Example:
 ```js
 phantom.onError = function(msg, trace) {
-    var msgStack = ["PHANTOM ERROR: " + msg];
+    var msgStack = ['PHANTOM ERROR: ' + msg];
     if (trace) {
-        msgStack.push("TRACE:");
+        msgStack.push('TRACE:');
         trace.forEach(function(t) {
-            msgStack.push(" -> " + (t.file || t.sourceURL) + ": " + t.line + (t.function ? " (in function '" + t.function + "')" : ""));
+            msgStack.push(' -> ' + (t.file || t.sourceURL) + ': ' + t.line + (t.function ? ' (in function '' + t.function + '')' : ''));
         });
     }
-    console.error(msgStack.join("\n"));
+    console.error(msgStack.join('\n'));
 };
 ```
 
@@ -159,8 +159,8 @@ As of PhantomJS 1.7, however, users can reference their own modules from the fil
 ## Function: `require` ##
 To support the Module API, a `require` function modeled after [CommonJS Modules' Require](http://wiki.commonjs.org/wiki/Modules/1.1.1#Require) is globally available. General usage:
 ```js
-var server = require("webserver").create();
-var Awesome = require("MyAwesomeModule");
+var server = require('webserver').create();
+var Awesome = require('MyAwesomeModule');
 Awesome.do();
 ```
 
@@ -168,7 +168,7 @@ Awesome.do();
 ## Module: WebPage ##
 A `WebPage` object encapsulates a web page. It is usually instantiated using the following pattern:
 ```js
-var page = require("webpage").create();
+var page = require('webpage').create();
 ```
 
 **Note:** For backward compatibility with legacy PhantomJS applications, the constructor also remains exposed as a _deprecated_ global `WebPage` object:
@@ -203,19 +203,19 @@ This property specifies additional HTTP request headers that will be sent to the
 
 Example:
 ```js
-// Send two additional headers "X-Test" and "DNT".
+// Send two additional headers 'X-Test' and 'DNT'.
 page.customHeaders = {
-    "X-Test": "foo",
-    "DNT": "1"
+    'X-Test': 'foo',
+    'DNT': '1'
 };
 ```
 
 Do you only want these `customHeaders` passed to the initial [`WebPage#open`](#webpage-open) request? Here's the recommended workaround:
 ```js
-// Send two additional headers "X-Test" and "DNT".
+// Send two additional headers 'X-Test' and 'DNT'.
 page.customHeaders = {
-    "X-Test": "foo",
-    "DNT": "1"
+    'X-Test': 'foo',
+    'DNT': '1'
 };
 page.onInitialized = function() {
     page.customHeaders = {};
@@ -258,11 +258,11 @@ The given object should be in one of the following two formats:
 { format: 'A4', orientation: 'portrait', border: '1cm' }
 ```
 
-If no `paperSize` is defined, the size is defined by the web page. Supported dimension units are: `"mm"`, `"cm"`, `"in"`, `"px"`. No unit means `"px"`. Border is optional and defaults to `0`. Supported formats are: `"A3"`, `"A4"`, `"A5"`, `"Legal"`, `"Letter"`, `"Tabloid"`. Orientation (`"portrait"`, `"landscape"`) is optional and defaults to `"portrait"`.
+If no `paperSize` is defined, the size is defined by the web page. Supported dimension units are: `'mm'`, `'cm'`, `'in'`, `'px'`. No unit means `'px'`. Border is optional and defaults to `0`. Supported formats are: `'A3'`, `'A4'`, `'A5'`, `'Legal'`, `'Letter'`, `'Tabloid'`. Orientation (`'portrait'`, `'landscape'`) is optional and defaults to `'portrait'`.
 
 Example:
 ```js
-page.paperSize = { width: "5in", height: "7in", border: "20px" };
+page.paperSize = { width: '5in', height: '7in', border: '20px' };
 ```
 
 <a name="webpage-plainText" />
@@ -292,7 +292,7 @@ Read-only. This property gets the current URL of the web page (main frame).
 
 <a name="webpage-viewportSize" />
 #### `viewportSize` {object} ####
-This property sets the size of the viewport for the layout process. It is useful to set the preferred initial size before loading the page, e.g. to choose between `"landscape"` vs `"portrait"`.
+This property sets the size of the viewport for the layout process. It is useful to set the preferred initial size before loading the page, e.g. to choose between `'landscape'` vs `'portrait'`.
 
 Because PhantomJS is headless (nothing is shown), `viewportSize` effectively simulates the size of the window like in a traditional browser.
 
@@ -325,8 +325,8 @@ Add a cookie to the page.  If the domains do not match, the cookie will be ignor
 Example:
 ```js
 page.addCookie({
-    "name": "Added-Cookie-Name",
-    "value": "Added-Cookie-Value"
+    'name': 'Added-Cookie-Name',
+    'value': 'Added-Cookie-Value'
 });
 ```
 
@@ -346,11 +346,11 @@ Due to some technical limitations, the web page object might not be completely g
 <a name="webpage-deleteCookie" />
 #### `deleteCookie(cookieName)` {boolean} ####
 **Introduced:** PhantomJS 1.7  
-Delete any cookies visible to the current URL with a "Name" property matching `cookieName`. Returns `true` if successfully deleted, otherwise `false`.
+Delete any cookies visible to the current URL with a 'name' property matching `cookieName`. Returns `true` if successfully deleted, otherwise `false`.
 
 Example:
 ```js
-page.deleteCookie("Added-Cookie-Name");
+page.deleteCookie('Added-Cookie-Name');
 ```
 
 
@@ -395,7 +395,7 @@ Includes external script from the specified `url` (usually a remote location) on
 
 Example:
 ```js
-page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js", function() {
+page.includeJs('http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js', function() {
     /* jQuery is loaded, now manipulate the DOM */
 });
 ```
@@ -406,12 +406,12 @@ Injects external script code from the specified file into the page (like [`WebPa
 
 <a name="webpage-open" />
 #### `open(url, callback)` {void} ####
-Opens the `url` and loads it to the page. Once the page is loaded, the optional `callback` is called using [`WebPage#onLoadFinished`](#webpage-onLoadFinished), and also provides the page status to the function (`"success"` or `"fail"`).
+Opens the `url` and loads it to the page. Once the page is loaded, the optional `callback` is called using [`WebPage#onLoadFinished`](#webpage-onLoadFinished), and also provides the page status to the function (`'success'` or `'fail'`).
 
 Example:
 ```js
 page.open('http://www.google.com/', function(status) {
-    console.log("Status: " + status);
+    console.log('Status: ' + status);
     // Do other things here...
 });
 ```
@@ -443,18 +443,18 @@ Supported formats include:
  * JPEG
 
 <a name="webpage-sendEvent" />
-#### `sendEvent(mouseEventType[, mouseX, mouseY, button="left"])` or `sendEvent(keyboardEventType, keyOrKeys)` ####
+#### `sendEvent(mouseEventType[, mouseX, mouseY, button='left'])` or `sendEvent(keyboardEventType, keyOrKeys)` ####
 Sends an event to the web page. [1.7 implementation source](https://github.com/ariya/phantomjs/blob/63e06cb/src/webpage.cpp#L1015).
 
 The events are not like synthetic [DOM events](http://www.w3.org/TR/DOM-Level-2-Events/events.html). Each event is sent to the web page as if it comes as part of user interaction.
 
 ##### Mouse events #####
 
-The first argument is the event type. Supported types are `"mouseup"`, `"mousedown"`, `"mousemove"`, `"doubleclick"` and `"click"`. The next two arguments are optional but represent the mouse position for the event.
+The first argument is the event type. Supported types are `'mouseup'`, `'mousedown'`, `'mousemove'`, `'doubleclick'` and `'click'`. The next two arguments are optional but represent the mouse position for the event.
 
 The button parameter (defaults to `left`) specifies the button to push.
 
-For `"mousemove"`, however, there is no button pressed (i.e. it is not dragging).
+For `'mousemove'`, however, there is no button pressed (i.e. it is not dragging).
 
 ##### Keyboard events #####
 
@@ -468,7 +468,7 @@ This function is used to automate the upload of a file, which is usually handled
 
 Example:
 ```js
-page.uploadFile("input[name=image]", "/path/to/some/photo.jpg");
+page.uploadFile('input[name=image]', '/path/to/some/photo.jpg');
 ```
 
 <a name="webpage-callbacks" />
@@ -482,7 +482,7 @@ This callback is invoked when there is a JavaScript `alert` on the web page. The
 Example:
 ```js
 page.onAlert = function(msg) {
-    console.log("ALERT: " + msg);
+    console.log('ALERT: ' + msg);
 };
 ```
 
@@ -497,7 +497,7 @@ Although there are many possible use cases for this inversion of control, the pr
 Example:
 ```js
 page.onCallback = function(data) {
-    console.log("CALLBACK: " + JSON.stringify(data));
+    console.log('CALLBACK: ' + JSON.stringify(data));
 };
 ```
 
@@ -509,7 +509,7 @@ This callback is invoked when the `WebPage` object is being closed, either via [
 Example:
 ```js
 page.onClosing = function(closingPage) {
-    console.log("The page is closing! URL: " + closingPage.url);
+    console.log('The page is closing! URL: ' + closingPage.url);
 };
 ```
 
@@ -521,7 +521,7 @@ This callback is invoked when there is a JavaScript `confirm` on the web page. T
 Example:
 ```js
 page.onConfirm = function(msg) {
-    console.log("CONFIRM: " + msg);
+    console.log('CONFIRM: ' + msg);
     return true;  // `true` === pressing the "OK" button, `false` === pressing the "Cancel" button
 };
 ```
@@ -536,7 +536,7 @@ By default, `console` messages from the web page are not displayed. Using this c
 Example:
 ```js
 page.onConsoleMessage = function(msg, lineNum, sourceId) {
-    console.log("CONSOLE: " + msg + ' (from line #' + lineNum + ' in "' + sourceId + '")');
+    console.log('CONSOLE: ' + msg + ' (from line #' + lineNum + ' in "' + sourceId + '")');
 };
 ```
 
@@ -548,14 +548,14 @@ This callback is invoked when there is a JavaScript execution error. It is a goo
 Example:
 ```js
 page.onError = function(msg, trace) {
-    var msgStack = ["ERROR: " + msg];
+    var msgStack = ['ERROR: ' + msg];
     if (trace) {
-        msgStack.push("TRACE:");
+        msgStack.push('TRACE:');
         trace.forEach(function(t) {
-            msgStack.push(" -> " + t.file + ": " + t.line + (t.function ? " (in function '" + t.function + "')" : ""));
+            msgStack.push(' -> ' + t.file + ': ' + t.line + (t.function ? ' (in function "' + t.function + '")' : ''));
         });
     }
-    console.error(msgStack.join("\n"));
+    console.error(msgStack.join('\n'));
 };
 ```
 
@@ -568,8 +568,8 @@ Example:
 ```js
 page.onInitialized = function() {
     page.evaluate(function() {
-        document.addEventListener("DOMContentLoaded", function() {
-            console.log("DOM content has loaded.");
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM content has loaded.');
         }, false);
     });
 };
@@ -578,14 +578,14 @@ page.onInitialized = function() {
 <a name="webpage-onLoadFinished" />
 #### `onLoadFinished` ####
 **Introduced:** PhantomJS 1.2  
-This callback is invoked when the page finishes the loading. It may accept a single argument indicating the page's `status`: `"success"` if no network errors occurred, otherwise `"fail"`.
+This callback is invoked when the page finishes the loading. It may accept a single argument indicating the page's `status`: `'success'` if no network errors occurred, otherwise `'fail'`.
 
 Also see [`WebPage#open`](#webpage-open) for an alternate hook for the `onLoadFinished` callback.
 
 Example:
 ```js
 page.onLoadFinished = function(status) {
-    console.log("Status: " + status);
+    console.log('Status: ' + status);
     // Do other things here...
 };
 ```
@@ -598,7 +598,7 @@ This callback is invoked when the page starts the loading. There is no argument 
 Example:
 ```js
 page.onLoadStarted = function() {
-    console.log("Now loading...");
+    console.log('Now loading...');
 };
 ```
 
@@ -607,17 +607,17 @@ page.onLoadStarted = function() {
 **Introduced:** PhantomJS 1.6  
 By implementing this callback, you will be notified when a navigation event happens and know if it will be blocked (by [`WebPage#navigationLocked`](#webpage-navigationLocked)). Takes the following arguments:
  * `url`: The target URL of this navigation event
- * `type`: Possible values include: `"Undefined"`, `"LinkClicked"`, `"FormSubmitted"`, `"BackOrForward"`, `"Reload"`, `"FormResubmitted"`, `"Other"`
+ * `type`: Possible values include: `'Undefined'`, `'LinkClicked'`, `'FormSubmitted'`, `'BackOrForward'`, `'Reload'`, `'FormResubmitted'`, `'Other'`
  * `willNavigate`: `true` if navigation will happen, `false` if it is locked (by [`WebPage#navigationLocked`](#webpage-navigationLocked))
  * `main`: `true` if this event comes from the main frame, `false` if it comes from an iframe of some other sub-frame.
 
 Example:
 ```js
 page.onNavigationRequested = function(url, type, willNavigate, main) {
-    console.log("Trying to navigate to: " + url);
-    console.log("Caused by: " + type);
-    console.log("Will actually navigate: " + willNavigate);
-    console.log("Sent from the page's main frame: " + main);
+    console.log('Trying to navigate to: ' + url);
+    console.log('Caused by: ' + type);
+    console.log('Will actually navigate: ' + willNavigate);
+    console.log('Sent from the page's main frame: ' + main);
 }
 ```
 
@@ -629,10 +629,10 @@ This callback is invoked when a new child window (but _not_ deeper descendant wi
 Example:
 ```js
 page.onPageCreated = function(newPage) {
-    console.log("A new child page was created! Its requested URL is not yet available, though.");
+    console.log('A new child page was created! Its requested URL is not yet available, though.');
     // Decorate
     newPage.onClosing = function(closingPage) {
-        console.log("A child page is closing: " + closingPage.url);
+        console.log('A child page is closing: ' + closingPage.url);
     };
 };
 ```
@@ -645,8 +645,8 @@ This callback is invoked when there is a JavaScript `prompt` on the web page. Th
 Example:
 ```js
 page.onPrompt = function(msg, defaultVal) {
-    if (msg === "What's your name?") {
-        return "PhantomJS";
+    if (msg === 'What's your name?') {
+        return 'PhantomJS';
     }
     return defaultVal;
 };
@@ -660,7 +660,7 @@ This callback is invoked when the page requests a resource. The only argument to
 Example:
 ```js
 page.onResourceRequested = function(request) {
-    console.log("Request (#" + request.id + "): " + JSON.stringify(request));
+    console.log('Request (#' + request.id + '): ' + JSON.stringify(request));
 };
 ```
 
@@ -689,8 +689,8 @@ page.onUrlChanged = function(targetUrl) {
     var currentUrl = page.evaluate(function() {
         return window.location.href;
     });
-    console.log("Old URL: " + currentUrl);
-    console.log("New URL: " + targetUrl);
+    console.log('Old URL: ' + currentUrl);
+    console.log('New URL: ' + targetUrl);
 };
 ```
 
@@ -708,37 +708,43 @@ var system = require('system');
 
 <a name="system-platform" />
 #### `platform` {string} ####
-Read-only. The name of the platform, for which the value is always `"phantomjs"`.
+Read-only. The name of the platform, for which the value is always `'phantomjs'`.
 
 <a name="system-os" />
-#### `os` {object} ####
-Read-only. An object providing information about the operating system, including `architecture`, `name`, and `version`.
+#### `os` {Object} ####
+Read-only. An object providing information about the operating system, including `architecture`, `name`, and `version`. For example:
+```js
+var os = require('system').os;
+console.log(os.architecture);  // '32bit'
+console.log(os.name);  // 'windows'
+console.log(os.version);  // '7'
+```
 
 <a name="system-env" />
-#### `env` {object} ####
+#### `env` {Object} ####
 Queries and returns a list of key-value pairs representing the environment variables.
 
 The following example demonstrates the same functionality as the Unix `printenv` utility or the Windows `set` command:
 ```js
-var env = require("system").env;
+var env = require('system').env;
 Object.keys(env).forEach(function(key) {
-    console.log(key + "=" + env[key]);
+    console.log(key + '=' + env[key]);
 });
 ```
 
 <a name="system-args" />
-#### `args` {array} ####
+#### `args` {String[]} ####
 Queries and returns a list of the command-line arguments.  The first one is always the script name, which is then followed by the subsequent arguments.
 
 The following example prints all of the command-line arguments:
 ```js
-var args = require("system").args;
+var args = require('system').args;
 if (args.length === 1) {
-    console.log("Try to pass some arguments when invoking this script!");
+    console.log('Try to pass some arguments when invoking this script!');
 }
 else {
     args.forEach(function(arg, i) {
-        console.log(i + ": " + arg);
+        console.log(i + ': ' + arg);
     });
 }
 ```
@@ -749,18 +755,18 @@ A set of API functions is available to access files and directories, modeled aft
 
 To start using, you must `require` a reference to the `fs` module:
 ```js
-var fs = require("fs");
+var fs = require('fs');
 ```
 
 <a name="filesystem-properties" />
 ### Properties ###
 
 <a name="filesystem-separator" />
-#### `separator` {string} ####
+#### `separator` {String} ####
 Read-only. The path separator (`/` or `\`, depending on the operating system).
 
 <a name="filesystem-workingDirectory" />
-#### `workingDirectory` {string} ####
+#### `workingDirectory` {String} ####
 Read-only. The current working directory.
 
 <a name="filesystem-functions" />
@@ -791,9 +797,9 @@ Read-only. The current working directory.
 
 <a name="filesystem-file-functions" />
 #### File Functions ####
- * `open(path, mode)`: Returns a `stream` object representing the stream interface to the specified file (`mode` can be `"r"` for read, `"w"` for write, or `"a"` for append).
+ * `open(path, mode)`: Returns a `stream` object representing the stream interface to the specified file (`mode` can be `'r'` for read, `'w'` for write, or `'a'` for append).
  * `read(path)`: Returns the entire content of a file.
- * `write(path, content, mode)`: Writes content to a file (`mode` can be `"w"` for write or `"a"` for append).
+ * `write(path, content, mode)`: Writes content to a file (`mode` can be `'w'` for write or `'a'` for append).
  * `size(path)`: Returns the size (in bytes) of the file specified by the `path`.
  * `remove(path)`: Removes the file specified by the `path`.
  * `copy(source, destination)`: Copies a file to another.
@@ -828,12 +834,12 @@ var service = server.listen(8080, function(request, response) {
 
 <a name="webserver-request" />
 The `request` object passed to the callback function may contain the following properties:
- * `method`: Defines the request method (`"GET"`, `"POST"`, etc.)
+ * `method`: Defines the request method (`'GET'`, `'POST'`, etc.)
  * `url`: The complete request URL, including the query string (if any)
  * `httpVersion`: The actual HTTP version
  * `headers`: All of the HTTP headers as key-value pairs
- * `post`: The request body (only for `"POST"` and `"PUT"` method requests)
- * `postRaw`: If the `Content-Type` header is set to `"application/x-www-form-urlencoded"` (the default for form submissions), the original contents of `post` will be stored in this extra property (`postRaw`) and then `post` will be automatically updated with a URL-decoded version of the data.
+ * `post`: The request body (only for `'POST'` and `'PUT'` method requests)
+ * `postRaw`: If the `Content-Type` header is set to `'application/x-www-form-urlencoded'` (the default for form submissions), the original contents of `post` will be stored in this extra property (`postRaw`) and then `post` will be automatically updated with a URL-decoded version of the data.
  
 <a name="webserver-response" />
 The `response` object should be used to create the response using the following properties and functions:
@@ -842,4 +848,22 @@ The `response` object should be used to create the response using the following 
  * `write(data)`: Sends a chunk for the response body. Can be called multiple times.
  * `writeHead(statusCode, headers)`: Sends a response header to the request. The status code is a 3-digit HTTP status code (e.g. `404`). The last argument, headers, are the response headers. Optionally one can give a human-readable `headers` collection as the second argument.
  * `close()`: Closes the HTTP connection.
-      * To avoid the client detecting a connection drop, remember to use `write()` at least once. Sending an empty string (i.e. `response.write("")`) would be enough if the only aim is, for example, to return an HTTP status code of `200` (`"OK"`).
+      * To avoid the client detecting a connection drop, remember to use `write()` at least once. Sending an empty string (i.e. `response.write('')`) would be enough if the only aim is, for example, to return an HTTP status code of `200` (`"OK"`).
+
+# Appendix #
+<a name="cookie" />
+## `cookie` {Object} ##
+Various methods in the [`phantom`](#phantom) object, as well as in [`WebPage`](#webpage) instances, utilize `cookie` objects. These are best created via object literals.
+
+For example:
+```js
+page.addCookie({
+    'name': 'Valid-Cookie-Name',    /* required property */
+    'value': 'Valid-Cookie-Value',  /* required property */
+    'domain': 'localhost',          /* required property */
+    'path': '/foo',
+    'httponly': true,
+    'secure': false,
+    'expires': (new Date()).getTime() + 3600   /* <- expires in 1 hour */
+});
+```
