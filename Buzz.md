@@ -4,6 +4,9 @@
 
 ## 2012
 
+Automating Jasmine Tests with Chutzpah by Joel Ross (Nov 8, 2012)<br/>
+http://www.rosscode.com/blog/index.php?title=automating-jasmine-tests-with-chutzpah
+
 AngularJS and SEO by Matias Niemelä (Nov 7, 2012)<br/>
 http://www.yearofmoo.com/2012/11/angularjs-and-seo.html
 
