@@ -4,6 +4,9 @@
 
 ## 2012
 
+AngularJS and SEO by Matias Niemelä (Nov 7, 2012)<br/>
+http://www.yearofmoo.com/2012/11/angularjs-and-seo.html
+
 Whatever It Takes by Parse.ly team (Nov 1, 2012)<br/>
 http://blog.parsely.com/post/34241210620/whatever-it-takes
 
