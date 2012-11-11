@@ -7,6 +7,9 @@
 Automating Jasmine Tests with Chutzpah by Joel Ross (Nov 8, 2012)<br/>
 http://www.rosscode.com/blog/index.php?title=automating-jasmine-tests-with-chutzpah
 
+Running Jasmine tests with Testacular on Bamboo OnDemand by Iwein Fuld (Nov 7, 2012)<br/>
+http://iweinfuld.posterous.com/running-jasmine-tests-with-testacular-on-bamb
+
 AngularJS and SEO by Matias Niemelä (Nov 7, 2012)<br/>
 http://www.yearofmoo.com/2012/11/angularjs-and-seo.html
 
