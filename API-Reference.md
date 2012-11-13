@@ -1,4 +1,4 @@
-_**Applies to:** PhantomJS 1.7_
+_**This is a living document. As the codebase is updated, we hope to keep this document updated as well. Unless otherwise stated, this document currently applies to the latest PhantomJS release:** PhantomJS 1.7.0_
 
 **Note:** This page serves as a reference. To learn step-by-step on how to use PhantomJS, please refer to the [[Quick Start guide|Quick Start]].
 
@@ -696,7 +696,7 @@ page.onUrlChanged = function(targetUrl) {
 
 <a name="system-module" />
 ## Module: System ##
-A set of functions to access system-level functionalities is available, modeled after the [CommonJS System proposal](http://wiki.commonjs.org/wiki/System).
+A set of functions to access system-level functionality, modeled after the [CommonJS System proposal](http://wiki.commonjs.org/wiki/System). This also includes process-related properties.
 
 To start using, you must `require` a reference to the `system` module:
 ```js
@@ -706,8 +706,13 @@ var system = require('system');
 <a name="system-properties" />
 ### Properties ###
 
+<a name="system-pid" />
+#### `pid` {Number} ####
+**Introduced:** PhantomJS 1.8  
+Read-only. The PID (Process ID) for the currently executing PhantomJS process.
+
 <a name="system-platform" />
-#### `platform` {string} ####
+#### `platform` {String} ####
 Read-only. The name of the platform, for which the value is always `'phantomjs'`.
 
 <a name="system-os" />
