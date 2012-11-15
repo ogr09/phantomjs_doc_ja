@@ -10,6 +10,9 @@ http://bryntum.com/blog/siesta-tip-integrating-phantomjs-with-your-ide/
 Running Dojo DOH tests headlessly with PhantomJS by Mark Basler (Nov 12, 2012)<br/>
 http://markabasler.blogspot.com/2012/11/running-dojo-doh-tests-headlessly-with.html
 
+Randomized Consumerism by Darius Kazemi (Nov 10, 2012)<br/>
+http://randomshopper.tumblr.com/post/35454415921/randomized-consumerism
+
 Automating Jasmine Tests with Chutzpah by Joel Ross (Nov 8, 2012)<br/>
 http://www.rosscode.com/blog/index.php?title=automating-jasmine-tests-with-chutzpah
 
