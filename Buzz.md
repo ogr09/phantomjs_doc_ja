@@ -4,7 +4,7 @@
 
 ## 2012
 
-Rendering Buildy’s satellite view: PhantomJS, Beanstalkd, Leaflet, and PIL by Steve Johnson<br/>
+Rendering Buildy’s satellite view: PhantomJS, Beanstalkd, Leaflet, and PIL by Steve Johnson (Nov 21, 2012)<br/>
 http://blog.playbuildy.com/2012/11/21/rendering-buildys-satellite-view-phantomjs-beanstalkd-leaflet-and-pil/
 
 Siesta tip: Integrating PhantomJS with your IDE by Nickolay (Nov 13, 2012)<br/>
