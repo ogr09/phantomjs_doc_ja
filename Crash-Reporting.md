@@ -74,7 +74,7 @@ In the mean time, the following steps can be used to obtain a somewhat useful tr
 
 5. Run:
 
-   cp -r phantomjs/`ls phantomjs` phantomjs/D41D8CD98F00B204E9800998ECF8427E0
+   cp -r phantomjs/\`ls phantomjs\` phantomjs/D41D8CD98F00B204E9800998ECF8427E0
 
    (Substitute in your own hash value if it is different.)
 
