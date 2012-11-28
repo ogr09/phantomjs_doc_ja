@@ -40,6 +40,9 @@ http://viget.com/extend/testing-google-analytics-with-phantomjs
 Acceptance Testing Primer for Emberjs by Anthony Bull (Oct 15, 2012)<br/>
 http://thebullog.net/acceptance-testing-primer-for-emberjs/index.html
 
+Findings: On Twitter Cards (Oct 15, 2012)<br/>
+http://blog.findings.com/post/33662964481/on-twitter-cards
+
 Using PhantomJs to download jsFiddle.net code by Joe Kuan (Oct 10, 2012)<br/>
 http://joekuan.wordpress.com/2012/10/10/using-phantomjs-to-download-jsfiddle-net-code/
 
