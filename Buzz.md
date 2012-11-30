@@ -4,6 +4,9 @@
 
 ## 2012
 
+Testing JavaScript with PhantomJS by Andrew Burgess (Nov 21, 2012)<br/>
+http://net.tutsplus.com/tutorials/javascript-ajax/testing-javascript-with-phantomjs/
+
 Rendering Buildy’s satellite view: PhantomJS, Beanstalkd, Leaflet, and PIL by Steve Johnson (Nov 21, 2012)<br/>
 http://blog.playbuildy.com/2012/11/21/rendering-buildys-satellite-view-phantomjs-beanstalkd-leaflet-and-pil/
 
