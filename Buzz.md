@@ -4,6 +4,9 @@
 
 ## 2012
 
+Interactive JavaScript testing with PhantomRunner (Dec 4, 2012)<br/>
+http://dev.solita.fi/2012/12/04/phantom-runner.html
+
 Testing JavaScript with PhantomJS by Andrew Burgess (Nov 21, 2012)<br/>
 http://net.tutsplus.com/tutorials/javascript-ajax/testing-javascript-with-phantomjs/
 
