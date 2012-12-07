@@ -4,6 +4,9 @@
 
 ## 2012
 
+PhantomJS by Paul Reinheimer (Dec 6, 2012)<br/>
+http://webadvent.org/2012/phantomjs-by-paul-reinheimer
+
 Interactive JavaScript testing with PhantomRunner (Dec 4, 2012)<br/>
 http://dev.solita.fi/2012/12/04/phantom-runner.html
 
