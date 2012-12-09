@@ -269,6 +269,14 @@ page.paperSize = { width: '5in', height: '7in', border: '20px' };
 #### `plainText` {string} ####
 Read-only. This property stores the content of the web page (main frame) as plain text &mdash; no element tags!
 
+<a name="webpage-scrollPosition" />
+#### `scrollPosition` {object} ####
+This property defines the scroll position of the web page.
+
+Example:
+```js
+page.scrollPosition = { top: 100, left: 0 };
+```
 <a name="webpage-settings" />
 #### `settings` {object} ####
 This property stores various settings of the web page:
