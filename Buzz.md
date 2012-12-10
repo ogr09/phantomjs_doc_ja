@@ -10,6 +10,9 @@ http://webadvent.org/2012/phantomjs-by-paul-reinheimer
 Interactive JavaScript testing with PhantomRunner (Dec 4, 2012)<br/>
 http://dev.solita.fi/2012/12/04/phantom-runner.html
 
+Headless WebKit and PhantomJS by Colin Ihrig (Dec 2, 2012)<br/>
+http://jspro.com/toolsandlibraries/headless-webkit-and-phantomjs/
+
 KnockoutJS and Testing by Kyle Hodgson (Nov 29, 2012)<br/>
 http://kylehodgson.com/2012/11/29/knockoutjs-and-testing/
 
