@@ -4,6 +4,9 @@
 
 ## 2012
 
+Create PDF invoices with HTML5 and PhantomJS by Thomas Bley (Dec 8, 2012)<br/>
+http://we-love-php.blogspot.de/2012/12/create-pdf-invoices-with-html5-and-phantomjs.html
+
 PhantomJS by Paul Reinheimer (Dec 6, 2012)<br/>
 http://webadvent.org/2012/phantomjs-by-paul-reinheimer
 
