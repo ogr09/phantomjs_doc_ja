@@ -4,6 +4,9 @@
 
 ## 2012
 
+Testing Front End Changes Quickly and Easily by David Blooman (Dec 10, 2012)<br/>
+http://mobiletestingfordummies.tumblr.com/post/37629799816/testing-front-end-changes-quickly-and-easily
+
 Create PDF invoices with HTML5 and PhantomJS by Thomas Bley (Dec 8, 2012)<br/>
 http://we-love-php.blogspot.de/2012/12/create-pdf-invoices-with-html5-and-phantomjs.html
 
