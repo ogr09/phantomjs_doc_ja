@@ -60,7 +60,7 @@ Several page capture projects utilizing PhantomJS:
 
  * [phantomjs-node](https://github.com/sgentle/phantomjs-node) provides PhantomJS bridge for Node.js applications.
 
- * [PhantomLint](https://github.com/arthurakay/PhantomLint) uses PhantomJS to run JSLint on JavaScript application code.
+ * [PhantomLint](https://github.com/arthurakay/LintRoller/tree/v1.3.0) uses PhantomJS to run JSLint on JavaScript application code.
 
  * [shortcut.io](https://github.com/hukl/shortcut.io) uses PhantomJS to generate the screenshot of the bookmarked web sites.
 
