@@ -625,7 +625,7 @@ page.onNavigationRequested = function(url, type, willNavigate, main) {
     console.log('Trying to navigate to: ' + url);
     console.log('Caused by: ' + type);
     console.log('Will actually navigate: ' + willNavigate);
-    console.log('Sent from the page's main frame: ' + main);
+    console.log('Sent from the page\'s main frame: ' + main);
 }
 ```
 
