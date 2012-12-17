@@ -11,7 +11,7 @@ page.onResourceReceived = function (response) {
     console.log('Receive ' + JSON.stringify(response, undefined, 4));
 };
 page.open(url);
-````
+```
 
 By collecting the data and reformatting it, another example, [netsniff.js](https://github.com/ariya/phantomjs/blob/master/examples/netsniff.js), exports the network traffic in [HAR format](http://www.softwareishard.com/blog/har-12-spec). Use [HAR viewer](http://www.softwareishard.com/blog/har-viewer) to visualize the result and get the waterfall diagram.
 
