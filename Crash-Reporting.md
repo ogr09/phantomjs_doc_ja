@@ -56,7 +56,7 @@ In the mean time, the following steps can be used to obtain a somewhat useful tr
 
 3. Run:
 
-   ```./minidump_stackwalk /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp . 2>&1 | egrep "No symbol file at .*phantomjs"```
+   `./minidump_stackwalk /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp . 2>&1 | egrep "No symbol file at .*phantomjs"`
 
    Obviously, substitute the path to your own crash dump.
 
@@ -80,7 +80,7 @@ In the mean time, the following steps can be used to obtain a somewhat useful tr
 
 6. Now run:
 
-   `./minidump_stacktrace /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp . 2>/dev/null`
+   `./minidump_stackwalk /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp . 2>/dev/null`
 
    Obviously, substitute the path to your own crash dump.
 
