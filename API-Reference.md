@@ -844,6 +844,16 @@ var service = server.listen(8080, function(request, response) {
     response.close();
 });
 ```
+If you want to bind to specify address, just use `ipaddress:port` instead of `port`.
+Example:
+```js
+var server = require('webserver').create();
+var service = server.listen('127.0.0.1:8080', function(request, response) {
+    response.statusCode = 200;
+    response.write('<html><body>Hello!</body></html>');
+    response.close();
+});
+```
 
 <a name="webserver-request" />
 The `request` object passed to the callback function may contain the following properties:
