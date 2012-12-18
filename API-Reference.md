@@ -502,15 +502,15 @@ This callback is invoked when there is a JavaScript `window.callPhantom` call ma
 
 Although there are many possible use cases for this inversion of control, the primary one so far is to prevent the need for a PhantomJS script to be continually polling for some variable on the web page.
 
-Example:
-_WebPage (client-side)_
+Example:  
+_WebPage (client-side)_  
 ```js
 if (typeof window.callPhantom === 'function') {
     window.callPhantom({ hello: 'world' });
 }
 ```
 
-_PhantomJS (server-side)_
+_PhantomJS (server-side)_  
 ```js
 page.onCallback = function(data) {
     console.log('CALLBACK: ' + JSON.stringify(data));  // Prints 'CALLBACK: { "hello": "world" }'
@@ -519,8 +519,8 @@ page.onCallback = function(data) {
 
 Additionally, note that the `WebPage#onCallback` handler can return a data object that will be curried back as the result of the originating `window.callPhantom` call, too.
 
-Example:
-_WebPage (client-side)_
+Example:  
+_WebPage (client-side)_  
 ```js
 if (typeof window.callPhantom === 'function') {
     var status = window.callPhantom({ secret: 'ghostly' });
@@ -528,7 +528,7 @@ if (typeof window.callPhantom === 'function') {
 }
 ```
 
-_PhantomJS (server-side)_
+_PhantomJS (server-side)_  
 ```js
 page.onCallback = function(data) {
     if (data && data.secret && (data.secret === 'ghostly') {
