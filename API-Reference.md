@@ -277,6 +277,7 @@ Example:
 ```js
 page.scrollPosition = { top: 100, left: 0 };
 ```
+
 <a name="webpage-settings" />
 #### `settings` {object} ####
 This property stores various settings of the web page:
@@ -467,6 +468,14 @@ For `'mousemove'`, however, there is no button pressed (i.e. it is not dragging)
 ##### Keyboard events #####
 
 The first argument is the event type. The supported types are: `keyup`, `keypress` and `keydown`. The second parameter is a key (from [page.event.key](https://github.com/ariya/phantomjs/commit/cab2635e66d74b7e665c44400b8b20a8f225153a)), or a string.
+
+<a name="webpage-setContent" />
+#### `setContent(content, url)` ####
+**Introduced:** PhantomJS 1.8
+
+Allows to set both [`WebPage#content`](#webpage-content) and [`WebPage#url`](#webpage-url) properties.
+
+The webpage will be reloaded with the new content and the current location set as the given url, without any actual http request being made.
 
 <a name="webpage-uploadFile" />
 #### `uploadFile(selector, filename)` ####
