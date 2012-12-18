@@ -16,7 +16,7 @@ The following table summarizes the list of various test frameworks and the corre
 | [Jasmine](https://github.com/pivotal/jasmine) | [Chutzpah](http://chutzpah.codeplex.com), [grunt-jasmine-runner](https://github.com/jasmine-contrib/grunt-jasmine-runner), [guard-jasmine](https://github.com/netzpirat/guard-jasmine), [phantom-jasmine](https://github.com/jcarver989/phantom-jasmine)|
 | [JsTestDriver](http://code.google.com/p/js-test-driver/) | [js-test-driver-phantomjs](https://github.com/larrymyers/js-test-driver-phantomjs) |
 | [Robot Framework](http://code.google.com/p/robotframework/) | [phantomrobot](https://github.com/datakurre/phantomrobot)|
-| [QUnit](http://qunitjs.com) | [built-in](https://github.com/jquery/qunit/tree/master/addons/phantomjs), [Chutzpah](http://chutzpah.codeplex.com), [JS Test Runner](http://js-testrunner.codehaus.org), [United](https://github.com/asciidisco/united)|
+| [QUnit](http://qunitjs.com) | [built-in](https://github.com/jquery/qunit/tree/master/addons/phantomjs), [Chutzpah](http://chutzpah.codeplex.com), [JS Test Runner](http://js-testrunner.codehaus.org), [QUnited](http://github.com/aaronroyer/qunited)|
 | [Testacular](http://vojtajina.github.com/testacular) | built-in |
 | [Testem](https://github.com/airportyh/testem) | built-in |
 | [WebDriver](http://dvcs.w3.org/hg/webdriver/raw-file/tip/webdriver-spec.html) | [GhostDriver](https://github.com/detro/ghostdriver)|
