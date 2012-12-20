@@ -1,4 +1,4 @@
-One major use case of PhantomJS is **headless testing** of web applications. It is suitable for general command-line based testing, within a precommit hook, and as part as a continuous integration system.
+One major use case of PhantomJS is **headless testing** of web applications. It is suitable for general command-line based testing, within a precommit hook, and as part of a continuous integration system.
 
 ## Test Frameworks
 
