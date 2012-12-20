@@ -4,6 +4,9 @@
 
 ## 2012
 
+JavaScript tests on your Continous Integration server by Pål Ruud (Dec 19, 2012)<br/>
+http://blog.iterate.no/2012/12/19/javascript-tests-on-your-continous-integration-server/
+
 Testing Front End Changes Quickly and Easily by David Blooman (Dec 10, 2012)<br/>
 http://mobiletestingfordummies.tumblr.com/post/37629799816/testing-front-end-changes-quickly-and-easily
 
