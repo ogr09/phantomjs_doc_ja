@@ -25,6 +25,7 @@ Supported command-line options are:
  * `--script-encoding=encoding` sets the encoding used for the starting script (default is `utf8`).
  * `--version` or `-v` prints out the version of PhantomJS. _Halts immediately, will not run a script passed as argument._
  * `--web-security=[yes|no]` enables web security and forbids cross-domain XHR (default is `yes`).
+ * `--ssl-protocol=[sslv3|sslv2|tlsv1|any']` sets the SSL protocol for secure connections (default is `SSLv3`).
 
 Alternatively, since PhantomJS 1.3, you can also utilize a JavaScript Object Notation (JSON) configuration file instead of passing in multiple command-line options:
  * `--config=/path/to/config.json`
