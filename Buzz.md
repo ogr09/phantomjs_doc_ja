@@ -88,6 +88,9 @@ http://thedigitalself.com/blog/seo-and-javascript-with-phantomjs-server-side-ren
 Headless Tests with Buster.js and Phantom.js by Knut Haugen (Sep 28, 2012)<br/>
 http://blog.knuthaugen.no/2012/09/headless-tests-with-buster-and-phantom/
 
+Using PhantomJS to Measure Web Page Performance by Michael Mathews (Sep 28, 2012)<br/>
+http://scriptogr.am/micmath/post/using-phantomjs-to-measure-web-page-performance
+
 How to test Recurly.js in Ruby using RSpec, Capybara and Phantom.js (Sep 27, 2012)<br/>
 http://pieoneers.tumblr.com/post/32406386853/test-recurlyjs-in-ruby-using-rspec-capybara-phantomjs
 
