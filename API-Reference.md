@@ -510,6 +510,8 @@ page.onAlert = function(msg) {
 **Introduced:** PhantomJS 1.6  
 This callback is invoked when there is a JavaScript `window.callPhantom` call made on the web page. The only argument passed to the callback is a data object.
 
+**Note**: `window.callPhantom` is still an experimental API. In the near future, it will be likely replaced with a message-based solution which will still provide the same functionality.
+
 Although there are many possible use cases for this inversion of control, the primary one so far is to prevent the need for a PhantomJS script to be continually polling for some variable on the web page.
 
 Example:  
