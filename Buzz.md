@@ -10,6 +10,9 @@ http://www.scottlogic.co.uk/2012/12/headless-testing-in-less-js-with-phantomjs/
 JavaScript tests on your Continous Integration server by Pål Ruud (Dec 19, 2012)<br/>
 http://blog.iterate.no/2012/12/19/javascript-tests-on-your-continous-integration-server/
 
+Render D3.js-driven SVG server-side! by jreyes (Dec 13, 2012)<br/>
+https://blogs.law.harvard.edu/jreyes/2012/12/13/render-d3-js-driven-svg-server-side/
+
 Testing Front End Changes Quickly and Easily by David Blooman (Dec 10, 2012)<br/>
 http://mobiletestingfordummies.tumblr.com/post/37629799816/testing-front-end-changes-quickly-and-easily
 
