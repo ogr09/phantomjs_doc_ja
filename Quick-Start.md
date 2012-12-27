@@ -11,7 +11,7 @@ console.log('Hello, world!');
 phantom.exit();
 ```
 
-Save it as `hello.js` and the run it:
+Save it as `hello.js` and then run it:
 
     phantomjs hello.js
 
