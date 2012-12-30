@@ -4,6 +4,9 @@
 
 ## 2012
 
+Lessons learned while wrestling with Ubuntu fonts by Frank Hoffsümmer (Dec 27, 2012)<br/>
+http://captnswing.blogspot.com/2012/12/lessons-learned-wrestling-with-ubuntu.html
+
 Headless testing in less.js with PhantomJS by Luke Page (Dec 21, 2012)<br/>
 http://www.scottlogic.co.uk/2012/12/headless-testing-in-less-js-with-phantomjs/
 
