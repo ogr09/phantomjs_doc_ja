@@ -9,7 +9,7 @@ The following table summarizes the list of various test frameworks and the corre
 | Framework  | Test Runner |
 |:-----------|:------------|
 | [Buster.JS](http://busterjs.org)| built-in|
-| [Capybara](http://jnicklas.github.com/capybara) |[Poltergeist](https://github.com/jonleighton/poltergeist)
+| [Capybara](http://jnicklas.github.com/capybara) |[Poltergeist](https://github.com/jonleighton/poltergeist), [Terminus](http://terminus.jcoglan.com)
 | [Mocha](http://visionmedia.github.com/mocha) | [mocha-phantomjs](http://metaskills.net/mocha-phantomjs) |
 | [FuncUnit](http://funcunit.com) | built-in|
 | [Hiro](http://hirojs.com) | built-in|
