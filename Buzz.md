@@ -4,6 +4,9 @@
 
 ## 2012
 
+How to setup Mocha and SpookyJS for Node.js by Matthew Carriere (Dec 31, 2012)<br/>
+http://matthewcarriere.com/2012/12/31/how-to-setup-mocha-and-spookyjs-for-node-js/
+
 Lessons learned while wrestling with Ubuntu fonts by Frank Hoffsümmer (Dec 27, 2012)<br/>
 http://captnswing.blogspot.com/2012/12/lessons-learned-wrestling-with-ubuntu.html
 
