@@ -896,11 +896,17 @@ var service = server.listen('127.0.0.1:8080', function(request, response) {
     response.close();
 });
 ```
+The value returned by `server.listen()` is a boolean: true if the server is launched.
+
+The `server` object contains these functions:
+ * `close()` : close the server
+ * `port` : the port on which the server listen requests (readonly)
+
 
 <a name="webserver-request" />
 The `request` object passed to the callback function may contain the following properties:
  * `method`: Defines the request method (`'GET'`, `'POST'`, etc.)
- * `url`: The complete request URL, including the query string (if any)
+ * `url`: The path part and query string part (if any) of the request URL
  * `httpVersion`: The actual HTTP version
  * `headers`: All of the HTTP headers as key-value pairs
  * `post`: The request body (only for `'POST'` and `'PUT'` method requests)
