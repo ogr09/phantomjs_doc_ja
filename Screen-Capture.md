@@ -1,11 +1,11 @@
 Since PhantomJS is using WebKit, a real layout and rendering engine, it can capture a web page as a screenshot. Because PhantomJS can render anything on the web page, it can be used to convert contents not only in HTML and CSS, but also SVG and Canvas.
 
-The following script demonstrates the simplest use of page capture. It loads Google homepage and then save it as an image, `google.png`.
+The following script demonstrates the simplest use of page capture. It loads Google homepage and then save it as an image, `github.png`.
 
 ```
 var page = require('webpage').create();
-page.open('http://google.com', function () {
-    page.render('google.png');
+page.open('http://github.com/', function () {
+    page.render('github.png');
     phantom.exit();
 });
 ```
