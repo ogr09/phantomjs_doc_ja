@@ -2,6 +2,11 @@
 
 (Sorted chronologically, the first is the most recent).
 
+## 2013
+
+Printing maps made easier by Tim Welch  (Jan 2, 2013)<br/>
+http://madrona.ecotrust.org/news/map-printing/
+
 ## 2012
 
 How to setup Mocha and SpookyJS for Node.js by Matthew Carriere (Dec 31, 2012)<br/>
