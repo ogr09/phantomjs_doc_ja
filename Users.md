@@ -8,6 +8,7 @@ The following open-source projects are using PhantomJS as part of the testing wo
 * Grunt
 * Modernizr
 * YUI3
+* Zepto
 
 ## Organizations
 
