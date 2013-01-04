@@ -52,13 +52,13 @@ Several page capture projects utilizing PhantomJS:
 
  * [Guard PhantomJS](https://github.com/carhartl/guard-phantomjs) automatically runs PhantomJS using Guard.
 
- * [node-phantom](https://github.com/alexscheelmeyer/node-phantom) is a bridge between PhantomJS and Node.js.
+ * [phantom-proxy](https://github.com/sheebz/phantom-proxy) provides a proxy interface for PhantomJS which runs inside of node.
+
+ * [node-phantom](https://github.com/alexscheelmeyer/node-phantom) is a bridge between PhantomJS and Node.js. **currently unmaintained, suggest phantom-proxy**
 
  * [phantomas](https://github.com/macbre/phantomas) is a web-performance metrics and hints generation tool.
 
- * [phantom-proxy](https://github.com/sheebz/phantom-proxy) provides a proxy interface for PhantomJS which runs inside of node.
-
- * [phantomjs-node](https://github.com/sgentle/phantomjs-node) provides PhantomJS bridge for Node.js applications.
+ * [phantomjs-node](https://github.com/sgentle/phantomjs-node) provides PhantomJS bridge for Node.js applications. **currently unmaintained, suggest phantom-proxy**
 
  * [PhantomLint](https://github.com/arthurakay/LintRoller/tree/v1.3.0) uses PhantomJS to run JSLint on JavaScript application code.
 
