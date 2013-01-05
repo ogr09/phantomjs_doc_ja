@@ -21,6 +21,7 @@ Note: the wiki content is still being migrated. It may not complete yet.
 * [[Examples|Examples]]
 * [[Best Practices|Best Practices]]
 * [[Tips and Tricks|Tips and Tricks]]
+* [[Supported Features|Supported Features]]
 * [[Troubleshooting|Troubleshooting]]
 * [[Buzz|Buzz]]: blog posts, articles, etc
 * [[Who's Using PhantomJS?|Users]]
