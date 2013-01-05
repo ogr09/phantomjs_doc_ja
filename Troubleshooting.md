@@ -14,7 +14,7 @@ Transport Layer Security (TLS) and Secure Sockets Layer (SSL) are necessary to a
 
 ### Interactive Mode (REPL)
 
-If PhantomJS is launched without any argument, it starts in the so-called interactive mode, also known for REPL (read-eval-print-loop). This mode allows a faster cycle of experiment and script prototyping. PhantomJS REPL supports the expected features: command editing, persistent history, and autocomplete (with Tab key).
+If PhantomJS is launched without any argument, it starts in the so-called interactive mode, also known for [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) (read-eval-print-loop). This mode allows a faster cycle of experiment and script prototyping. PhantomJS REPL supports the expected features: command editing, persistent history, and autocomplete (with Tab key).
 
 ### Remote Debugging
 
@@ -24,7 +24,7 @@ Remote debugging permits inspection of the script and web page via another WebKi
 phantomjs --remote-debugger-port=9000 test.js
 ```
 
-After than, open Safari/Chrome and go to the http://ipaddress:9000. The browser will show the familiar Web Inspector interface which in this case works on the script being tested.
+After than, open Safari/Chrome and go to the http://ipaddress:9000. The browser will show the familiar [Web Inspector interface](http://www.webkit.org/blog/1620/webkit-remote-debugging/) which in this case works on the script being tested.
 
 ### Page Error Handler
 
