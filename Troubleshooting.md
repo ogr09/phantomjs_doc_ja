@@ -1,12 +1,12 @@
 ### Latest Version
 
-All examples are designed to work with the latest version of PhantomJS. They may not work with the older versions. To check for PhantomJS version, run:
+Before reporting an issue, make sure you are using the latest version:
 
 ```
 phantomjs --version
 ```
 
-If some examples do not work, make sure that there is not more than one version of PhantomJS installed in the system. Multiple versions may lead to conflict as to which one is being invoked in the terminal.
+All examples are designed to work with the latest version of PhantomJS. If some examples do not work, make sure that there is not more than one version of PhantomJS installed in the system. Multiple versions may lead to conflict as to which one is being invoked in the terminal.
 
 ### SSL and TLS
 
