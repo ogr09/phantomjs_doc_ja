@@ -19,6 +19,7 @@ Note: the wiki content is still being migrated. It may not complete yet.
 ## Explore
 
 * [[Examples|Examples]]
+* [[Best Practices|Best Practices]]
 * [[Tips and Tricks|Tips and Tricks]]
 * [[Troubleshooting|Troubleshooting]]
 * [[Buzz|Buzz]]: blog posts, articles, etc
