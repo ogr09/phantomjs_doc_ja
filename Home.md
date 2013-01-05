@@ -19,8 +19,9 @@ Note: the wiki content is still being migrated. It may not complete yet.
 ## Explore
 
 * [[Examples|Examples]]
-* [[Buzz|Buzz]]: blog posts, articles, etc
+* [[Tips and Tricks|Tips and Tricks]]
 * [[Troubleshooting|Troubleshooting]]
+* [[Buzz|Buzz]]: blog posts, articles, etc
 * [[Who's Using PhantomJS?|Users]]
 * [[Related Projects|Related Projects]]
 
