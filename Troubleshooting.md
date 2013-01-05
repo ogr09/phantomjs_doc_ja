@@ -14,7 +14,7 @@ Transport Layer Security (TLS) and Secure Sockets Layer (SSL) are necessary to a
 
 ### Interactive Mode (REPL)
 
-If PhantomJS is launched without any argument, it starts in the so-called interactive mode, also known for [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) (read-eval-print-loop). This mode allows a faster cycle of experiment and script prototyping. PhantomJS REPL supports the expected features: command editing, persistent history, and autocomplete (with Tab key).
+If PhantomJS is launched without any argument, it starts in the so-called interactive mode, also known for [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) (read-eval-print-loop). This mode allows a faster cycle of experiment and script prototyping. PhantomJS REPL supports the expected features: command editing, persistent history, and autocomplete (with Tab key). Read more [[about REPL|REPL]].
 
 ### Remote Debugging
 
