@@ -56,11 +56,11 @@ Upload **both** the package (-macosx.zip) and the symbols file (-macosx-symbols.
 
 ### Linux
 
-Linux package needs to be created using a virtualized Ubuntu 10.04.
+Linux package needs to be created using a virtualized CentoS 5.8 (`glibc 2.5`, lowest common denominator).
 
 Install [Vagrant](http://www.vagrantup.com) and make sure it is running properly.
 
-**Note**: Vagrant will automatically download and install Ubuntu base box. This may take a lot of bandwidth.
+**Note**: Vagrant will automatically download and install CentOS base box. This may take a lot of bandwidth.
 
 For the 32-bit package, run:
 
