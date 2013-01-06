@@ -1,6 +1,4 @@
-Note: the wiki content is still being migrated. It may not complete yet.
-
-## From the Website
+## Get Started
 
 * [Download and Installation](http://phantomjs.org/download.html)
 * [Build from Source](http://phantomjs.org/build.html)
