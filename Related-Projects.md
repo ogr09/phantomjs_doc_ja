@@ -67,3 +67,5 @@ Several page capture projects utilizing PhantomJS:
  * [Slippy](https://github.com/Seldaek/slippy) uses PhantomJS to convert HTML presentations into PDFs that can be e.g. uploaded to SlideShare.
 
  * [Yeoman](http://github.com/yeoman/yeoman) is a robust and opinionated client-side stack, comprised of tools and frameworks that can help developers quickly build beautiful web applications. It uses PhantomJS as a basis for headless tests.
+
+ * [basset](https://github.com/fragphace/basset) command-line website performance sniffer.
