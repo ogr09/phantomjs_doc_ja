@@ -4,6 +4,12 @@
 
 ## 2013
 
+Python Testing - PhantomJS with Selenium WebDriver by Corey Goldberg (Jan 6, 2013)<br/>
+http://coreygoldberg.blogspot.com/2013/01/python-testing-phantomjs-with-selenium.html
+
+Create charts on the server by Highcharts team (Jan 2, 2013)<br/>
+http://www.highcharts.com/component/content/article/2-news/52-serverside-generated-charts
+
 Printing maps made easier by Tim Welch  (Jan 2, 2013)<br/>
 http://madrona.ecotrust.org/news/map-printing/
 
