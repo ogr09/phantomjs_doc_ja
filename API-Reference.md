@@ -30,7 +30,7 @@ Supported command-line options are:
 Alternatively, since PhantomJS 1.3, you can also utilize a JavaScript Object Notation (JSON) configuration file instead of passing in multiple command-line options:
  * `--config=/path/to/config.json`
 
-The contents of `config.json` should be a standalone JavaScript object. Keys are de-dashed, camel-cased equivalents of the other supported command-line options.  Values are their JavaScript equivalents: 'yes'/'no' values translate into `true`/`false` Boolean values, numbers remain numbers, strings remain strings. For example:
+The contents of `config.json` should be a standalone JavaScript object. Keys are de-dashed, camel-cased equivalents of the other supported command-line options (other than `--version`/`-v` and `--help`/`-h`).  Values are their JavaScript equivalents: 'yes'/'no' values translate into `true`/`false` Boolean values, numbers remain numbers, strings remain strings. For example:
 ```js
 {
     /* Same as: --ignore-ssl-errors=yes */
