@@ -24,7 +24,7 @@ Remote debugging permits inspection of the script and web page via another WebKi
 phantomjs --remote-debugger-port=9000 test.js
 ```
 
-After than, open Safari/Chrome and go to the http://ipaddress:9000. The browser will show the familiar [Web Inspector interface](http://www.webkit.org/blog/1620/webkit-remote-debugging/) which in this case works on the script being tested.
+After than, open Safari/Chrome and go to the http://ipaddress:9000. The browser will show the familiar [Web Inspector interface](http://www.webkit.org/blog/1620/webkit-remote-debugging/) which in this case works on the script being tested.  To run your script, simply enter the ```__run()``` command in the Web Inspector Console.
 
 ### Page Error Handler
 
