@@ -14,13 +14,18 @@
 * [[Page Automation|Page Automation]]
 * [[API Reference|API Reference]]
 
+## Get Help
+
+Something does not work?
+
+* [[Troubleshooting|Troubleshooting]]
+
 ## Explore
 
 * [[Examples|Examples]]
 * [[Best Practices|Best Practices]]
 * [[Tips and Tricks|Tips and Tricks]]
 * [[Supported Web Standards|Supported Web Standards]]
-* [[Troubleshooting|Troubleshooting]]
 * [[Buzz|Buzz]]: blog posts, articles, etc
 * [[Who's Using PhantomJS?|Users]]
 * [[Related Projects|Related Projects]]
