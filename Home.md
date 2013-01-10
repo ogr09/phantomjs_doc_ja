@@ -2,7 +2,6 @@
 
 * [Download and Installation](http://phantomjs.org/download.html)
 * [Build from Source](http://phantomjs.org/build.html)
-* [Frequently Asked Question](http://phantomjs.org/faq.html) (FAQ)
 * [Release Notes](http://phantomjs.org/releases.html)
 
 ## Learn
@@ -19,6 +18,7 @@
 Something does not work?
 
 * [[Troubleshooting|Troubleshooting]]
+* [Frequently Asked Question](http://phantomjs.org/faq.html) (FAQ)
 
 ## Explore
 
