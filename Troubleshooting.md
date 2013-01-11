@@ -37,9 +37,7 @@ page.onError = function (msg, trace) {
 }
 ```
 
-### Interactive Mode (REPL)
-
-If PhantomJS is launched without any argument, it starts in the so-called interactive mode, also known for [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) (read-eval-print-loop). This mode allows a faster cycle of experiment and script prototyping. PhantomJS REPL supports the expected features: command editing, persistent history, and autocomplete (with Tab key). Read more [[about REPL|REPL]].
+Now if the page opens a site with some JavaScript exceptions, a detailed information (including the stack trace) will be printed out.
 
 ### Remote Debugging
 
@@ -49,8 +47,11 @@ Remote debugging permits inspection of the script and web page via another WebKi
 phantomjs --remote-debugger-port=9000 test.js
 ```
 
-After than, open Safari/Chrome and go to the http://ipaddress:9000. The browser will show the familiar [Web Inspector interface](http://www.webkit.org/blog/1620/webkit-remote-debugging/) which in this case works on the script being tested.  To run your script, simply enter the ```__run()``` command in the Web Inspector Console.
+After than, open Safari/Chrome and go to the http://ipaddress:9000. The browser will show the familiar [Web Inspector interface](http://www.webkit.org/blog/1620/webkit-remote-debugging/) which in this case works on the script being tested.
 
+To run your script, simply enter the ```__run()``` command in the Web Inspector Console. Alternatively, use `--remote-debugger-autorun=yes` command-line argument to have your script launched immediately.
 
+### Interactive Mode (REPL)
 
-Now if the page opens a site with some JavaScript exceptions, a detailed information (including the stack trace) will be printed out.
+If PhantomJS is launched without any argument, it starts in the so-called interactive mode, also known for [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) (read-eval-print-loop). This mode allows a faster cycle of experiment and script prototyping. PhantomJS REPL supports the expected features: command editing, persistent history, and autocomplete (with Tab key). Read more [[about REPL|REPL]].
+
