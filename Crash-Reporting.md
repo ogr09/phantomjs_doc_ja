@@ -48,11 +48,15 @@ Then there is no point posting it - it is not useful for debugging in this form.
 
 At the moment the process for obtaining OS X stack traces is not ideal. It would be great if someone could work on this.
 
-In the mean time, the following steps can be used to obtain a somewhat useful trace. The trace must be generated on Linux, since we don't have a way of building the minidump_stacktrace program on OS X yet.
+In the mean time, the following steps can be used to obtain a somewhat useful trace. The trace must be generated on Linux, since we don't have a way of building the minidump_stacktrace program on OS X yet. You can perform the following steps in a linux virtual machine, or any linux environment that you can put your .dmp file on.
+
+**You only need to do steps 1 - 5 the first time you get a stack trace. After that, you can skip to step 6**
 
 1. Obtain the macosx symbol files from the [downloads page](https://code.google.com/p/phantomjs/downloads/list). Also download the linux symbols, as you will need to copy the minidump_stackwalk program from here.
 
-2. Extract the tarball and cd into the directory.
+2. Extract both tarballs and cd into the macosx symbols directory.
+
+3. Copy the `minidump_stackwalk` binary from the linux symbols directory to the mac osx symbols directory.
 
 3. Run:
 
@@ -78,7 +82,7 @@ In the mean time, the following steps can be used to obtain a somewhat useful tr
 
    (Substitute in your own hash value if it is different.)
 
-6. Now run:
+6. **You only need to perform the above steps the first time.** To get the stack trace run:
 
    `./minidump_stacktrace /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp . 2>/dev/null`
 
@@ -95,6 +99,10 @@ In the mean time, the following steps can be used to obtain a somewhat useful tr
 ```
 
 These show the [mangled names](https://en.wikipedia.org/wiki/Name_mangling) of the stack frames.
+
+8. It is suggested you write the output to a file and attach it to your ticket.
+
+   `./minidump_stackwalk /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp . 2>/dev/null > dump.txt`
 
 ## If you're not using an official binary
 
