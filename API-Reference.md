@@ -13,27 +13,27 @@ If PhantomJS is invoked without any argument, it will enter the interactive mode
 ## Command-line Options ##
 Supported command-line options are:
  * `--cookies-file=/path/to/cookies.txt` specifies the file name to store the persistent [Cookies](#cookie).
- * `--disk-cache=[yes|no]` enables disk cache (at desktop services cache storage location, default is `no`).
+ * `--disk-cache=[true|false]` enables disk cache (at desktop services cache storage location, default is `false`). Also accepted: `[yes|no]`.
  * `--help` or `-h` lists all possible command-line options. _Halts immediately, will not run a script passed as argument._
- * `--ignore-ssl-errors=[yes|no]` ignores SSL errors, such as expired or self-signed certificate errors (default is `no`).
- * `--load-images=[yes|no]` load all inlined images (default is `yes`).
- * `--local-to-remote-url-access=[yes|no]` allows local content to access remote URL (default is `no`).
+ * `--ignore-ssl-errors=[true|false]` ignores SSL errors, such as expired or self-signed certificate errors (default is `false`). Also accepted: `[yes|no]`.
+ * `--load-images=[true|false]` load all inlined images (default is `true`). Also accepted: `[yes|no]`.
+ * `--local-to-remote-url-access=[true|false]` allows local content to access remote URL (default is `false`). Also accepted: `[yes|no]`.
  * `--max-disk-cache-size=size` limits the size of disk cache (in KB).
  * `--output-encoding=encoding` sets the encoding used for terminal output (default is `utf8`).
  * `--proxy=address:port` specifies the proxy server to use (e.g. `--proxy=192.168.1.42:8080`).
  * `--proxy-type=[http|socks5|none]` specifies the type of the proxy server (default is `http`).
  * `--script-encoding=encoding` sets the encoding used for the starting script (default is `utf8`).
  * `--version` or `-v` prints out the version of PhantomJS. _Halts immediately, will not run a script passed as argument._
- * `--web-security=[yes|no]` enables web security and forbids cross-domain XHR (default is `yes`).
+ * `--web-security=[true|false]` enables web security and forbids cross-domain XHR (default is `true`). Also accepted: `[yes|no]`.
  * `--ssl-protocol=[sslv3|sslv2|tlsv1|any']` sets the SSL protocol for secure connections (default is `SSLv3`).
 
 Alternatively, since PhantomJS 1.3, you can also utilize a JavaScript Object Notation (JSON) configuration file instead of passing in multiple command-line options:
  * `--config=/path/to/config.json`
 
-The contents of `config.json` should be a standalone JavaScript object. Keys are de-dashed, camel-cased equivalents of the other supported command-line options (excluding `--version`/`-v` and `--help`/`-h`).  Values are their JavaScript equivalents: 'yes'/'no' values translate into `true`/`false` Boolean values, numbers remain numbers, strings remain strings. For example:
+The contents of `config.json` should be a standalone JavaScript object. Keys are de-dashed, camel-cased equivalents of the other supported command-line options (excluding `--version`/`-v` and `--help`/`-h`).  Values are their JavaScript equivalents: 'true'/'false' (or 'yes'/'no') values translate into `true`/`false` Boolean values, numbers remain numbers, strings remain strings. For example:
 ```js
 {
-    /* Same as: --ignore-ssl-errors=yes */
+    /* Same as: --ignore-ssl-errors=true */
     "ignoreSslErrors": true,
 
     /* Same as: --max-disk-cache-size=1000 */
