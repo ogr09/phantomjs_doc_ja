@@ -10,6 +10,9 @@ http://jhchabran.com/blog/2013/01/10/introducing-photograph/
 Backbone, RequireJS, Jasmine, PhantomJS, and Grunt by Hidenari Nozaki (Jan 10, 2013)<br/>
 http://hdnrnzk.me/2013/01/10/backbone-requirejs-jasmine-phantomjs-and-grunt/
 
+Using PhantomJS and GhostDriver with Selenium WebDriver in .Net by Michael Whelan (Jan 9, 2013)<br/>
+http://michael-whelan.net/using-phantomjs-with-webdriver
+
 Python Testing - PhantomJS with Selenium WebDriver by Corey Goldberg (Jan 6, 2013)<br/>
 http://coreygoldberg.blogspot.com/2013/01/python-testing-phantomjs-with-selenium.html
 
