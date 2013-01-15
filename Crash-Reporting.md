@@ -17,7 +17,7 @@ You can post the crash dump to an issue, but it will help us solve your problem 
 
 3. Run:
 
-    `./minidump_stacktrace /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp . 2>/dev/null`
+    `./minidump_stackwalk /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp . 2>/dev/null`
 
    Obviously, substitute the path to your own crash dump.
 
@@ -48,11 +48,11 @@ Then there is no point posting it - it is not useful for debugging in this form.
 
 At the moment the process for obtaining OS X stack traces is not ideal. It would be great if someone could work on this.
 
-In the mean time, the following steps can be used to obtain a somewhat useful trace. The trace must be generated on Linux, since we don't have a way of building the minidump_stacktrace program on OS X yet. You can perform the following steps in a linux virtual machine, or any linux environment that you can put your .dmp file on.
+In the mean time, the following steps can be used to obtain a somewhat useful trace. These steps must be completed on a Linux OS -- it's not currently possible to analyse an OS X crash dump on OS X. This is because we don't have a way of building the minidump_stackwalk program on OS X yet. You can perform the steps in a linux virtual machine, or any linux environment that you can put your .dmp file on.
 
 **You only need to do steps 1 - 6 the first time you get a stack trace. After that, you can skip to step 7**
 
-1. Obtain the macosx symbol files from the [downloads page](https://code.google.com/p/phantomjs/downloads/list). Also download the linux symbols, as you will need to copy the minidump_stackwalk program from here.
+1. Obtain the macosx symbol files from the [downloads page](https://code.google.com/p/phantomjs/downloads/list). Also download the equivalent linux symbol files, as you will need to copy the minidump_stackwalk program from here.
 
 2. Extract both tarballs and cd into the macosx symbols directory.
 
@@ -84,7 +84,7 @@ In the mean time, the following steps can be used to obtain a somewhat useful tr
 
 7. **You only need to perform the above steps the first time.** To get the stack trace run:
 
-   `./minidump_stacktrace /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp . 2>/dev/null`
+   `./minidump_stackwalk /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp . 2>/dev/null`
 
    Obviously, substitute the path to your own crash dump.
 
