@@ -50,7 +50,7 @@ At the moment the process for obtaining OS X stack traces is not ideal. It would
 
 In the mean time, the following steps can be used to obtain a somewhat useful trace. The trace must be generated on Linux, since we don't have a way of building the minidump_stacktrace program on OS X yet. You can perform the following steps in a linux virtual machine, or any linux environment that you can put your .dmp file on.
 
-**You only need to do steps 1 - 5 the first time you get a stack trace. After that, you can skip to step 6**
+**You only need to do steps 1 - 6 the first time you get a stack trace. After that, you can skip to step 7**
 
 1. Obtain the macosx symbol files from the [downloads page](https://code.google.com/p/phantomjs/downloads/list). Also download the linux symbols, as you will need to copy the minidump_stackwalk program from here.
 
@@ -58,49 +58,49 @@ In the mean time, the following steps can be used to obtain a somewhat useful tr
 
 3. Copy the `minidump_stackwalk` binary from the linux symbols directory to the mac osx symbols directory.
 
-3. Run:
+4. Run:
 
    `./minidump_stackwalk /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp . 2>&1 | egrep "No symbol file at .*phantomjs"`
 
    Obviously, substitute the path to your own crash dump.
 
-4. You'll see something like:
+5. You'll see something like:
 
-```
-2012-08-04 14:18:40: simple_symbol_supplier.cc:192: INFO: No symbol file at ./phantomjs/D41D8CD98F00B204E9800998ECF8427E0/phantomjs.sym
-2012-08-04 14:18:40: simple_symbol_supplier.cc:192: INFO: No symbol file at ./phantomjs/D41D8CD98F00B204E9800998ECF8427E0/phantomjs.sym
-2012-08-04 14:18:40: simple_symbol_supplier.cc:192: INFO: No symbol file at ./phantomjs/D41D8CD98F00B204E9800998ECF8427E0/phantomjs.sym
-2012-08-04 14:18:40: simple_symbol_supplier.cc:192: INFO: No symbol file at ./phantomjs/D41D8CD98F00B204E9800998ECF8427E0/phantomjs.sym
-2012-08-04 14:18:40: simple_symbol_supplier.cc:192: INFO: No symbol file at ./phantomjs/D41D8CD98F00B204E9800998ECF8427E0/phantomjs.sym
-```
+   ```
+   2012-08-04 14:18:40: simple_symbol_supplier.cc:192: INFO: No symbol file at ./phantomjs/D41D8CD98F00B204E9800998ECF8427E0/phantomjs.sym
+   2012-08-04 14:18:40: simple_symbol_supplier.cc:192: INFO: No symbol file at ./phantomjs/D41D8CD98F00B204E9800998ECF8427E0/phantomjs.sym
+   2012-08-04 14:18:40: simple_symbol_supplier.cc:192: INFO: No symbol file at ./phantomjs/D41D8CD98F00B204E9800998ECF8427E0/phantomjs.sym
+   2012-08-04 14:18:40: simple_symbol_supplier.cc:192: INFO: No symbol file at ./phantomjs/D41D8CD98F00B204E9800998ECF8427E0/phantomjs.sym
+   2012-08-04 14:18:40: simple_symbol_supplier.cc:192: INFO: No symbol file at ./phantomjs/D41D8CD98F00B204E9800998ECF8427E0/phantomjs.sym
+   ```
 
    Copy the hash value (D41D8CD98F00B204E9800998ECF8427E0)
 
-5. Run:
+6. Run:
 
    cp -r phantomjs/\`ls phantomjs\` phantomjs/D41D8CD98F00B204E9800998ECF8427E0
 
    (Substitute in your own hash value if it is different.)
 
-6. **You only need to perform the above steps the first time.** To get the stack trace run:
+7. **You only need to perform the above steps the first time.** To get the stack trace run:
 
    `./minidump_stacktrace /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp . 2>/dev/null`
 
    Obviously, substitute the path to your own crash dump.
 
-7. You should see a trace containing lines like:
+8. You should see a trace containing lines like:
 
-```
- 0  phantomjs!__ZN7WebCoreL15requiresLineBoxERKNS_14InlineIteratorERKNS_8LineInfoE + 0x35
-    eip = 0x009fd2f5   esp = 0xbfffc820   ebp = 0xbfffc848   ebx = 0xbfffcdcc
-    esi = 0x0bd8e9b8   edi = 0xbfffcfe4   eax = 0x00000000   ecx = 0xbfffcdcc
-    edx = 0x0bd8e9b8   efl = 0x00210246
-    Found by: given as instruction pointer in context
-```
+   ```
+   0  phantomjs!__ZN7WebCoreL15requiresLineBoxERKNS_14InlineIteratorERKNS_8LineInfoE + 0x35
+      eip = 0x009fd2f5   esp = 0xbfffc820   ebp = 0xbfffc848   ebx = 0xbfffcdcc
+      esi = 0x0bd8e9b8   edi = 0xbfffcfe4   eax = 0x00000000   ecx = 0xbfffcdcc
+      edx = 0x0bd8e9b8   efl = 0x00210246
+      Found by: given as instruction pointer in context
+   ```
 
-These show the [mangled names](https://en.wikipedia.org/wiki/Name_mangling) of the stack frames.
+   These show the [mangled names](https://en.wikipedia.org/wiki/Name_mangling) of the stack frames.
 
-8. It is suggested you write the output to a file and attach it to your ticket.
+9. It is suggested you write the output to a file and attach it to your ticket.
 
    `./minidump_stackwalk /tmp/598e080c-58dd-e183-12fb7ba8-29a93fff.dmp . 2>/dev/null > dump.txt`
 
