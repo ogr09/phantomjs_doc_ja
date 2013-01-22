@@ -4,6 +4,9 @@
 
 ## 2013
 
+Automating Rasterization of HTML elements on a Page (Stephen James, Jan 16, 2013)<br/>
+http://stephenjamescode.blogspot.com/2013/01/automating-rasterization-of-html.html
+
 Introducing Photograph by Jean Hadrien Chabran (Jan 10, 2013)<br/>
 http://jhchabran.com/blog/2013/01/10/introducing-photograph/
 
