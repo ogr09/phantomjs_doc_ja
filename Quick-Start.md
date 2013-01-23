@@ -1,4 +1,4 @@
-This instruction assumes that PhantomJS is installed and its executable is place somewhere in the PATH.
+This instruction assumes that PhantomJS is installed and its executable is placed somewhere in the PATH.
 
 The code shown here is also available in [[various examples|Examples]] included with PhantomJS. You are also recommended to explore the use of PhantomJS for [[page automation|Page Automation]], [[network monitoring|Network Monitoring]], [[screen capture|Screen Capture]], and [[headless testing|Headless Testing]].
 
