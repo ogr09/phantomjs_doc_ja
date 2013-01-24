@@ -45,3 +45,5 @@ The following open-source projects are using PhantomJS as part of the testing wo
 [Torbit](http://torbit.com) uses PhantomJS to analyze web pages in order to determine potential optimizations and various other tests.
 
 [Twitter](http://twitter.com) uses using PhantomJS to run QUnit-based tests running within Jenkins CI (source: [tweet](https://twitter.com/leolaneseltd/status/197766152745787392) from Leo Lanese)
+
+[BandPage](http://www.bandpage.com) uses using PhantomJS inside a custom node file watcher thingy to run QUnit-based tests on every file save.
