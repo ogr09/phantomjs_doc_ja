@@ -4,6 +4,9 @@
 
 ## 2013
 
+UI-testing (EPiServer): the need for speed (Stefan Forsberg, Jan 25, 2013)<br/>
+http://www.popkram.com/blog/2013/01/ui-testing-episerver-the-need-for-speed/
+
 Automating Rasterization of HTML elements on a Page (Stephen James, Jan 16, 2013)<br/>
 http://stephenjamescode.blogspot.com/2013/01/automating-rasterization-of-html.html
 
