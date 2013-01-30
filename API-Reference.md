@@ -648,7 +648,11 @@ This callback is invoked when the page starts the loading. There is no argument 
 Example:
 ```js
 page.onLoadStarted = function() {
-    console.log('Now loading...');
+    var currentUrl = page.evaluate(function() {
+        return window.location.href;
+    });
+    console.log('Current page ' + currentUrl +' will gone...');
+    console.log('Now loading a new page...');
 };
 ```
 
@@ -755,13 +759,11 @@ This callback is invoked when the URL changes, e.g. as it navigates away from th
 Example:
 ```js
 page.onUrlChanged = function(targetUrl) {
-    var currentUrl = page.evaluate(function() {
-        return window.location.href;
-    });
-    console.log('Old URL: ' + currentUrl);
     console.log('New URL: ' + targetUrl);
 };
 ```
+To retrieve the old URL, use the onLoadStarted callback.
+
 
 <a name="system-module" />
 ## Module: System ##
