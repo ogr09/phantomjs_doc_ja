@@ -713,6 +713,13 @@ page.onResourceRequested = function(request) {
     console.log('Request (#' + request.id + '): ' + JSON.stringify(request));
 };
 ```
+The `request` metadata object contains these properties:
+
+ * `id`: the number of the requested resource
+ * `method`: http method
+ * `url`: the URL of the requested resource
+ * `time`: Date object containing the date of the request
+ * `headers`: list of http headers
 
 <a name="webpage-onResourceReceived" />
 #### `onResourceReceived` ####
@@ -727,6 +734,18 @@ page.onResourceReceived = function(response) {
     console.log('Response (#' + response.id + ', stage "' + response.stage + '"): ' + JSON.stringify(response));
 };
 ```
+The `response` metadata object contains these properties:
+
+ * `id`: the number of the requested resource
+ * `url`: the URL of the requested resource
+ * `time`: Date object containing the date of the response
+ * `headers`: list of http headers
+ * `bodySize`: size of the received content (entire content or chunk content)
+ * `contentType`: the content type if specified
+ * `redirectURL`: if there is a redirection, the redirected URL
+ * `stage`: "start", "end" (FIXME: other value for intermediate chunk?)
+ * `status`: http status code. ex: `200`
+ * `statusText`: http status text. ex: `OK`
 
 <a name="webpage-onUrlChanged" />
 #### `onUrlChanged` ####
