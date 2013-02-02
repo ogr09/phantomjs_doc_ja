@@ -936,11 +936,15 @@ The `request` object passed to the callback function may contain the following p
 <a name="webserver-response" />
 The `response` object should be used to create the response using the following properties and functions:
  * `headers`: Stores all HTTP headers as key-value pairs. These must be set **BEFORE** calling `write` for the first time.
+ * `setHeader(name, value)`: sets a specific header
+ * `header(name)`: returns the value of the given header
  * `statusCode`: Sets the returned HTTP status code.
+ * `setEncoding(encoding)`: Indicate the encoding to use to convert data given to `write()`. By default data will be converted to UTF-8. Indicate `"binary"` if data is a binary string.
  * `write(data)`: Sends a chunk for the response body. Can be called multiple times.
  * `writeHead(statusCode, headers)`: Sends a response header to the request. The status code is a 3-digit HTTP status code (e.g. `404`). The last argument, headers, are the response headers. Optionally one can give a human-readable `headers` collection as the second argument.
  * `close()`: Closes the HTTP connection.
       * To avoid the client detecting a connection drop, remember to use `write()` at least once. Sending an empty string (i.e. `response.write('')`) would be enough if the only aim is, for example, to return an HTTP status code of `200` (`"OK"`).
+ * `closeGracefully()`: same as `close()`, but ensures response headers have been sent first (and do at least a `response.write('')`)
 
 # Appendix #
 <a name="cookie" />
