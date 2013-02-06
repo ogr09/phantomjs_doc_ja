@@ -12,9 +12,10 @@ If PhantomJS is invoked without any argument, it will enter the interactive mode
 <a name="command-line-options" />
 ## Command-line Options ##
 Supported command-line options are:
+ * `--help` or `-h` lists all possible command-line options. _Halts immediately, will not run a script passed as argument._
+ * `--version` or `-v` prints out the version of PhantomJS. _Halts immediately, will not run a script passed as argument._
  * `--cookies-file=/path/to/cookies.txt` specifies the file name to store the persistent [Cookies](#cookie).
  * `--disk-cache=[true|false]` enables disk cache (at desktop services cache storage location, default is `false`). Also accepted: `[yes|no]`.
- * `--help` or `-h` lists all possible command-line options. _Halts immediately, will not run a script passed as argument._
  * `--ignore-ssl-errors=[true|false]` ignores SSL errors, such as expired or self-signed certificate errors (default is `false`). Also accepted: `[yes|no]`.
  * `--load-images=[true|false]` load all inlined images (default is `true`). Also accepted: `[yes|no]`.
  * `--local-to-remote-url-access=[true|false]` allows local content to access remote URL (default is `false`). Also accepted: `[yes|no]`.
@@ -23,9 +24,8 @@ Supported command-line options are:
  * `--proxy=address:port` specifies the proxy server to use (e.g. `--proxy=192.168.1.42:8080`).
  * `--proxy-type=[http|socks5|none]` specifies the type of the proxy server (default is `http`).
  * `--script-encoding=encoding` sets the encoding used for the starting script (default is `utf8`).
- * `--version` or `-v` prints out the version of PhantomJS. _Halts immediately, will not run a script passed as argument._
- * `--web-security=[true|false]` enables web security and forbids cross-domain XHR (default is `true`). Also accepted: `[yes|no]`.
  * `--ssl-protocol=[sslv3|sslv2|tlsv1|any']` sets the SSL protocol for secure connections (default is `SSLv3`).
+ * `--web-security=[true|false]` enables web security and forbids cross-domain XHR (default is `true`). Also accepted: `[yes|no]`.
 
 Alternatively, since PhantomJS 1.3, you can also utilize a JavaScript Object Notation (JSON) configuration file instead of passing in multiple command-line options:
  * `--config=/path/to/config.json`
