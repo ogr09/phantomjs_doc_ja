@@ -290,7 +290,7 @@ Supported formats include:
  * JPEG
 
 <a name="webpage-sendEvent" />
-#### `sendEvent(mouseEventType[, mouseX, mouseY, button='left'])` or `sendEvent(keyboardEventType, keyOrKeys)` ####
+#### `sendEvent(mouseEventType[, mouseX, mouseY, button='left'])` or `sendEvent(keyboardEventType, keyOrKeys, [0, "", Modifier])` ####
 Sends an event to the web page. [1.7 implementation source](https://github.com/ariya/phantomjs/blob/63e06cb/src/webpage.cpp#L1015).
 
 The events are not like synthetic [DOM events](http://www.w3.org/TR/DOM-Level-2-Events/events.html). Each event is sent to the web page as if it comes as part of user interaction.
@@ -306,6 +306,24 @@ For `'mousemove'`, however, there is no button pressed (i.e. it is not dragging)
 ##### Keyboard events #####
 
 The first argument is the event type. The supported types are: `keyup`, `keypress` and `keydown`. The second parameter is a key (from [page.event.key](https://github.com/ariya/phantomjs/commit/cab2635e66d74b7e665c44400b8b20a8f225153a)), or a string.
+
+You can also indicate a fifth argument, which is an integer indicating the modifier key.
+
+- 0: No modifier key is pressed
+- 0x02000000: A Shift key on the keyboard is pressed
+- 0x04000000: A Ctrl key on the keyboard is pressed
+- 0x08000000: An Alt key on the keyboard is pressed
+- 0x10000000: A Meta key on the keyboard is pressed
+- 0x20000000: A keypad button is pressed
+
+Third and fourth argument are not taken account for keyboard events. Just give null for them.
+
+Example:
+```js
+page.sendEvent('keypress', page.event.key.A, null, null, 0x02000000 | 0x08000000 );
+```
+It simulate a shift+alt+A keyboard combination.
+
 
 <a name="webpage-setContent" />
 #### `setContent(content, url)` ####
