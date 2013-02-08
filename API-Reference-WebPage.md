@@ -14,8 +14,63 @@ var page = require('webpage').create();
 var page = new WebPage();
 ```
 
+### Properties list ###
+
+[`clipRect`](#webpage-clipRect) [`canGoBack`](#webpage-canGoBack) [`canGoForward`](#webpage-canGoForward)
+[`content`](#webpage-content) [`cookies`](#webpage-cookies) [`customHeaders`](#webpage-customHeaders)
+[`event`](#webpage-event) [`focusedFrameName`](#webpage-focusedFrameName) [`frameContent`](#webpage-frameContent)
+[`frameName`](#webpage-frameName) [`framePlainText`](#webpage-framePlainText) [`frameTitle`](#webpage-frameTitle)
+[`frameUrl`](#webpage-frameUrl) [`framesCount`](#webpage-framesCount) [`framesName`](#webpage-framesName)
+[`libraryPath`](#webpage-libraryPath) [`navigationLocked`](#webpage-navigationLocked)
+[`offlineStoragePath`](#webpage-offlineStoragePath) [`offlineStorageQuota`](#webpage-offlineStorageQuota)
+[`ownsPages`](#webpage-ownsPages) [`pages`](#webpage-pages) [`pagesWindowName`](#webpage-pagesWindowName)
+[`paperSize`](#webpage-paperSize) [`plainText`](#webpage-plainText) [`scrollPosition`](#webpage-scrollPosition)
+[`settings`](#webpage-settings) [`title`](#webpage-title) [`url`](#webpage-url)
+[`viewportSize`](#webpage-viewportSize) [`windowName`](#webpage-windowName) [`zoomFactor`](#webpage-zoomFactor)
+
+### Functions list ###
+
+[`addCookie()`](#webpage-addCookie) [`childFramesCount()`](#webpage-childFramesCount) [`childFramesName()`](#webpage-childFramesName) 
+[`clearCookies()`](#webpage-clearCookies) [`close()`](#webpage-close) [`currentFrameName()`](#webpage-currentFrameName) 
+[`deleteCookie()`](#webpage-deleteCookie) [`evaluateJavascript()`](#webpage-evaluateJavascript) [`evaluate()`](#webpage-evaluate) 
+[`evaluateASync()`](#webpage-evaluateASync) [`getPage()`](#webpage-getPage) [`go()`](#webpage-go) 
+[`goBack()`](#webpage-goBack) [`goForward()`](#webpage-goForward) [`includeJs()`](#webpage-includeJs) 
+[`injectJs()`](#webpage-injectJs) [`open()`](#webpage-open) [`openUrl()`](#webpage-openUrl) 
+[`release()`](#webpage-release) [`reload()`](#webpage-reload) [`render()`](#webpage-render) 
+[`renderBase64()`](#webpage-renderBase64) [`sendEvent()`](#webpage-sendEvent) 
+[`setContent()`](#webpage-setContent) [`stop()`](#webpage-stop) [`switchToFocusedFrame()`](#webpage-switchToFocusedFrame) 
+[`switchToFrame()`](#webpage-switchToFrame) [`switchToFrame()`](#webpage-switchToFrame) [`switchToChildFrame()`](#webpage-switchToChildFrame) 
+[`switchToChildFrame()`](#webpage-switchToChildFrame) [`switchToMainFrame()`](#webpage-switchToMainFrame)
+[`switchToParentFrame()`](#webpage-switchToParentFrame) [`uploadFile()`](#webpage-uploadFile)
+
+### Callbacks list ###
+
+[`onalert`](#webpage-onalert) [`onCallback`](#webpage-onCallback) [`onClosing`](#webpage-onClosing) 
+[`onConfirm`](#webpage-onConfirm) [`onConsoleMessage`](#webpage-onConsoleMessage) [`onError`](#webpage-onError) 
+[`onFilePicker`](#webpage-onFilePicker) [`onInitialized`](#webpage-onInitialized) [`onLoadFinished`](#webpage-onLoadFinished) 
+[`onLoadStarted`](#webpage-onLoadStarted) [`onNavigationRequested`](#webpage-onNavigationRequested) [`onPageCreated`](#webpage-onPageCreated) 
+[`onPrompt`](#webpage-onPrompt) [`onResourceRequested`](#webpage-onResourceRequested) [`onResourceReceived`](#webpage-onResourceReceived) 
+[`onUrlChanged`](#webpage-onUrlChanged)
+
+Internal methods to trigger callbacks :
+[`closing()`](#webpage-closing) [`initialized()`](#webpage-initialized) 
+[`javaScriptAlertSent()`](#webpage-javaScriptAlertSent) [`javaScriptConsoleMessageSent()`](#webpage-javaScriptConsoleMessageSent)
+[`loadFinished()`](#webpage-loadFinished) 
+[`loadStarted()`](#webpage-loadStarted) [`navigationRequested()`](#webpage-navigationRequested) [`rawPageCreated()`](#webpage-rawPageCreated) 
+[`resourceReceived()`](#webpage-resourceReceived) [`resourceRequested()`](#webpage-resourceRequested) [`urlChanged()`](#webpage-urlChanged) 
+
+
+
 <a name="webpage-properties" />
 ### Properties ###
+
+<a name="webpage-canGoBack" />
+#### `canGoBack` ####
+
+
+<a name="webpage-canGoForward" />
+#### `canGoForward` ####
+
 
 <a name="webpage-clipRect" />
 #### `clipRect` {object} ####
@@ -60,21 +115,46 @@ page.onInitialized = function() {
 };
 ```
 
+<a name="webpage-event" />
+#### `event` ####
+
+<a name="webpage-focusedFrameName" />
+#### `focusedFrameName` ####
+
 
 <a name="webpage-frameContent" />
 #### `frameContent` {string} ####
 **Introduced:** PhantomJS 1.7  
 This property stores the content of the web page's _currently active_ frame (which may or may not be the main frame), enclosed in an HTML/XML element. Setting the property will effectively reload the web page with the new content.
 
+
+<a name="webpage-frameName" />
+#### `frameName` ####
+
+
+
 <a name="webpage-framePlainText" />
 #### `framePlainText` {string} ####
 **Introduced:** PhantomJS 1.7  
 Read-only. This property stores the content of the web page's _currently active_ frame (which may or may not be the main frame) as plain text &mdash; no element tags!
 
+<a name="webpage-frameTitle" />
+#### `frameTitle` ####
+
+
 <a name="webpage-frameUrl" />
 #### `frameUrl` {string} ####
 **Introduced:** PhantomJS 1.7  
 Read-only. This property gets the current URL of the web page's _currently active_ frame (which may or may not be the main frame).
+
+<a name="webpage-framesCount" />
+#### `framesCount` ####
+
+
+
+<a name="webpage-framesName" />
+#### `framesName` ####
+
 
 <a name="webpage-libraryPath" />
 #### `libraryPath` {string} ####
@@ -85,6 +165,26 @@ script invoked by PhantomJS.
 <a name="webpage-navigationLocked" />
 #### `navigationLocked` {boolean} ####
 This property defines whether navigation away from the page is permitted or not. If it is set to `true`, then the page is locked to the current URL. Defaults to `false`.
+
+<a name="webpage-offlineStoragePath" />
+#### `offlineStoragePath` ####
+
+
+<a name="webpage-offlineStorageQuota" />
+#### `offlineStorageQuota` ####
+
+
+<a name="webpage-ownsPages" />
+#### `ownsPages` ####
+
+
+<a name="webpage-pages" />
+#### `pages` ####
+
+
+<a name="webpage-pagesWindowName" />
+#### `pagesWindowName` ####
+
 
 <a name="webpage-paperSize" />
 #### `paperSize` {object} ####
@@ -132,6 +232,10 @@ This property stores various settings of the web page:
 
 **Note:** The `settings` apply only during the initial call to the [`WebPage#open`](#webpage-open) function. Subsequent modification of the `settings` object will not have any impact.
 
+<a name="webpage-title" />
+#### `title` ####
+
+
 <a name="webpage-url" />
 #### `url` {string} ####
 **Introduced:** PhantomJS 1.7  
@@ -148,6 +252,9 @@ Example:
 page.viewportSize = { width: 480, height: 800 };
 ```
 
+<a name="webpage-windowName" />
+#### `windowName` ####
+
 <a name="webpage-zoomFactor" />
 #### `zoomFactor` {number} ####
 This property specifies the scaling factor for the [`WebPage#render`](#webpage-render) and [`WebPage#renderBase64`](#webpage-renderBase64) functions. The default is `1`, i.e. 100% zoom.
@@ -158,6 +265,9 @@ Example:
 page.zoomFactor = 0.25;
 page.render('capture.png');
 ```
+
+
+
 
 
 
@@ -177,6 +287,15 @@ page.addCookie({
 });
 ```
 
+<a name="webpage-childFramesCount" />
+#### `childFramesCount()` ####
+
+Deprecated.
+
+<a name="webpage-childFramesName" />
+#### `childFramesName()` ####
+
+Deprecated.
 
 <a name="webpage-clearCookies" />
 #### `clearCookies()` {void} ####
@@ -190,6 +309,11 @@ Close the page and releases the memory heap associated with it. Do not use the p
 
 Due to some technical limitations, the web page object might not be completely garbage collected. This is often encountered when the same object is used over and over again. Calling this function may stop the increasing heap allocation.
 
+<a name="webpage-currentFrameName" />
+#### `currentFrameName()` ####
+
+Deprecated.
+
 <a name="webpage-deleteCookie" />
 #### `deleteCookie(cookieName)` {boolean} ####
 **Introduced:** PhantomJS 1.7  
@@ -199,7 +323,6 @@ Example:
 ```js
 page.deleteCookie('Added-Cookie-Name');
 ```
-
 
 <a name="webpage-evaluate" />
 #### `evaluate(function, arg1, arg2, ...)` {object} ####
@@ -236,6 +359,25 @@ functions, DOM nodes, etc. will _not_ work!
 #### `evaluateAsync(function)` {void} ####
 Evaluates the given function in the context of the web page without blocking the current execution. The function returns immediately and there is no return value. This is useful to run some script asynchronously.
 
+<a name="webpage-evaluateJavascript" />
+#### `evaluateJavascript(str)` ####
+
+<a name="webpage-getPage" />
+#### `getPage(windowName)` ####
+
+
+<a name="webpage-go" />
+#### `go(index)` ####
+
+
+
+<a name="webpage-goBack" />
+#### `goBack()` ####
+
+
+<a name="webpage-goForward" />
+#### `goForward()` ####
+
 <a name="webpage-includeJs" />
 #### `includeJs(url, callback)` {void} ####
 Includes external script from the specified `url` (usually a remote location) on the page and executes the `callback` upon completion.
@@ -263,12 +405,21 @@ page.open('http://www.google.com/', function(status) {
 });
 ```
 
+<a name="webpage-openUrl" />
+#### `openUrl(url, httpConf, settings)` ####
+
+
+
 <a name="webpage-release" />
 #### `release()` {void} ####
 **Stability:** _DEPRECATED_ - Use [`WebPage#close`](#webpage-close))  
 Releases memory heap associated with this page. Do not use the page instance after calling this.
 
 Due to some technical limitations, the web page object might not be completely garbage collected. This is often encountered when the same object is used over and over again. Calling this function may stop the increasing heap allocation.
+
+<a name="webpage-reload" />
+#### `reload()` ####
+
 
 <a name="webpage-render" />
 #### `render(filename)` {void} ####
@@ -290,7 +441,7 @@ Supported formats include:
  * JPEG
 
 <a name="webpage-sendEvent" />
-#### `sendEvent(mouseEventType[, mouseX, mouseY, button='left'])` or `sendEvent(keyboardEventType, keyOrKeys, [0, "", Modifier])` ####
+#### `sendEvent(mouseEventType[, mouseX, mouseY, button='left'])` or `sendEvent(keyboardEventType, keyOrKeys, [null, null, modifier])` ####
 Sends an event to the web page. [1.7 implementation source](https://github.com/ariya/phantomjs/blob/63e06cb/src/webpage.cpp#L1015).
 
 The events are not like synthetic [DOM events](http://www.w3.org/TR/DOM-Level-2-Events/events.html). Each event is sent to the web page as if it comes as part of user interaction.
@@ -333,6 +484,31 @@ Allows to set both [`WebPage#content`](#webpage-content) and [`WebPage#url`](#we
 
 The webpage will be reloaded with the new content and the current location set as the given url, without any actual http request being made.
 
+
+<a name="webpage-stop" />
+#### `stop()` ####
+
+
+<a name="webpage-switchToFocusedFrame" />
+#### `switchToFocusedFrame()` ####
+
+<a name="webpage-switchToFrame" />
+#### `switchToFrame(frameName)` or `switchToFrame(framePosition)` ####
+
+
+<a name="webpage-switchToChildFrame" />
+#### `switchToChildFrame(frameName)` or `switchToChildFrame(framePosition)` ####
+
+deprecated
+
+<a name="webpage-switchToMainFrame" />
+#### `switchToMainFrame()` ####
+
+
+<a name="webpage-switchToParentFrame" />
+#### `switchToParentFrame()` ####
+
+
 <a name="webpage-uploadFile" />
 #### `uploadFile(selector, filename)` ####
 Uploads the specified file (`filename`) to the form element associated with the `selector`.
@@ -343,6 +519,7 @@ Example:
 ```js
 page.uploadFile('input[name=image]', '/path/to/some/photo.jpg');
 ```
+
 
 <a name="webpage-callbacks" />
 ### Callbacks ###
@@ -463,6 +640,10 @@ page.onError = function(msg, trace) {
     console.error(msgStack.join('\n'));
 };
 ```
+
+<a name="webpage-onFilePicker" />
+#### `onFilePicker` ####
+
 
 <a name="webpage-onInitialized" />
 #### `onInitialized` ####
@@ -618,4 +799,57 @@ page.onUrlChanged = function(targetUrl) {
 };
 ```
 To retrieve the old URL, use the onLoadStarted callback.
+
+
+<a name="webpage-callbacks-triggers" />
+### Callbacks triggers ###
+
+These function call callbacks. Used for tests...
+
+<a name="webpage-closing" />
+#### `closing(page)` ####
+
+
+<a name="webpage-initialized" />
+#### `initialized()` ####
+
+
+
+<a name="webpage-javaScriptAlertSent" />
+#### `javaScriptAlertSent(message)` ####
+
+
+<a name="webpage-javaScriptConsoleMessageSent" />
+#### `javaScriptConsoleMessageSent(message)` ####
+
+
+<a name="webpage-loadFinished" />
+#### `loadFinished(status)` ####
+
+
+
+<a name="webpage-loadStarted" />
+#### `loadStarted()` ####
+
+
+<a name="webpage-navigationRequested" />
+#### `navigationRequested(url, navigationType, navigationLocked, isMainFrame)` ####
+
+
+<a name="webpage-rawPageCreated" />
+#### `rawPageCreated(page)` ####
+
+
+
+<a name="webpage-resourceReceived" />
+#### `resourceReceived(request)` ####
+
+
+<a name="webpage-resourceRequested" />
+#### `resourceRequested(resource)` ####
+
+
+<a name="webpage-urlChanged" />
+#### `urlChanged(url)` ####
+
 
