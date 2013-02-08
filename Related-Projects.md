@@ -62,7 +62,7 @@ Several page capture projects utilizing PhantomJS:
 
  * [phantomas](https://github.com/macbre/phantomas) is a web-performance metrics and hints generation tool.
 
- * ["phantomjs"](https://github.com/Obvious/phantomjs) is a Node.js module to download/install PhantomJS and provide its executable path (and that's all). Used by Grunt.js in [grunt-lib-phantomjs](https://github.com/gruntjs/grunt-lib-phantomjs) for higher-level use in [grunt-contrib-qunit](https://github.com/gruntjs/grunt-contrib-qunit), etc.
+ * ["phantomjs"](https://github.com/Obvious/phantomjs) is a Node.js module to download/install PhantomJS and provide its executable path (and that's all). Used by Grunt in [grunt-lib-phantomjs](https://github.com/gruntjs/grunt-lib-phantomjs) for higher-level use in [grunt-contrib-qunit](https://github.com/gruntjs/grunt-contrib-qunit), etc.
 
  * [phantomjs-node](https://github.com/sgentle/phantomjs-node) provides PhantomJS bridge for Node.js applications. **currently unmaintained, suggest phantom-proxy**
 
@@ -72,4 +72,4 @@ Several page capture projects utilizing PhantomJS:
 
  * [Slippy](https://github.com/Seldaek/slippy) uses PhantomJS to convert HTML presentations into PDFs that can be e.g. uploaded to SlideShare.
 
- * [Yeoman](http://github.com/yeoman/yeoman) is a robust and opinionated client-side stack, comprised of tools and frameworks that can help developers quickly build beautiful web applications. It uses PhantomJS as a basis for headless tests.
+ * [Yeoman](http://github.com/yeoman/yeoman) is a robust and opinionated client-side stack, comprised of tools and frameworks that can help developers quickly build beautiful web applications. It uses PhantomJS (via Grunt) as a basis for headless tests.
