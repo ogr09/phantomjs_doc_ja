@@ -6,7 +6,7 @@ The following projects are based on PhantomJS. They provide extra functionalitie
 
  * [Ghostbuster](https://github.com/joshbuddy/ghostbuster) simplifies the testing setup with more convenient wrappers.
 
- * [GhostDriver](https://github.com/detro/ghostdriver) implements Remote WebDriver Wire protocol for PhantomJS.
+ * [GhostDriver](https://github.com/detro/ghostdriver) implements Remote WebDriver Wire protocol for PhantomJS. Although it is developed separately, it has been a part of PhantomJS core since PhantomJS 1.8.
 
  * [Lotte](https://github.com/StanAngeloff/lotte) adds jQuery-like methods, chaining, and more assertion logic.
 
@@ -24,11 +24,13 @@ Several page capture projects utilizing PhantomJS:
 
  * [capturejs](https://github.com/superbrothers/capturejs), a command-line tool using Node.js
 
- * [phantomjs-screenshots](https://github.com/hggh/phantomjs-screenshots), powers [Screener demo](http://screener.brachium-system.net).
+ * [ChromaNope](http://chromanope.com/), a web tool for simulating what a website looks like to users with varying types of color blindness.
 
  * [django-screamshot](https://github.com/makinacorpus/django-screamshot) (uses Django and CasperJS).
 
  * [node-webshot](https://github.com/brenden/node-webshot) (uses Node.js).
+
+ * [phantomjs-screenshots](https://github.com/hggh/phantomjs-screenshots), powers [Screener demo](http://screener.brachium-system.net).
 
  * [Screenshot](https://github.com/jegade/Screenshot) (uses Dancer).
 
@@ -41,6 +43,8 @@ Several page capture projects utilizing PhantomJS:
 
 <a id="tools" />
 ## Tools ##
+
+ * [basset](https://github.com/fragphace/basset) command-line website performance sniffer.
 
  * [Compass Magick](https://github.com/StanAngeloff/compass-magick) is a dynamic image generation for Compass using (among others) PhantomJS.
 
@@ -58,6 +62,8 @@ Several page capture projects utilizing PhantomJS:
 
  * [phantomas](https://github.com/macbre/phantomas) is a web-performance metrics and hints generation tool.
 
+ * ["phantomjs"](https://github.com/Obvious/phantomjs) is a Node.js module to download/install PhantomJS and provide its executable path (and that's all). Used by Grunt.js in [grunt-lib-phantomjs](https://github.com/gruntjs/grunt-lib-phantomjs) for higher-level use in [grunt-contrib-qunit](https://github.com/gruntjs/grunt-contrib-qunit), etc.
+
  * [phantomjs-node](https://github.com/sgentle/phantomjs-node) provides PhantomJS bridge for Node.js applications. **currently unmaintained, suggest phantom-proxy**
 
  * [PhantomLint](https://github.com/arthurakay/LintRoller/tree/v1.3.0) uses PhantomJS to run JSLint on JavaScript application code.
@@ -67,5 +73,3 @@ Several page capture projects utilizing PhantomJS:
  * [Slippy](https://github.com/Seldaek/slippy) uses PhantomJS to convert HTML presentations into PDFs that can be e.g. uploaded to SlideShare.
 
  * [Yeoman](http://github.com/yeoman/yeoman) is a robust and opinionated client-side stack, comprised of tools and frameworks that can help developers quickly build beautiful web applications. It uses PhantomJS as a basis for headless tests.
-
- * [basset](https://github.com/fragphace/basset) command-line website performance sniffer.
