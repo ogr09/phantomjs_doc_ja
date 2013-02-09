@@ -4,6 +4,12 @@
 
 ## 2013
 
+Server-Side XSS Attack Detection with ModSecurity and PhantomJS (Ryan Barnett, Feb 8, 2013)<br/>
+http://blog.spiderlabs.com/2013/02/server-site-xss-attack-detection-with-modsecurity-and-phantomjs.html
+
+Watir-WebDriver with GhostDriver on OSX: headless browser testing (Alister Scott, Feb 5, 2013)<br/>
+http://watirmelon.com/2013/02/05/watir-webdriver-with-ghostdriver-on-osx-headless-browser-testing/
+
 UI-testing (EPiServer): the need for speed (Stefan Forsberg, Jan 25, 2013)<br/>
 http://www.popkram.com/blog/2013/01/ui-testing-episerver-the-need-for-speed/
 
