@@ -49,6 +49,8 @@ Several page capture projects utilizing PhantomJS:
  * [Compass Magick](https://github.com/StanAngeloff/compass-magick) is a dynamic image generation for Compass using (among others) PhantomJS.
 
  * [Confess](https://github.com/jamesgpearce/confess) is small script library that uses PhantomJS to headlessly analyze web pages for the purposes of creating a cache manifest file.
+
+ * [GhostStory](https://github.com/thingsinjars/GhostStory) is a collection of [Cucumber](http://cukes.info) steps for automated CSS testing with SpookyJS, CasperJS, PhantomJS, PhantomCSS and Node.JS.
  
  * [Grover](https://github.com/davglass/grover) is a wrapper to automatically run YUI Test based tests.
 
