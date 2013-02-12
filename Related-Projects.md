@@ -64,11 +64,15 @@ Several page capture projects utilizing PhantomJS:
 
  * [phantomas](https://github.com/macbre/phantomas) is a web-performance metrics and hints generation tool.
 
+ * [PhantomCSS](https://github.com/Huddle/PhantomCSS) enables automated visual regression testing.
+
  * ["phantomjs"](https://github.com/Obvious/phantomjs) is a Node.js module to download/install PhantomJS and provide its executable path (and that's all). Used by Grunt in [grunt-lib-phantomjs](https://github.com/gruntjs/grunt-lib-phantomjs) for higher-level use in [grunt-contrib-qunit](https://github.com/gruntjs/grunt-contrib-qunit), etc.
 
  * [phantomjs-node](https://github.com/sgentle/phantomjs-node) provides PhantomJS bridge for Node.js applications. **currently unmaintained, suggest phantom-proxy**
 
  * [PhantomLint](https://github.com/arthurakay/LintRoller/tree/v1.3.0) uses PhantomJS to run JSLint on JavaScript application code.
+
+ * [PhantomXHR](https://github.com/Huddle/PhantomXHR) isolates UI from server API for fast automated UI testing.
 
  * [shortcut.io](https://github.com/hukl/shortcut.io) uses PhantomJS to generate the screenshot of the bookmarked web sites.
 
