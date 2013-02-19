@@ -10,6 +10,9 @@ http://blog.spiderlabs.com/2013/02/server-site-xss-attack-detection-with-modsecu
 Watir-WebDriver with GhostDriver on OSX: headless browser testing (Alister Scott, Feb 5, 2013)<br/>
 http://watirmelon.com/2013/02/05/watir-webdriver-with-ghostdriver-on-osx-headless-browser-testing/
 
+Javascript Testing with Cucumber, Capybara, Poltergeist, PhantomJS, and the Twitter Bootstrap Modal Dialog Box (Bruce Park, Jan 28, 2013)<br/>
+http://www.binarywebpark.com/javascript-testing-with-cucumber-capybara-poltergeist-phantomjs-and-the-twitter-bootstrap-modal-dialog-box/
+
 UI-testing (EPiServer): the need for speed (Stefan Forsberg, Jan 25, 2013)<br/>
 http://www.popkram.com/blog/2013/01/ui-testing-episerver-the-need-for-speed/
 
