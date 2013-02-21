@@ -18,6 +18,8 @@ Supported command-line options are:
  * `--disk-cache=[true|false]` enables disk cache (at desktop services cache storage location, default is `false`). Also accepted: `[yes|no]`.
  * `--ignore-ssl-errors=[true|false]` ignores SSL errors, such as expired or self-signed certificate errors (default is `false`). Also accepted: `[yes|no]`.
  * `--load-images=[true|false]` load all inlined images (default is `true`). Also accepted: `[yes|no]`.
+ * `--local-storage-path=/some/path` path to save LocalStorage content and WebSQL content.
+ * `--local-storage-quota=number` maximum size to allow for data.
  * `--local-to-remote-url-access=[true|false]` allows local content to access remote URL (default is `false`). Also accepted: `[yes|no]`.
  * `--max-disk-cache-size=size` limits the size of disk cache (in KB).
  * `--output-encoding=encoding` sets the encoding used for terminal output (default is `utf8`).
