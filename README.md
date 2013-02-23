@@ -1,4 +1,4 @@
-PhantomJS “ú–{ŒêƒhƒLƒ…ƒƒ“ƒg
+PhantomJS æ—¥æœ¬èªãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆ
 ========================
 
-[PhantomJS](http://phantomjs.org/)‚ÌƒhƒLƒ…ƒƒ“ƒg‚ğ–|–ó‚µ‚Ä‚¢‚Ü‚·B
+[PhantomJS](http://phantomjs.org/)ã®ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã‚’ç¿»è¨³ã—ã¦ã„ã¾ã™ã€‚
