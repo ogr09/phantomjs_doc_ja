@@ -1,15 +1,15 @@
-# ƒwƒbƒhƒŒƒXƒeƒXƒg
+# ãƒ˜ãƒƒãƒ‰ãƒ¬ã‚¹ãƒ†ã‚¹ãƒˆ
 
-PhantomJS‚Ìå‚Èƒ†[ƒXƒP[ƒX‚Ì1‚Â‚ÍAWebƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Ì **ƒwƒbƒhƒŒƒXƒeƒXƒg** ‚Å‚·B‚±‚ê‚ÍƒvƒŠƒRƒ~ƒbƒgƒtƒbƒN“àA‚¨‚æ‚ÑŒp‘±“I‚È“‡ƒVƒXƒeƒ€‚Ìˆê•”‚Æ‚µ‚ÄAˆê”Ê“I‚ÈƒRƒ}ƒ“ƒhƒ‰ƒCƒ“ƒx[ƒX‚ÌƒeƒXƒg‚É“K‚µ‚Ä‚¢‚Ü‚·B
+PhantomJSã®ä¸»ãªãƒ¦ãƒ¼ã‚¹ã‚±ãƒ¼ã‚¹ã®1ã¤ã¯ã€Webã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã® **ãƒ˜ãƒƒãƒ‰ãƒ¬ã‚¹ãƒ†ã‚¹ãƒˆ** ã§ã™ã€‚ã“ã‚Œã¯ãƒ—ãƒªã‚³ãƒŸãƒƒãƒˆãƒ•ãƒƒã‚¯å†…ã€ãŠã‚ˆã³ç¶™ç¶šçš„ãªçµ±åˆã‚·ã‚¹ãƒ†ãƒ ã®ä¸€éƒ¨ã¨ã—ã¦ã€ä¸€èˆ¬çš„ãªã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³ãƒ™ãƒ¼ã‚¹ã®ãƒ†ã‚¹ãƒˆã«é©ã—ã¦ã„ã¾ã™ã€‚
 <!-- One major use case of PhantomJS is **headless testing** of web applications. It is suitable for general command-line based testing, within a precommit hook, and as part of a continuous integration system. -->
 
-## ƒeƒXƒgƒtƒŒ[ƒ€ƒ[ƒN
+## ãƒ†ã‚¹ãƒˆãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯
 <!-- ## Test Frameworks -->
 
-PhantomJS©‘Ì‚ÍƒeƒXƒgƒtƒŒ[ƒ€ƒ[ƒN‚Å‚Í **‚ ‚è‚Ü‚¹‚ñ** BPhantomJS‚Í“KØ‚ÈƒeƒXƒgƒ‰ƒ“ƒi[‚ğ‰î‚µ‚ÄAƒeƒXƒg‚ğ‹N“®‚·‚é‚½‚ß‚¾‚¯‚Ég—p‚³‚ê‚Ü‚·B
+PhantomJSè‡ªä½“ã¯ãƒ†ã‚¹ãƒˆãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã§ã¯ **ã‚ã‚Šã¾ã›ã‚“** ã€‚PhantomJSã¯é©åˆ‡ãªãƒ†ã‚¹ãƒˆãƒ©ãƒ³ãƒŠãƒ¼ã‚’ä»‹ã—ã¦ã€ãƒ†ã‚¹ãƒˆã‚’èµ·å‹•ã™ã‚‹ãŸã‚ã ã‘ã«ä½¿ç”¨ã•ã‚Œã¾ã™ã€‚
 <!-- PhantomJS itself is **not** a test framework, it is only used to launch the tests via a suitable test runner. -->
 
-Ÿ‚Ì•\‚ÍA‚³‚Ü‚´‚ÜƒeƒXƒgƒtƒŒ[ƒ€ƒ[ƒN‚Æ‚»‚ê‚É‘Î‰‚·‚éƒeƒXƒgƒ‰ƒ“ƒi[‚Ìˆê——‚ğ‚Ü‚Æ‚ß‚Ä‚¢‚Ü‚·BƒtƒŒ[ƒ€ƒ[ƒN‚ª“à•”/ŠO•”‚ÌƒT[ƒhƒp[ƒeƒB»ƒ‰ƒ“ƒi[‚ğ•K—v‚Æ‚µ‚È‚¢ê‡A "built-in"‚Æ‚µ‚Ä‚¢‚Ü‚·B
+æ¬¡ã®è¡¨ã¯ã€ã•ã¾ã–ã¾ãƒ†ã‚¹ãƒˆãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã¨ãã‚Œã«å¯¾å¿œã™ã‚‹ãƒ†ã‚¹ãƒˆãƒ©ãƒ³ãƒŠãƒ¼ã®ä¸€è¦§ã‚’ã¾ã¨ã‚ã¦ã„ã¾ã™ã€‚ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ãŒå†…éƒ¨/å¤–éƒ¨ã®ã‚µãƒ¼ãƒ‰ãƒ‘ãƒ¼ãƒ†ã‚£è£½ãƒ©ãƒ³ãƒŠãƒ¼ã‚’å¿…è¦ã¨ã—ãªã„å ´åˆã€ "built-in"ã¨ã—ã¦ã„ã¾ã™ã€‚
 <!-- The following table summarizes the list of various test frameworks and the corresponding test runners. If the framework does not need an external/third-party runner, it is marked as "built-in". -->
 
 | Framework  | Test Runner |
@@ -29,30 +29,30 @@ PhantomJS©‘Ì‚ÍƒeƒXƒgƒtƒŒ[ƒ€ƒ[ƒN‚Å‚Í **‚ ‚è‚Ü‚¹‚ñ** BPhantomJS‚Í“KØ‚ÈƒeƒXƒg
 | [wru](https://github.com/WebReflection/wru) | built-in|
 | [YUITest](http://yuilibrary.com/projects/yuitest) | [Grover](https://github.com/davglass/grover), [phantomjs-yuitest](https://github.com/metafeather/phantomjs-yuitest) |
 
-PhantomJS‚Í`examples`ƒfƒBƒŒƒNƒgƒŠ‚Ì’†‚É[run-qunit](https://github.com/ariya/phantomjs/blob/master/examples/run-qunit.js)‚Æ[run-jasmine](https://github.com/ariya/phantomjs/blob/master/examples/run-jasmine.js)‚ğŠÜ‚ñ‚Å‚¢‚Ü‚·B‚µ‚©‚µA‚±‚ê‚ç‚ÍÀ—á‚Ì‚½‚ß‚Å‚ ‚èAÀÛ‚Ég—p‚·‚éã‚Å•K—v‚ÈƒŒƒ|[ƒg‹@”\‚ª‚ ‚è‚Ü‚¹‚ñI
+PhantomJSã¯`examples`ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®ä¸­ã«[run-qunit](https://github.com/ariya/phantomjs/blob/master/examples/run-qunit.js)ã¨[run-jasmine](https://github.com/ariya/phantomjs/blob/master/examples/run-jasmine.js)ã‚’å«ã‚“ã§ã„ã¾ã™ã€‚ã—ã‹ã—ã€ã“ã‚Œã‚‰ã¯å®Ÿä¾‹ã®ãŸã‚ã§ã‚ã‚Šã€å®Ÿéš›ã«ä½¿ç”¨ã™ã‚‹ä¸Šã§å¿…è¦ãªãƒ¬ãƒãƒ¼ãƒˆæ©Ÿèƒ½ãŒã‚ã‚Šã¾ã›ã‚“ï¼
 <!-- PhantomJS includes [run-qunit](https://github.com/ariya/phantomjs/blob/master/examples/run-qunit.js) and [run-jasmine](https://github.com/ariya/phantomjs/blob/master/examples/run-jasmine.js) in its `examples` subdirectory. However, these are for illustration purposes and lack important reporting features necessary for real-world uses! -->
 
 ## PhantomJS tailored testing
 
-‚Ü‚½AƒeƒXƒg‚ğ–Ú“I‚Æ‚µ‚½•Ö—˜‚Å‚ƒŒƒxƒ‹‚È‹@”\‚ğ’ñ‹Ÿ‚·‚é‚½‚ß‚ÉPhantomJS‚Ìã‚É\’z‚³‚ê‚Ä‚¢‚é[projects](./Related-Projects.md)‚ª‚¢‚­‚Â‚©‚ ‚è‚Ü‚·:
+ã¾ãŸã€ãƒ†ã‚¹ãƒˆã‚’ç›®çš„ã¨ã—ãŸä¾¿åˆ©ã§é«˜ãƒ¬ãƒ™ãƒ«ãªæ©Ÿèƒ½ã‚’æä¾›ã™ã‚‹ãŸã‚ã«PhantomJSã®ä¸Šã«æ§‹ç¯‰ã•ã‚Œã¦ã„ã‚‹[projects](./Related-Projects.md)ãŒã„ãã¤ã‹ã‚ã‚Šã¾ã™:
 <!-- In addition, there are [[projects|Related Projects]] which are built on top of PhantomJS to provide convenient high-level functionality for testing purposes: -->
 
-* [Casper.js](http://casperjs.org)‚ÍƒXƒNƒŠƒvƒgƒiƒrƒQ[ƒVƒ‡ƒ“‚ÆƒeƒXƒg‚ğ\’z‚·‚é‚Ì‚É—L—p‚Å‚·
-* [Lotte](https://github.com/StanAngeloff/lotte)‚ÍjQueryƒ‰ƒCƒN‚Èƒƒ\ƒbƒh‚âƒ`ƒF[ƒ“A‚»‚Ì‘¼‚ÉƒAƒT[ƒVƒ‡ƒ“ƒƒWƒbƒN‚ğ’Ç‰Á‚µ‚Ä‚¢‚Ü‚·
-* [WebSpecter](https://github.com/jgonera/webspecter)‚ÍWebƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Ì‚½‚ß‚ÌBDDƒXƒ^ƒCƒ‹‚Ìó‚¯“ü‚êƒeƒXƒg‚ÌƒtƒŒ[ƒ€ƒ[ƒN‚Å‚·
+* [Casper.js](http://casperjs.org)ã¯ã‚¹ã‚¯ãƒªãƒ—ãƒˆãƒŠãƒ“ã‚²ãƒ¼ã‚·ãƒ§ãƒ³ã¨ãƒ†ã‚¹ãƒˆã‚’æ§‹ç¯‰ã™ã‚‹ã®ã«æœ‰ç”¨ã§ã™
+* [Lotte](https://github.com/StanAngeloff/lotte)ã¯jQueryãƒ©ã‚¤ã‚¯ãªãƒ¡ã‚½ãƒƒãƒ‰ã‚„ãƒã‚§ãƒ¼ãƒ³ã€ãã®ä»–ã‚¢ã‚µãƒ¼ã‚·ãƒ§ãƒ³ãƒ­ã‚¸ãƒƒã‚¯ã‚’è¿½åŠ ã—ã¦ã„ã¾ã™
+* [WebSpecter](https://github.com/jgonera/webspecter)ã¯Webã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®ãŸã‚ã®BDDã‚¹ã‚¿ã‚¤ãƒ«ã®å—ã‘å…¥ã‚Œãƒ†ã‚¹ãƒˆã®ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã§ã™
 
 <!-- * [Casper.js](http://casperjs.org) is useful to build scripted navigation and testing -->
 <!-- * [Lotte](https://github.com/StanAngeloff/lotte) adds jQuery-like methods, chaining, and more assertion logic -->
 <!-- * [WebSpecter](https://github.com/jgonera/webspecter) is a BDD-style acceptance test framework for web applications -->
 
-## Œp‘±“IƒCƒ“ƒeƒOƒŒ[ƒVƒ‡ƒ“ƒVƒXƒeƒ€
+## ç¶™ç¶šçš„ã‚¤ãƒ³ãƒ†ã‚°ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã‚·ã‚¹ãƒ†ãƒ 
 <!-- ## Continuous Integration Systems -->
 
-**[Jenkins](http://jenkins-ci.org/)** ‚â **[TeamCity](http://www.jetbrains.com/teamcity/)** ‚Æ‚¢‚Á‚½CIƒVƒXƒeƒ€‚ÅPhantomJS‚ğg—p‚·‚éê‡‚ÍA“Á•Ê‚ÈƒZƒbƒgƒAƒbƒv‚Í•K—v‚ ‚è‚Ü‚¹‚ñBPhantomJS‚ªƒXƒŒ[ƒu/ƒrƒ‹ƒhƒG[ƒWƒFƒ“ƒgã‚Å³‚µ‚­ƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ä‚¢‚ÄAÀs‰Â”\‚Å‚ ‚é‚±‚Æ‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B
+**[Jenkins](http://jenkins-ci.org/)** ã‚„ **[TeamCity](http://www.jetbrains.com/teamcity/)** ã¨ã„ã£ãŸCIã‚·ã‚¹ãƒ†ãƒ ã§PhantomJSã‚’ä½¿ç”¨ã™ã‚‹å ´åˆã¯ã€ç‰¹åˆ¥ãªã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—ã¯å¿…è¦ã‚ã‚Šã¾ã›ã‚“ã€‚PhantomJSãŒã‚¹ãƒ¬ãƒ¼ãƒ–/ãƒ“ãƒ«ãƒ‰ã‚¨ãƒ¼ã‚¸ã‚§ãƒ³ãƒˆä¸Šã§æ­£ã—ãã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã¦ã„ã¦ã€å®Ÿè¡Œå¯èƒ½ã§ã‚ã‚‹ã“ã¨ã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚
 <!-- Using PhantomJS with CI system such as **[Jenkins](http://jenkins-ci.org/)** or **[TeamCity](http://www.jetbrains.com/teamcity/)** does not require special setup. Make sure PhantomJS is installed properly on the slave/build agent and it is ready to go. -->
 
-PhantomJS‚ÍLinuxã‚Åƒsƒ…ƒAƒwƒbƒhƒŒƒX‚Å‚ ‚é‚½‚ßAƒG[ƒWƒFƒ“ƒg‚Í”CˆÓ‚ÌGUI‚ÌƒCƒ“ƒXƒg[ƒ‹ã‚ÅÀs‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B‚±‚Ì•û–@‚ÍAX11‚Ì‚È‚¢ƒxƒAƒ{[ƒ“‚ÈLinuxƒVƒXƒeƒ€‚Å‚àPhantomJS‚Í–â‘è‚ ‚è‚Ü‚¹‚ñB‚±‚ê‚ÍAmazon EC2‚âHeroku‚ÌƒCƒ“ƒXƒ^ƒ“ƒXã‚ÅŒy—Ê‚Èƒrƒ‹ƒhƒG[ƒWƒFƒ“ƒg‚ğ‘½”‹N“®‚·‚é‚±‚Æ‚ª‰Â”\‚É‚È‚è‚Ü‚·B
+PhantomJSã¯Linuxä¸Šã§ãƒ”ãƒ¥ã‚¢ãƒ˜ãƒƒãƒ‰ãƒ¬ã‚¹ã§ã‚ã‚‹ãŸã‚ã€ã‚¨ãƒ¼ã‚¸ã‚§ãƒ³ãƒˆã¯ä»»æ„ã®GUIã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ä¸Šã§å®Ÿè¡Œã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚ã“ã®æ–¹æ³•ã¯ã€X11ã®ãªã„ãƒ™ã‚¢ãƒœãƒ¼ãƒ³ãªLinuxã‚·ã‚¹ãƒ†ãƒ ã§ã‚‚PhantomJSã¯å•é¡Œã‚ã‚Šã¾ã›ã‚“ã€‚ã“ã‚Œã¯Amazon EC2ã‚„Herokuã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ä¸Šã§è»½é‡ãªãƒ“ãƒ«ãƒ‰ã‚¨ãƒ¼ã‚¸ã‚§ãƒ³ãƒˆã‚’å¤šæ•°èµ·å‹•ã™ã‚‹ã“ã¨ãŒå¯èƒ½ã«ãªã‚Šã¾ã™ã€‚
 <!-- Since PhantomJS is purely headless on Linux, the agent can run on an installation with any GUI. This means, a barebone Linux system without X11 is not a problem for PhantomJS. It makes it possible to spawn light build agents on Amazon EC2 or Heroku instances. -->
 
-l‹CƒzƒXƒeƒbƒhCIƒVƒXƒeƒ€‚Å‚ ‚é **[Travis CI](http://about.travis-ci.org/)** ‚ÍAPhantomJS‚É‘g‚İ‚İƒTƒ|[ƒg‚³‚ê‚Ä‚¢‚Ü‚·BÚ×‚Í[its documentation](http://about.travis-ci.org/docs/user/gui-and-headless-browsers/)‚ğQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+äººæ°—ãƒ›ã‚¹ãƒ†ãƒƒãƒ‰CIã‚·ã‚¹ãƒ†ãƒ ã§ã‚ã‚‹ **[Travis CI](http://about.travis-ci.org/)** ã¯ã€PhantomJSã«çµ„ã¿è¾¼ã¿ã‚µãƒãƒ¼ãƒˆã•ã‚Œã¦ã„ã¾ã™ã€‚è©³ç´°ã¯[its documentation](http://about.travis-ci.org/docs/user/gui-and-headless-browsers/)ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
 <!-- **[Travis CI](http://about.travis-ci.org/)**, a popular hosted CI system, has built-in support for PhantomJS. See [its documentation](http://about.travis-ci.org/docs/user/gui-and-headless-browsers/) for details. -->
