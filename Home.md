@@ -17,7 +17,7 @@
 * [スクリーンキャプチャー](./Screen-Capture.md)
 * [ネットワーク監視](./Network-Monitoring.md)
 * [ページの自動化](./Page-Automation.md)
-* [API Reference](./API-Reference.md)
+* [APIリファレンス](./API-Reference.md)
 
 <!--
 * [[Quick Start|Quick Start]]
